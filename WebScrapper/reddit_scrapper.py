@@ -4,7 +4,22 @@ import pandas as pd
 import time
 
 # set up reddit API account as a praw instance
-reddit_agent = praw.Reddit(client_id='my_client_id', client_secret='my_client_secret', user_agent='my_user_agent')
+'''
+function reddit_agent_setup:
+
+description: 
+This function sets up reddit API account as a praw instance.
+
+input:
+- client_id: Reddit API app client id
+- client_secret: Reddit API app client secret
+- user_agent: Reddit API app name
+
+output:
+- praw instance for reddit API account
+'''
+def reddit_agent_setup(client_id, client_secret, user_agent):
+    return praw.Reddit(client_id=client_id, client_secret=client_secret, user_agent=user_agent)
 
 
 # function to scrap reddit data
@@ -23,8 +38,6 @@ inputs:
 outputs:
 - an excel file stored as "{topic}{unix_timestamp}.xlsx" in current directory
 '''
-
-
 def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
     # set list to store records
     records = []
@@ -56,3 +69,10 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
     output_timestamp = str(int(time.time()))
     output_name = topic + output_timestamp + ".xlsx"
     output.to_excel(output_name)
+
+
+'''
+# working example
+reddit_agent = praw.Reddit(client_id='my_client_id', client_secret='my_client_secret', user_agent='my_user_agent')
+reddit_scrapper(reddit_agent, ["MachineLearning", "learnmachinelearning", "nlp", "GPT"], limit=6, topic="machinemind")
+'''
