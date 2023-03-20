@@ -1,5 +1,6 @@
 # import libraries
 import praw
+from praw.models import MoreComments
 import pandas as pd
 import time
 
@@ -59,6 +60,8 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
 
             # iterate by comments
             for comment in post.comments:
+                if isinstance(comment, MoreComments):
+                    continue
                 author = comment.author
                 timestamp = comment.created_utc
                 body = comment.body
