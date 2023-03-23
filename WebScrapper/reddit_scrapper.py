@@ -48,6 +48,9 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
         subreddit = reddit.subreddit(instance)
         thread = subreddit.title
 
+        # process update
+        print("Scrapping subreddit: " + thread)
+
         # set limit of posts due to maximum request limit
         hot_posts = subreddit.hot(limit=limit)
 

@@ -10,9 +10,9 @@
     <link rel="stylesheet" href= {% static '/css/tailwind.css/' %}/>
 </head>
 <body>
-    <div id="homepage">
+    <div id="homepage" class="p-20 py-10">
         <div class="flex flex-wrap place-items-center">
-            <div class="w-full md:w-2/3 xl:w-2/3 p-10 h-200 place-items-center">
+            <div class="w-full md:w-2/3 xl:w-3/5 p-6 h-200 place-items-center">
                 <div class="bg-white border-transparent shadow-xl w-full">
                     <div class="bg-gradient-to-b from-gray-300 to-gray-100 uppercase
                         text-gray-800 border-b-2 border-gray-300 p-2 w-full">
@@ -20,7 +20,7 @@
                             Input your social media text here!
                         </h2>
                     </div>
-                    <div class="w-3/5 p-6" id = "text-input">
+                    <div class="w-full p-6" id = "text-input">
                         <form>
                             <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50
                                 dark:bg-gray-700 dark:border-gray-600">
@@ -46,6 +46,16 @@
             </div>
         </div>
         <div class="flex flex-wrap">
+            <div class="w-full md:w-2/3 xl:w-3/5 p-6 h-50 place-items-center">
+                <div class="bg-white border-transparent shadow-xl w-full">
+                    <div class="bg-gradient-to-b from-gray-300 to-gray-100 uppercase
+                        text-gray-800 border-b-2 border-gray-300 p-2 w-full">
+                        <h2 class="font-bold uppercase text-gray-600 hover:text-gray-700">
+                            Results
+                        </h2>
+                    </div>
+                </div>
+            </div>
             <div class="flex justify-around">
                     <card></card>
                     <card></card>
