@@ -39,7 +39,7 @@ inputs:
 outputs:
 - an excel file stored as "{topic}{unix_timestamp}.xlsx" in current directory
 '''
-def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
+def reddit_scrapper(reddit, subreddit_lists, limit=5, comment_limit=5, topic="reddit_output"):
     # set list to store records
     records = []
 
@@ -55,22 +55,31 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
         hot_posts = subreddit.hot(limit=limit)
 
         # iterate by posts
+        count_posts = 0
         for post in hot_posts:
+            print("=> post no. " + str(count_posts + 1))
             author = post.author
             timestamp = post.created_utc
             body = post.selftext
             records.append([topic, thread, author, timestamp, body])
 
             # iterate by comments
+            count_comments = 0
             for comment in post.comments:
                 if isinstance(comment, MoreComments):
                     continue
+                print("=>=> comment no. " + str(count_comments + 1))
                 author = comment.author
                 timestamp = comment.created_utc
                 body = comment.body
                 records.append([topic, thread, author, timestamp, body])
+                count_comments += 1
+                if count_comments >= comment_limit:
+                    break
 
-    # convert records to dataframe and output in excel
+            count_posts += 1
+
+    # convert records to dataframe and output in Excel
     output = pd.DataFrame(records, columns=["topic", "thread", "author", "timestamp", "body"])
     output_timestamp = str(int(time.time()))
     output_name = topic + output_timestamp + ".xlsx"
@@ -80,5 +89,5 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, topic="reddit_output"):
 '''
 # working example
 reddit_agent = praw.Reddit(client_id='my_client_id', client_secret='my_client_secret', user_agent='my_user_agent')
-reddit_scrapper(reddit_agent, ["MachineLearning", "learnmachinelearning", "nlp", "GPT"], limit=6, topic="machinemind")
+reddit_scrapper(reddit_agent, ["MachineLearning", "learnmachinelearning", "nlp", "GPT"], limit=10, comment_limit=10, topic="machinemind")
 '''
