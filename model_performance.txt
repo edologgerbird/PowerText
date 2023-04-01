@@ -20,31 +20,31 @@ ROC AUC score for MultinomialNB model:
 3  advertisement       0.500000
 4             ai       0.502137
 
-Time taken to train MultinomialNB model: 1.007 seconds
+Time taken to train MultinomialNB model: 0.75 seconds
 
 Classification report for PassiveAggressiveClassifier model: 
                precision    recall  f1-score   support
 
-         hate       0.90      0.89      0.89      3789
+         hate       0.90      0.88      0.89      3789
        sexual       0.00      0.00      0.00         3
       illegal       0.00      0.00      0.00         3
-advertisement       1.00      0.50      0.67         6
-           ai       0.91      0.77      0.84       234
+advertisement       0.75      0.50      0.60         6
+           ai       0.91      0.76      0.83       234
 
-    micro avg       0.90      0.88      0.89      4035
-    macro avg       0.56      0.43      0.48      4035
- weighted avg       0.90      0.88      0.89      4035
+    micro avg       0.90      0.87      0.89      4035
+    macro avg       0.51      0.43      0.46      4035
+ weighted avg       0.90      0.87      0.88      4035
   samples avg       0.43      0.43      0.43      4035
 
 ROC AUC score for PassiveAggressiveClassifier model: 
            label  roc_auc_score
-0           hate       0.900004
+0           hate       0.898398
 1         sexual       0.500000
 2        illegal       0.500000
-3  advertisement       0.750000
-4             ai       0.885691
+3  advertisement       0.749939
+4             ai       0.881355
 
-Time taken to train PassiveAggressiveClassifier model: 1.1 seconds
+Time taken to train PassiveAggressiveClassifier model: 1.012 seconds
 
 Classification report for XGBClassifier model: 
                precision    recall  f1-score   support
@@ -68,7 +68,7 @@ ROC AUC score for XGBClassifier model:
 3  advertisement       0.666667
 4             ai       0.757548
 
-Time taken to train XGBClassifier model: 16.987 seconds
+Time taken to train XGBClassifier model: 16.379 seconds
 
 Classification report for LGBMClassifier model: 
                precision    recall  f1-score   support
@@ -92,5 +92,5 @@ ROC AUC score for LGBMClassifier model:
 3  advertisement       0.498361
 4             ai       0.832334
 
-Time taken to train LGBMClassifier model: 19.384 seconds
+Time taken to train LGBMClassifier model: 19.425 seconds
 
