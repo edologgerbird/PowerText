@@ -1,64 +1,96 @@
 Classification report for MultinomialNB model: 
                precision    recall  f1-score   support
 
-         hate       0.89      0.89      0.89      3826
-       sexual       0.00      0.00      0.00         0
-      illegal       0.00      0.00      0.00         5
-advertisement       0.00      0.00      0.00         4
-           ai       0.00      0.00      0.00       228
+         hate       0.90      0.89      0.89      3789
+       sexual       0.00      0.00      0.00         3
+      illegal       0.00      0.00      0.00         3
+advertisement       0.00      0.00      0.00         6
+           ai       1.00      0.00      0.01       234
 
-    micro avg       0.89      0.84      0.87      4063
-    macro avg       0.18      0.18      0.18      4063
- weighted avg       0.84      0.84      0.84      4063
-  samples avg       0.41      0.41      0.41      4063
+    micro avg       0.90      0.83      0.86      4035
+    macro avg       0.38      0.18      0.18      4035
+ weighted avg       0.90      0.83      0.84      4035
+  samples avg       0.41      0.41      0.41      4035
 
-Time taken to train MultinomialNB model: 0.144 seconds
+ROC AUC score for MultinomialNB model: 
+           label  roc_auc_score
+0           hate       0.898836
+1         sexual       0.500000
+2        illegal       0.500000
+3  advertisement       0.500000
+4             ai       0.502137
+
+Time taken to train MultinomialNB model: 1.007 seconds
 
 Classification report for PassiveAggressiveClassifier model: 
                precision    recall  f1-score   support
 
-         hate       0.90      0.89      0.90      3826
-       sexual       0.00      0.00      0.00         0
-      illegal       0.00      0.00      0.00         5
-advertisement       1.00      0.50      0.67         4
-           ai       0.92      0.82      0.87       228
+         hate       0.90      0.89      0.89      3789
+       sexual       0.00      0.00      0.00         3
+      illegal       0.00      0.00      0.00         3
+advertisement       1.00      0.50      0.67         6
+           ai       0.91      0.77      0.84       234
 
-    micro avg       0.90      0.89      0.89      4063
-    macro avg       0.56      0.44      0.49      4063
- weighted avg       0.90      0.89      0.89      4063
-  samples avg       0.44      0.44      0.44      4063
+    micro avg       0.90      0.88      0.89      4035
+    macro avg       0.56      0.43      0.48      4035
+ weighted avg       0.90      0.88      0.89      4035
+  samples avg       0.43      0.43      0.43      4035
 
-Time taken to train PassiveAggressiveClassifier model: 0.423 seconds
+ROC AUC score for PassiveAggressiveClassifier model: 
+           label  roc_auc_score
+0           hate       0.900004
+1         sexual       0.500000
+2        illegal       0.500000
+3  advertisement       0.750000
+4             ai       0.885691
+
+Time taken to train PassiveAggressiveClassifier model: 1.1 seconds
 
 Classification report for XGBClassifier model: 
                precision    recall  f1-score   support
 
-         hate       0.95      0.92      0.93      3826
-       sexual       0.00      0.00      0.00         0
-      illegal       0.00      0.00      0.00         5
-advertisement       0.50      0.25      0.33         4
-           ai       0.93      0.55      0.69       228
+         hate       0.95      0.91      0.93      3789
+       sexual       0.00      0.00      0.00         3
+      illegal       0.00      0.00      0.00         3
+advertisement       1.00      0.33      0.50         6
+           ai       0.88      0.52      0.65       234
 
-    micro avg       0.94      0.90      0.92      4063
-    macro avg       0.48      0.34      0.39      4063
- weighted avg       0.94      0.90      0.92      4063
-  samples avg       0.44      0.44      0.44      4063
+    micro avg       0.94      0.89      0.91      4035
+    macro avg       0.57      0.35      0.42      4035
+ weighted avg       0.94      0.89      0.91      4035
+  samples avg       0.43      0.43      0.43      4035
 
-Time taken to train XGBClassifier model: 14.806 seconds
+ROC AUC score for XGBClassifier model: 
+           label  roc_auc_score
+0           hate       0.933893
+1         sexual       0.500000
+2        illegal       0.500000
+3  advertisement       0.666667
+4             ai       0.757548
+
+Time taken to train XGBClassifier model: 16.987 seconds
 
 Classification report for LGBMClassifier model: 
                precision    recall  f1-score   support
 
-         hate       0.95      0.92      0.93      3826
-       sexual       0.00      0.00      0.00         0
-      illegal       0.00      0.00      0.00         5
-advertisement       0.00      0.00      0.00         4
-           ai       0.91      0.69      0.79       228
+         hate       0.94      0.92      0.93      3789
+       sexual       0.00      0.00      0.00         3
+      illegal       0.00      0.00      0.00         3
+advertisement       0.00      0.00      0.00         6
+           ai       0.91      0.67      0.77       234
 
-    micro avg       0.93      0.91      0.92      4063
-    macro avg       0.37      0.32      0.34      4063
- weighted avg       0.94      0.91      0.92      4063
-  samples avg       0.45      0.45      0.45      4063
+    micro avg       0.92      0.90      0.91      4035
+    macro avg       0.37      0.32      0.34      4035
+ weighted avg       0.93      0.90      0.92      4035
+  samples avg       0.44      0.44      0.44      4035
 
-Time taken to train LGBMClassifier model: 18.62 seconds
+ROC AUC score for LGBMClassifier model: 
+           label  roc_auc_score
+0           hate       0.934297
+1         sexual       0.497754
+2        illegal       0.499818
+3  advertisement       0.498361
+4             ai       0.832334
+
+Time taken to train LGBMClassifier model: 19.384 seconds
 
