@@ -8,7 +8,7 @@ import nltk
 
 # nltk.download('stopwords')
 # stop_words = nltk.corpus.stopwords.words('english')
-
+nltk.download('wordnet')
 
 def load_stopwords():
     try:
