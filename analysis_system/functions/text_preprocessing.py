@@ -17,9 +17,9 @@ def load_stopwords():
     except:
         nltk.download('stopwords')
         stopwords = nltk.corpus.stopwords.words('english')
-        with open('cache_files/stopwords.txt', "w") as word_list:
-            for word in stopwords:
-                word_list.write(word + '\n')
+        # with open('cache_files/stopwords.txt', "w") as word_list:
+        #     for word in stopwords:
+        #         word_list.write(word + '\n')
     return stopwords
 
 # Removing punctuations
