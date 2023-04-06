@@ -8,10 +8,17 @@ import functions.content_explorer as content_explorer
 import utils.design_format as format
 import os 
 
+deployed_on_st = False
+if deployed_on_st:
+    path = "analysis_system/"
+else:
+    path = ""
+
 def load_model_dict():
 
     # load model dictionary
-    model_dict = pickle.load(open("analysis_system/models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
+    model_dict = pickle.load(open(f"{path}models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
+    # model_dict = pickle.load(open("analysis_system/models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
 
     return model_dict
 
@@ -66,14 +73,53 @@ def get_posts_with_violation(predicted_content, target):
     return posts_with_violation
 
 def display_post_from_df(predicted_content, n_post):
+    
     n_post = min(n_post, predicted_content.shape[0])
+    feedback_content = predicted_content.copy()
+
     if n_post == 0:
         st.write("No posts found")
     for i in range(n_post):
+        st.subheader(f"Post {i+1}")
         st.write(predicted_content["body"].values[i])
         st.caption(predicted_content["author"].values[i])
+
+        # Feedback mechanism
+        with st.expander("This post was wrongly classified!"):
+            feedback_encoded = feedback_on_post(i)
+            if len(feedback_encoded):
+                if st.button("Submit Feedback", key=(i+1)*1000):
+                    row_concern = predicted_content.iloc[i]
+                    row_concern[get_targets()] = feedback_encoded
+                    row_concern_df = pd.DataFrame(row_concern).T
+                    save_feedback_to_datastore(row_concern_df)
+                    st.success("Feedback submitted! This will be used in the next model re-training cycle.")
+
         format.horizontal_line()
 
+
+
+def save_feedback_to_datastore(feedback):
+    try:
+        feedback_df = pd.read_csv(f"{path}data_store/feedback/feedback.csv")
+        feedback_df = pd.concat([feedback_df, feedback], axis=0)
+        feedback_df.to_csv(f"{path}data_store/feedback/feedback.csv", index=False)
+
+    except:
+        feedback.to_csv(f"{path}data_store/feedback/feedback.csv", index=False)
+    return
+
+
+def feedback_on_post(i):
+    targets = get_targets()
+    feedback = st.multiselect("Select the correct target(s). Leave blank if no violation.", targets, key=i)
+    feedback_encoded = []
+    for target in targets:
+        if target in feedback:
+            feedback_encoded.append(1)
+        else:
+            feedback_encoded.append(0)
+    return feedback_encoded
 
 
 def display_overall_prediction_stats(predicted_content):

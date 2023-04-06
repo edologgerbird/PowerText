@@ -58,25 +58,24 @@ def run():
         # Viewing violated posts by target
 
         st.subheader("View Violated Posts by Target")
-        st.write("Here are posts that violated respective Terms-of-Services: ")
+        st.write("Here are posts that violated respective Terms-of-Services. If any predictions are wrong, you may submit feedback. ")
         st.write("")
         
         targets = ["No Violations"] + model_inference.get_targets()
 
         target = st.selectbox("Select Target", targets)
         st.write("")
-        n_post = st.slider("Number of Posts to Display", min_value=1, max_value=predicted_outputs.shape[0], value=10)
+        n_post = st.slider("Number of Reddit posts to display", min_value=1, max_value=predicted_outputs.shape[0], value=10)
 
-        show_posts = st.button("Show")
 
-        if show_posts:
-            format.horizontal_line()
-            if target == "No Violations":
-                filtered_output = model_inference.get_posts_without_violation(predicted_outputs)
-                model_inference.display_post_from_df(filtered_output, n_post)
-            else:
-                filtered_output = model_inference.get_posts_with_violation(predicted_outputs, target)
-                model_inference.display_post_from_df(filtered_output, n_post)
+        # if show_posts:
+        format.horizontal_line()
+        if target == "No Violations":
+            filtered_output = model_inference.get_posts_without_violation(predicted_outputs)
+            model_inference.display_post_from_df(filtered_output, n_post)
+        else:
+            filtered_output = model_inference.get_posts_with_violation(predicted_outputs, target)
+            model_inference.display_post_from_df(filtered_output, n_post)
         
     else:
         util.no_file_uploaded()
