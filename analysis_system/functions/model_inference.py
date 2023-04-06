@@ -8,13 +8,10 @@ import functions.content_explorer as content_explorer
 import utils.design_format as format
 import os 
 
-path = os.path.dirname(__file__)
-
-
 def load_model_dict():
 
     # load model dictionary
-    model_dict = pickle.load(open("PassiveAggressiveClassifier_model_dict.pkl", "rb"))
+    model_dict = pickle.load(open(f"{os.getcwd()}/models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
 
     return model_dict
 
