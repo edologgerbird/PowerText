@@ -67,6 +67,7 @@ openpyxl==3.1.2
 packaging==23.0
 pandas==1.5.3
 parso==0.8.3
+path==16.6.0
 pathy==0.10.1
 pickleshare==0.7.5
 Pillow==9.4.0
