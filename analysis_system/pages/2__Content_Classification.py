@@ -63,7 +63,7 @@ def run():
 
     target = st.selectbox("Select Target", targets)
     st.write("")
-    n_post = st.slider("Number of Posts to Display", min_value=1, max_value=30, value=10)
+    n_post = st.slider("Number of Posts to Display", min_value=1, max_value=predicted_outputs.shape[0], value=10)
 
     show_posts = st.button("Show")
 
