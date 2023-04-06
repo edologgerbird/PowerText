@@ -2,11 +2,6 @@ import streamlit as st
 import utils.design_format as format
 import utils.utility as util
 import pandas as pd
-import sys
-import path
-
-dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
 
 st.title("🔥Powertext Analysis System")
 format.horizontal_line()

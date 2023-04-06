@@ -6,7 +6,6 @@ from streamlit_extras.metric_cards import style_metric_cards
 import altair as alt
 import utils.utility as util
 import utils.design_format as format
-from streamlit_card import card
 
 
 
