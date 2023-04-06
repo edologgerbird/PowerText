@@ -6,17 +6,15 @@ import altair as alt
 import functions.text_preprocessing as text_preprocessing
 import functions.content_explorer as content_explorer
 import utils.design_format as format
+import os 
 
-def load_data():
-    # load data
-    reddit_content = pd.read_csv("data_store/scraped/reddit_store.csv")
+path = os.path.dirname(__file__)
 
-    return reddit_content
 
 def load_model_dict():
 
     # load model dictionary
-    model_dict = pickle.load(open("models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
+    model_dict = pickle.load(open("PassiveAggressiveClassifier_model_dict.pkl", "rb"))
 
     return model_dict
 
@@ -28,14 +26,6 @@ def get_targets():
 
     return targets
 
-def vectorize_data(reddit_content):
-    # load vectorizer
-    vectorizer = pickle.load(open("models/vectorizer.pickle", "rb"))
-
-    # vectorize text
-    vectorized_text = vectorizer.transform(reddit_content["text"])
-
-    return vectorized_text
 
 def predict_targets(reddit_content):
     # load model dict
