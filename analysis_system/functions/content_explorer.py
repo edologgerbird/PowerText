@@ -13,7 +13,8 @@ from streamlit_card import card
 def load_data(time_delta=24*60*60):
 
     # load data
-    reddit_content = pd.read_csv("data_store/scraped/reddit_store.csv")
+    # reddit_content = pd.read_csv("data_store/scraped/reddit_store.csv")
+    reddit_content = st.session_state["csv_file"]
 
     # filter out posts older than 24 hours
     reddit_content = reddit_content[reddit_content["timestamp"] > (

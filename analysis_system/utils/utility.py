@@ -42,3 +42,6 @@ def check_session_state_key(key):
         return False
     else:
         return True
+    
+def no_file_uploaded():
+    customDisppearingMsg("No file uploaded yet! Please upload your CSV file in the 'Home' page!", wait=-1, type_='warning', icon='⚠️')
