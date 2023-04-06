@@ -136,6 +136,8 @@ def preprocess_text(text,
                     _stem_text=True,
                     _remove_words_with_length_less_than_2=True):
     
+    text = str(text)
+    
     if _remove_punctuations:
         text = remove_punctuations(text)
     if _to_lowercase:
