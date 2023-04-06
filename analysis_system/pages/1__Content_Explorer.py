@@ -14,7 +14,7 @@ def run():
     reddit_content = content_explorer.load_data()
 
     # Display overall stats
-    st.subheader("Overall Stats")
+    st.subheader("Overall Statistics")
     st.write("Here is an overall summary of the Reddit posts from the past 24 hours: ")
     st.write("")
     content_explorer.display_overall_stats(reddit_content)
@@ -22,7 +22,7 @@ def run():
 
 
     # display subreddit stats
-    st.subheader("Subreddit Stats")
+    st.subheader("Subreddit Statistics")
     st.write("Here is a summary of the Subreddits from the past 24 hours:")
     st.write("")
 
@@ -31,7 +31,7 @@ def run():
     format.horizontal_line()
 
     # display random post
-    st.subheader("Random Post")
+    st.subheader("View a Random Reddit Post")
     st.write("Here is a random post from the past 24 hours:")
     st.write("")
     col1, col2 = st.columns([4,1])
