@@ -1,0 +1,809 @@
+topic,thread,id,author,timestamp,body,scraped_at
+machinemind,Machine Learning,122oxap,AutoModerator,1679842821.0,"Please post your questions here instead of creating a new thread. Encourage others who create new posts for questions to post here instead!
+
+Thread will stay alive until next one so keep posting after the date in the title.
+
+Thanks to everyone for answering questions in the previous thread!",1680761132
+machinemind,Machine Learning,jdtf6jh,fishybird,1679880094.0,"Anyone else bothered by how often LLMs are being called ""conscious""? in AI focused YouTube channels and even in this very sub, comments are getting dozens of upvotes for saying we're getting close to creating consciousness.
+
+I don't know why, but it seems dangerous to have a bunch of people running around thinking these things deserve human rights simply because they behave like a human.",1680761132
+machinemind,Machine Learning,jega9ag,colincameron49,1680293657.0,I have 0 experience with machine learning but looking to solve a problem I have and wondering if ML might not be the solution. Looking for some guidance on tools and how to get started on the project as quickly as possible. I work in agriculture and some portion of my time is reviewing pesticide labels for certain attributes. I have tried different document parsing platforms but the labels between manufacturers are all slightly different so structure has been hard to nail down. The other issue is I am specifically looking for certain key words in these documents as my company sells products that can be paired with pesticides to make them work better. I am hoping to build a workflow where I could drop a PDF into a folder have software spit out some sort of structure surrounding ingredients and instructions while flagging the keywords. I am decently proficient in no-code platforms if one such exists for my problem. Thanks in advance for any guidance. If this is the wrong subreddit for this I also apologize.,1680761132
+machinemind,Machine Learning,jdsp2q8,Various_Ad7388,1679867853.0,Hey @all if I am just starting off in machine learning what should I learn first Tensorflow or PyTorch or other?? Also once Im more experienced where do I go from there?,1680761132
+machinemind,Machine Learning,jdtm2zm,zaemis,1679883611.0,"I'm going to train a gpt model (distilgpt2) in a language other than english. At this point I'm just teaching it the language - not worrying about further abilities such as Q&A, I expect that to be later with fine-tuning. Anyway, my dataset is currently a csv with \[id, text\] and each text is a paragraph.
+
+It is my understanding that only 512 characters/tokens are going to be fed in (depending on my max\_length, but my point is that it'll probably be less than the entire length of the paragraph), and beyond that will be ignored. If I were to break the paragraphs into 512-word chunks, I could make better use of the dataset. But most likely those subsequent chunks wouldn't start a phrase or sentence - it'd be starting in the middle of a sentence.
+
+For example, ""The quick brown fox jumped over the lazy sleeping dog."" might be broken up into two samples. ""The quick brown fox jumped over the lazy"" and ""sleeping dog.""
+
+Is it a problem if I use text samples that don't ""start properly?""",1680761132
+machinemind,Machine Learning,jdu8jug,masterofn1,1679897324.0,How does a Transformer architecture handle inputs of different lengths? Is the sequence length limit inherent to the model architecture or more because of resource issues like memory?,1680761132
+machinemind,Machine Learning,jduuhcf,topcodemangler,1679915703.0,"Is there any real progress on the JEPA architecture proposed and pushed by LeCun? I see him constantly bashing LLMs and saying how we need JEPA (or something similar) to truly solve intelligence but it has been a long time since the initial proposition (2 years?) and nothing practical has come out of it.
+
+&#x200B;
+
+It may sound a bit aggressive but that was not my intention - the original paper really sparked my interest and I agree with a lot that he has to say. It's just that I would want to see how those ideas fare in the real world.",1680761132
+machinemind,Machine Learning,jdzo44q,Dartagnjan,1680002165.0,"Is anyone in need of machine learning protégé? I am looking for a doctorate position in the German and English speaking worlds. 
+
+My experience is in deep learning, specifically GNNs applied to science problems. I would like to remain in deep learning, broadly but would not mind changing topic to some other application, or to a more theoretical research project.
+
+I am also interested in theoretical questions, e.g. given a well defined problem (e.g. the approximation of the solution of a PDE), what can we say about the ""training difficulty"", is optimization at all possible (re. Tangent kernel analysis),  how architectures help facilitate optimization, and solid mathematical foundations of deep learning theory.
+
+I have a strong mathematical background with knowledge in functional analysis and differential geometry, and also hold a BSc in Physics, adjacent to my main mathematical educational track.
+
+Last week I also started getting into QML with pennylane and find the area also quite interesting.
+
+Please get in touch if you think I could be a good fit for your research group or know an open position that might fit my profile.",1680761132
+machinemind,Machine Learning,je14a0c,thomasahle,1680024881.0,"Are there any ""small"" LLMs, like 1MB, that I can include, say, on a website using ONNX to provide a minimal AI chat experience?",1680761132
+machinemind,Machine Learning,je3lv1g,RandomScriptingQs,1680062591.0,"Is anyone able to contrast MIT's 6.034 ""Artificial Intelligence, Fall 2010"" versus 18.065 ""Matrix Methods in Data Analysis, Signal Processing, and Machine Learning, Spring 2018""?   
+I'm wanting to use the one that lies slightly closer to the more theoretical/foundational side as supplementary study and have really enjoyed listening to both Instructors in the past.",1680761132
+machinemind,Machine Learning,je5ru4r,james_mclellan,1680108289.0,"Two questions :
+
+(1) Does anyone create missing data when constructing models? Examples - searchjng for stronger relationships between data set and first and second derivatives of time series data, compairsons to same day of week last N periods, same holiday last N periods; examining distance to an urban center for geodata
+
+(2) Does anyone use a model that falls back on functions when a match is not 100%? For example,  ""apple"" may mean fruit, music, machines, music companies or machine companies -- instead of a number 0 to 1 of the probable meaning, does anyone use models where the code ""performs a test"" to better disambiguate?",1680761132
+machinemind,Machine Learning,120f4oy,MTGTraner,1679650349.0,,1680761132
+machinemind,Machine Learning,12cvkvn,mckirkus,1680723849.0,"It seems OpenAI are steering the conversation away from the existential threat narrative and into things like accuracy, decency, privacy, economic risk, etc.
+
+To the extent that they do buy the existential risk argument, they don't seem concerned much about GPT-4 making a leap into something dangerous, even if it's at the heart of autonomous agents that are currently emerging.  
+
+>""Despite extensive research and testing, we cannot predict all of the [beneficial ways people will use our technology](https://openai.com/customer-stories), nor all the ways people will abuse it. That’s why we believe that learning from real-world use is a critical component of creating and releasing increasingly safe AI systems over time. ""
+
+Article headers:
+
+* Building increasingly safe AI systems
+* Learning from real-world use to improve safeguards
+* Protecting children
+* Respecting privacy
+* Improving factual accuracy
+
+&#x200B;
+
+[https://openai.com/blog/our-approach-to-ai-safety](https://openai.com/blog/our-approach-to-ai-safety)",1680761132
+machinemind,Machine Learning,jf3gjbk,Imnimo,1680725016.0,"Good for them for focusing on actual safety and risks, rather than ""what if GPT-5 figures out how to make nanobots by mail?""",1680761132
+machinemind,Machine Learning,jf3hi7o,currentscurrents,1680725380.0,"I'm not really concerned about existential risk from GPT-4 either. The AGI hype train is out of control. 
+
+LLMs are very cool and likely very useful, but they're not superintelligent or even human-level intelligent. Maybe they might be if you scaled them up another 1000x, but we're pretty much at the limit of current GPU farms already. Gonna have to wait for computers to get faster.",1680761132
+machinemind,Machine Learning,jf4a4xp,rePAN6517,1680737145.0,"Sam Altman has been very public in stating that OpenAI is going for short timelines and slow takeoffs.  The best way to increase the odds of a slow takeoff is to keep releasing marginally improved systems, so that the first that *is* capable of recursive self-improvement isn't very good at it and kind of needs to make a lot of tricky and time-consuming things happen to really get the ball rolling.  
+
+They're just hoping that first capable system (or a predecessor) is capable of turbocharging alignment before takeoff gets too far.",1680761132
+machinemind,Machine Learning,jf3izus,cyborgsnowflake,1680725939.0,"'AI Safety' these days increasingly just means closed models and politically curated or censored responses. 
+
+Are there issues with LLMs? Yes, but nothing thats going to be improved by keeping them under the sole purview of megacorps and governments.",1680761132
+machinemind,Machine Learning,jf3gms7,reditum,1680725053.0,"This is obvious, they're worried about real threats, not imagined doomsday scenarios.",1680761132
+machinemind,Machine Learning,jf3uvro,andrew21w,1680730522.0,"The ""being factual"" if not downright impossible, it's insanely difficult.
+
+
+For example, scientific consensus on some fields changes constantly.
+
+
+Imagine that GPT4 gets trained on scientific papers as part of it's dataset. As a result it draws information from these papers.
+
+
+What if later a paper get retracted? What if, for example, scientific consensus changed after the time it was trained? Are you spreading misinformation/outdated information? 
+
+
+How are you gonna deal with that?
+
+
+And that's just a kinda simple example.",1680761132
+machinemind,Machine Learning,jf3v7e4,lifesthateasy,1680730657.0,"How about making their models open source, as in ""Open""AI?",1680761132
+machinemind,Machine Learning,jf3wtba,Snoo-64902,1680731320.0,What are these comments? Has OpenAI created a botnet to create positive sentiment about them on Reddit?,1680761132
+machinemind,Machine Learning,jf4m8lk,Digital__Salvo,1680742647.0,"What's concerning is the number of people giving GPT a prompt, and when it delivers something believable but not accurate, they cant wrap their head around the fact it is ""articulate"", yet wrong (or just made something up because it ""makes sense""). 
+
+What this spectacle shows us is we are capable of creating an interface to meaningfully interact with a complex system like GPT. So much so that any lay-person can do it.",1680761132
+machinemind,Machine Learning,jf3zf8e,gruevy,1680732407.0,"""Learning from real-world use to improve safeguards"" and ""Protecting children"" are kinda why chatgpt sucks, tho. It's like trying to get a contrary opinion from a brick wall with Karen from Corporate HR painted on it.",1680761132
+machinemind,Machine Learning,12d0s7w,Sirisian,1680735050.0,"https://ai.facebook.com/blog/segment-anything-foundation-model-image-segmentation/
+
+https://github.com/facebookresearch/segment-anything
+
+> Today, we aim to democratize segmentation by introducing the Segment Anything project: a new task, dataset, and model for image segmentation, as we explain in our research paper. We are releasing both our general Segment Anything Model (SAM) and our Segment Anything 1-Billion mask dataset (SA-1B), the largest ever segmentation dataset, to enable a broad set of applications and foster further research into foundation models for computer vision. We are making the SA-1B dataset available for research purposes and the Segment Anything Model is available under a permissive open license (Apache 2.0).",1680761132
+machinemind,Machine Learning,jf4duso,WarProfessional3278,1680738847.0,"From what I've read, the model can achieve pretty impressive inference speed for mask generation on client (\~50ms) on cpu, and has amazing integration with free form text prompting. However, this requires the image be preprocessed by the image encoder (pretrained MAE ViT):
+
+>Given a precomputed image embedding, the prompt encoder and mask decoder run in a web browser, on CPU, in ∼50ms.
+
+I doubt this would be practical for real time segmentation, but I am happy to be prove wrong. Regardless, new open source SOTA is always a big win for the community.",1680761132
+machinemind,Machine Learning,jf4f6nj,Sirisian,1680739452.0,"There's also these recent projects if you missed them:
+
+https://jerryxu.net/ODISE/  
+https://github.com/hujiecpp/YOSO",1680761132
+machinemind,Machine Learning,jf4ativ,Borky_,1680737457.0,guess there goes my job,1680761132
+machinemind,Machine Learning,jf5dld6,Xayo,1680756456.0,Could anyone find the code or a pretrained model? I could not.,1680761132
+machinemind,Machine Learning,12d6tp4,Moiz_rk,1680749422.0,"I am an NLP researcher whose mother tongue is Urdu. Despite being a high volume language it remains  low/poorly resourced. So my plan was to follow the steps that diab et Al did for Arabic and English code switching i.e. 1) gather a dataset with both language pairs in the same sentence 2) tag individual terms 3) train for down stream tasks.
+
+I have looked up and found few datasets for Roman Urdu that I can extend for my work and then use LLMs to augment. 
+
+My plan was also to write the ideas in an outline document just to help me stay on track.
+
+Are there any pointers before I embark on this.",1680761132
+machinemind,Machine Learning,jf5jka8,jawabdey,1680760668.0,"Can’t answer, but appreciate you doing this. Good luck!",1680761132
+machinemind,Machine Learning,12cdvy0,nicku_a,1680685005.0,"Previous post: [https://www.reddit.com/r/MachineLearning/comments/120h120/p\_reinforcement\_learning\_evolutionary/](https://www.reddit.com/r/MachineLearning/comments/120h120/p_reinforcement_learning_evolutionary/?utm_source=share&utm_medium=web2x&context=3)
+
+We've just released a big update to our evolutionary HPO framework for RL, which is 10x faster than the state-of-the-art!
+
+You can now use evolvable CNNs to tackle visual environments like Atari 👀
+
+We've also added network config support so that you can easily define your architectures, increasing compatibility with other RL libraries 🛠️
+
+Check it out!
+
+[https://github.com/AgileRL/AgileRL](https://github.com/AgileRL/AgileRL)",1680761132
+machinemind,Machine Learning,jf25z4d,dingdongkiss,1680707403.0,"If I understand correctly it's the same model architectures & RL algorithms, but by finding good hyperparameters quickly it's in effect making the learning much more sample efficient?",1680761132
+machinemind,Machine Learning,jf132y5,paramkumar1992,1680685863.0,Phenomenal! Really exciting. Faster training and better performance for visual environments!,1680761132
+machinemind,Machine Learning,jf1zmby,LightVelox,1680704861.0,"No joke this could be the thing that would make me want to become an AI Developer, I always loved the area but i'm simply not patient enough to have to wait dozens of hours of training to try pretty much anything i'm developing, cutting this down to possibly minutes (in very small models, obviously) would be a godsend",1680761132
+machinemind,Machine Learning,jf2vnvj,thecuteturtle,1680717205.0,And it works with gymnasium? Nice! Might need to brushup then,1680761132
+machinemind,Machine Learning,jf3s3w4,sebzim4500,1680729395.0,How sensitive is it to the meta-hyperparameters?,1680761132
+machinemind,Machine Learning,jf42f7z,dingdongkiss,1680733700.0,"Oh wow, I didn't realise the agent model architecture is part of the search space. From my understanding, neural network architecture search is quite domain specific, and isn't used much as a starting approach.
+
+Do you have some intuition for why (empirically/theoretically) your implementation works well in an RL setting?
+
+From what I can tell the fitness function used is an aggregate of the rewards for that agent - how do you think these evolutionary algorithms would perform in environments with long episodes (10^4 steps maybe) and sparse rewards? eg. a 0/1 in the terminal state for failure/success",1680761132
+machinemind,Machine Learning,12clb7d,MohamedRashad,1680703193.0,"Another chatbot trained by fine-tuning Meta’s [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) on dialogue data gathered from the web.
+
+https://preview.redd.it/rpgsepgun2sa1.png?width=1600&format=png&auto=webp&v=enabled&s=4dbaf8c73c3b206e9ca457f512fce3d03fb46c6d
+
+demo: [https://chat.lmsys.org/?model=koala-13b](https://chat.lmsys.org/?model=koala-13b)
+
+blog post: [https://bair.berkeley.edu/blog/2023/04/03/koala/](https://bair.berkeley.edu/blog/2023/04/03/koala/)
+
+opensource weights: [https://drive.google.com/drive/folders/10f7wrlAFoPIy-TECHsx9DKIvbQYunCfl](https://drive.google.com/drive/folders/10f7wrlAFoPIy-TECHsx9DKIvbQYunCfl)",1680761132
+machinemind,Machine Learning,jf4f5lu,WarProfessional3278,1680739440.0,Berkeley is catching up fast! Vicuna last week and Koala now. By next month we'll run out of animal names for the new models lol,1680761132
+machinemind,Machine Learning,jf3qv5b,ktpr,1680728897.0,What open source model is given for the weights? Derivatives of LLaMA weights can not be used for commercial purposes unlike code licensed with MIT or Apache.,1680761132
+machinemind,Machine Learning,jf3gw02,bys299,1680725149.0,It still completely fabricates citations and references. Also it performed poorly on some technical questions I asked.,1680761132
+machinemind,Machine Learning,12d09f5,Just_Paramedic_5198,1680733870.0,"[https://github.com/circulatedev/last-stop](https://github.com/circulatedev/last-stop)
+
+Hi everyone,
+
+My friend and I are building a platform that allows you to host a ChatGPT website within your own network - whether it's in an organization or at home!
+
+The benefits include:
+
+* Monitoring for DLP scenarios / employee needs
+* Getting back control of current AI platforms
+* Preventing users from bringing their own accounts
+* Deploying within your network
+
+&#x200B;
+
+Future Plans:
+
+* Easier deployment process using Beanstalk / K8s
+* Integrate with existing DLP solutions / advanced DLP capabilities
+* Enable prompt sanitization
+* Enable SIEM features
+* Build internal corpus for prompts / responses
+
+Come check it out and please give us any feedback! We are working with some decision makers in the community and would love to share this with the broader audience.
+
+Cheers,
+
+kai-ten",1680761132
+machinemind,Machine Learning,12c7wqi,Radiant_Routine_3183,1680667821.0,"Greetings. I recently came across a Twitter by Yann LeCun that sparked an interesting idea. He shared a Nature article ([https://www.nature.com/articles/s41562-022-01516-2](https://www.nature.com/articles/s41562-022-01516-2)) that suggests human brain neurons may have hierarchical structures to track long-range context. Considering the limitations of current LMs in making basic logic errors and lacking long-range logical reasoning, could Hierarchical Transformers or similar architectures be a solution?
+
+I found a recent paper from OpenAI and Google that demonstrates the possibility of Transformers learning higher-order representations of text:[https://arxiv.org/pdf/2110.13711.pdf](https://arxiv.org/pdf/2110.13711.pdf)
+
+Could this be a potential solution to improve the Long-Range Logic Reasoning in LMs? What are your thoughts on this?
+
+Edit: In broad terms, the way I understand Hierarchical Transformers is that they not only learn low-level representations for short-term predictions but also higher-level representations for long-term predictions. It's somewhat reminiscent of Yann LeCun's concept of Hierarchical JEPA, as mentioned in his article 'A Path Towards Autonomous Machine Intelligence'",1680761132
+machinemind,Machine Learning,jf0j097,oodmb,1680669793.0,Could be.  Why not try it?  You never know - if you beat a relevant benchmark you might end up writing a great paper.,1680761132
+machinemind,Machine Learning,jf0of9i,Sweet_Protection_163,1680673503.0,"I think the time complexity of hierarchical models is what scares most away (especially agglomeration approaches). But perhaps you will find a way to feasibly test it! If we can find an fast way to update a hierarchical network, I believe it could overtake current transformers in ability.",1680761132
+machinemind,Machine Learning,jf10vd9,keepthepace,1680683881.0,"Maybe but I am wondering if LLMs are not already doing this by stacking attention layers. 
+
+I feel like the stacking of layers provides an emergent hierarchical reasoning and that the huge context size already provides an ability to iterate a reasoning. 
+
+Of course there are certainly architectures able to optimize that much more, but if true there is also merit in the approach that says ""we have all we need, slap more layers and GPU to this"". 
+
+I would love to see a way to stack transformers that would merge tokens. Maybe a simple addition could do the trick? On some layers, divide the context size by k by simply adding tokens n, n+1,... n+k and you should get a hierarchical representation of the data.",1680761132
+machinemind,Machine Learning,jf0l5im,Fit-Recognition9795,1680671203.0,"What is the ""Hierarchical Transformer"" you  are referring to?",1680761132
+machinemind,Machine Learning,jf0kyzs,boring_pencil,1680671081.0,Can somebody ELI5? I tried to read the first paper but got completely lost,1680761132
+machinemind,Machine Learning,jf0wxlo,LowSpecDev972,1680680391.0,"I feel like we already do that with ""cognitive architecture"", using multiple context to track long range but also deeper semantic. Instead of simple hierarchy, we build entire graph of context each treating different aspacts. For example hierarchical long range memory is handled by summarization and salience sorting based on user input, then query of the most salient summury from the log (probably stored as a pinecone like sentence embedding database), merged back in the output context as context prompt with the user input. The thing is that we simply abstracted the network by using the same ""foundation"" but at different function level.",1680761132
+machinemind,Machine Learning,jf10kzk,AbleMountain2550,1680683620.0,"Maybe they already using it in GPT-4, as OpenAI didn’t share with the rest of us GPT-4 architecture and the secret sauce of those 100+ small optimisation",1680761132
+machinemind,Machine Learning,jf1237i,LanchestersLaw,1680684973.0,"With the way LLMs developed I wonder if higher order tokenization is a better way to conceptualize this? We have good models that already work on tokenized natural language. A higher order model which treats characteristics of sentences, paragraphs, and/or chapter length text as tokens and then does the same thing as the lower level LLM but more abstract. It seems like that could be an interesting approach.",1680761132
+machinemind,Machine Learning,jf2g42q,baffo32,1680711329.0,"This is the kind of thing where if you did it well enough you wouldn’t need advanced hardware to show it. Hierarchical relationships could significantly reduce unneeded computation, especially with a couple recursions.",1680761132
+machinemind,Machine Learning,jf2cwkv,Brand_EX,1680710085.0,Well I mean Optimus Primes best friend Bumblebee was able to predict the landing of Megatron on earth and help prepare and gather the other Transformers to protect us all from them taking over. I think that gathering together took a lot of teamwork and predictive planning in advance and proves that machines can do a lot with the help of their friends.,1680761132
+machinemind,Machine Learning,12czwf1,Matas979,1680733057.0,"Foundation models are trained on a ton of data that encompasses much more than what we exposed simpler neural nets to 4-5 years ago. Moving forward, presumably they'll have even more data that encompasses more scenarios/contexts. 
+
+Do past advantages around ""quality of data"" become less important?",1680761132
+machinemind,Machine Learning,jf474so,JustOneAvailableName,1680735797.0,"Lots of research over the past few years showed that more data of lesser quality improved models. Now I think it's trending the kther way around again, that the focus is more and more on quality of data again",1680761132
+machinemind,Learn Machine Learning,12cjxz2,ChirperChiara,1680700359.0,,1680761132
+machinemind,Learn Machine Learning,jf3v1hj,GusPlus,1680730589.0,It’s just numbers in Chinese? It didn’t translate that sentence at all.,1680761132
+machinemind,Learn Machine Learning,jf3tga8,nojokes4you,1680729935.0,What the fuck? It did not translate at all.,1680761132
+machinemind,Learn Machine Learning,jf2r4x7,Datsoon,1680715512.0,"Why is this not just this title with a link to the Microsoft blog post? This is a terrible way to spread awareness, if that's what you're trying to do.",1680761132
+machinemind,Learn Machine Learning,jf3asja,inglandation,1680722880.0,Do we need to have tiktok videos everywhere?,1680761132
+machinemind,Learn Machine Learning,jf45mx0,darkaurora84,1680735125.0,I really hope they don't start using AI to translate movies and TV shows. The translations will be so bad. AI can't even caption voice in the same language perfectly,1680761132
+machinemind,Learn Machine Learning,jf56t5s,unreachabled,1680752463.0,"Wow, I think we all know what consequences this can easily bring to us. Fraud, scams, spams will be so much easier now",1680761132
+machinemind,Learn Machine Learning,jf25m24,babysharkdoodoodoo,1680707260.0,"Curious why the down votes, not legit?",1680761132
+machinemind,Learn Machine Learning,jf4i3hp,kidnamedtonny,1680740763.0,Useful tool. I like everything about it.,1680761132
+machinemind,Learn Machine Learning,jf1pc4e,ChirperChiara,1680700366.0,"Follow us on our socials for more AI news and giveaways💡:  
+https://linktr.ee/the\_ai\_insider",1680761132
+machinemind,Learn Machine Learning,jf5ajqi,random-incident,1680754589.0,That invention would change the world and finally allow the planet to act as one (unless you know who intervenes again to prevent it).,1680761132
+machinemind,Learn Machine Learning,12cp2cg,Long_Mango_7196,1680710652.0,"I am working on an NLP project, and I am wondering why we use cosine similarity to compare transformer embeddings instead of some other distance calculation like Euclidean distance. 
+
+I understand that for other text-to-vec features (tfidf, word2vec, etc.), the magnitude increases as the length of the text increases. In this circumstance, I understand why we would care about the angle between vectors instead of distance. 
+
+For transformers, I can't find any resource that says that the magnitude of transformer embeddings increases with the size of the text. Is this the case? Because if the magnitude doesn't increase, why would we use cosine similarity instead of a distance metric?",1680761132
+machinemind,Learn Machine Learning,jf2neig,gunshoes,1680714104.0,"Euclidean distance implies two points in space to calculate a distance metric between. Embeddings are conceptually more similar to vectors in an n-dimensional space, so a vector measure is more cohesive intuitively. Technically they are more or less equivalent since you can transform between the two with a linear function.
+
+Practically, cosine similarity is bound between -1 and 1, while Euclidean distance is unbounded towards infinity. This behavior is suboptimal with most models due to risk of overflow.
+
+Also, nth root calculation for Euclidean is more costly than dot product for similarity.",1680761132
+machinemind,Learn Machine Learning,jf31uqy,olavla,1680719521.0,"Per ChatGPT-4:
+
+Cosine similarity is often preferred in comparing transformer embeddings over other distance metrics like Euclidean distance for a few reasons:
+
+Scale invariance: One of the main advantages of using cosine similarity is that it is scale-invariant. This means that it measures the similarity between vectors regardless of their magnitudes. In NLP tasks, the magnitude of the vectors might not always be directly related to the meaning or relevance of the text. Cosine similarity focuses on the angle between vectors, which helps mitigate this issue.
+
+Robustness to different text lengths: Although the magnitude of transformer embeddings may not necessarily increase with the length of the text, longer texts still tend to have higher magnitudes due to the aggregation of information. By using cosine similarity, we can better handle cases where the text length varies significantly, as the angle between vectors is less sensitive to such variations.
+
+Interpretability: Cosine similarity values range from -1 to 1, which provides an intuitive and interpretable measure of similarity. A value of 1 means that the vectors are identical, 0 means they are orthogonal (unrelated), and -1 means they are diametrically opposed. This simplicity makes cosine similarity easier to understand and communicate compared to other distance metrics.
+
+Suitability for high-dimensional spaces: In high-dimensional spaces, the Euclidean distance between points tends to increase as the dimensionality increases, leading to a phenomenon called the ""curse of dimensionality."" Cosine similarity is less affected by this problem, as it focuses on the angle between vectors rather than their absolute distance. Transformers create high-dimensional embeddings, so using cosine similarity can be more appropriate in such cases.
+
+Precedent in NLP: Cosine similarity has been successfully used in various NLP tasks and models (e.g., tf-idf, word2vec, doc2vec, etc.). This established usage may contribute to its popularity and preference when working with transformer embeddings as well.
+
+In summary, cosine similarity is preferred for comparing transformer embeddings primarily because it is scale-invariant, robust to different text lengths, interpretable, suitable for high-dimensional spaces, and has a precedent in NLP applications. However, it's essential to consider the specific problem and requirements when choosing the appropriate distance metric, and in some cases, other metrics like Euclidean distance might be more suitable.",1680761132
+machinemind,Learn Machine Learning,jf5fdxg,wise0807,1680757642.0,"Good question. Cosine similarity is simply the cosine angle 📐 formed by two vectors. You get this by calculating the dot product and dividing by the length of the vectors. - A.B/(A^2)*(B^2). This makes the model optimize for the meaning of the text (direction of vectors) rather than the exact words or sentence structure, giving it the ability to generalize. If we used the rmse error term, we would optimize for exact sentence structure and words and it would not generalize well. Also when I said vector that includes tensors as well.",1680761132
+machinemind,Learn Machine Learning,12d685x,Appropriate_Rip_6597,1680747858.0,"Hi, I'm currently taking a CS major, it is my second year. But I never had any experience with ML. I have well understanding of Java, and recently started on python using \[python crash course - Eric Matthes\] 
+
+So I try to come up with a road map for what to study but there are just too many topics to cover from math to programming to training data. I decide to finish up Python first but then after that, I have no idea what topic should I cover next and what is important and what is not. Does anyone have a good road map that I can use as a guide line to study on?",1680761132
+machinemind,Learn Machine Learning,12daprj,TitanFounder,1680760462.0,"Here's my car price predictor ml model 
+
+link:- [https://sajid.engineer/carprediction/](https://sajid.engineer/carprediction/)
+
+If you like it please spare your time to visit my Github repository by clicking on the github icon and kindly star my repo. Any feedback is appreciated.
+
+Have a good day. Thank You",1680761132
+machinemind,Learn Machine Learning,12da4nq,wh1te_whale,1680758630.0,"I am planning to build an application where users can select authors. Now using the past articles written by the authors selected by the user, text should be generated which is meaningful and gives the flavor of all the authors which were originally selected by the user. How should I proceed and what model should I use?",1680761132
+machinemind,Learn Machine Learning,12d9lv1,brow_n69,1680757105.0,"I wanna make a classifier which can take a word as an input and tell if its an illegal substance/activity or not. How can i do this, I tried to search for datasets but there arent any, what concepts do I need here, I am lost.   
+Thanks in advance",1680761132
+machinemind,Learn Machine Learning,jf5il89,MLwithMe1617,1680759937.0,Try labeling the words and train the model. Illegal as 1 and not as 0. Try using sentiment analysis,1680761132
+machinemind,Learn Machine Learning,12d98uk,MLwithMe1617,1680756030.0,,1680761132
+machinemind,Learn Machine Learning,12d8l6c,ChyNhk,1680754147.0,"Hi, I am kinda new to machine learning
+
+How do you work with GLCM features and CNN? I've tried to use the graycomatrix and feed it into AlexNet and have low loss and accuracy, my professor told me to use the matrix's features, but that would end me on a 1D array containing values of each features and I can't use 2D architecture CNN
+
+What should I do? Reshape the features so I can get a N*N matrix? Or anything? 
+
+Thank you in advance guys
+
+(I also posted this on the simple question thread)",1680761132
+machinemind,Learn Machine Learning,12cvv4c,Complex_Presence,1680724451.0,"I'm not even sure where to start here. I'm a .NET developer and have been tasked with the following. I can use .NET or python to do the work.
+
+We repair electronic devices. We have 15 years or so of data. We want to ""predict"" what parts will be needed to fix the device when the customer submits a repair request. This will be based on the device, the problem type selected, the age of the device, etc.
+
+Can someone point me to a library or model that I should be looking at?",1680761132
+machinemind,Learn Machine Learning,jf3q4c6,NameError-undefined,1680728607.0,Seems like a classification problem if I’ve ever seen one. Two main paths possibly more but I would start with neural network or clustering. I have no experience at all with .NET so I would use Python. Judging by your description I would say you have a supervised learning problem since you have 15 years of data,1680761132
+machinemind,Learn Machine Learning,jf4o2ur,Hot-Profession4091,1680743480.0,"If you’re more comfortable with C#, then ML dotnet may be a good choice for you. You have a classification problem and the tutorial has an example of a classification problem. 
+
+https://dotnet.microsoft.com/en-us/learn/ml-dotnet/get-started-tutorial/intro",1680761132
+machinemind,Learn Machine Learning,jf50qfs,EntshuldigungOK,1680749327.0,"What makes it a certainty that ML is even needed here? 
+
+Unless I am missing something, this sounds like a simple 15 to 30 min job of a standard sql join.
+
+Also, the narrowness of the scenarios (limited attributes), and the rather limited amount of data (15 years * 100 problems per day * 250 days per year isn't much) suggests that Deep Learning will suit this better than ML",1680761132
+machinemind,Learn Machine Learning,jf58cuv,Apokalipsis113,1680753319.0,"Business task is not full. Before trying to predict there is must be analysis for current possibilities. That is a classification problem that can gives data that allow to use ANN and predict or recommend. Prediction with ANN is not a miracle, it's based on data. So focus and explore data first and during exploring you get answers. 
+
+Python with keras above tensorflow is the best option for now.",1680761132
+machinemind,Learn Machine Learning,12d48hv,GamesWithGregVR,1680743037.0,"Im running and reading though these functions listed here. 
+
+[https://pytorch.org/docs/stable/cuda.html](https://pytorch.org/docs/stable/cuda.html)
+
+I have installed pynvml as asked when using the function `torch.cuda.max_memory_allocated(device=None)`
+
+Or 
+
+`torch.cuda.set_per_process_memory_fraction(.50, device=None)`
+
+&#x200B;
+
+https://preview.redd.it/czhnqdtjx5sa1.png?width=1061&format=png&auto=webp&v=enabled&s=9b4e0ec6f3dce4dd255ecaaeaf01d1785fc86cc8
+
+When i run the script 
+
+`python tortoise/do_tts.py --text ""I'm going to speak this"" --voice random --preset fast` 
+
+I Get this error : 
+
+https://preview.redd.it/cespuyk9y5sa1.png?width=2527&format=png&auto=webp&v=enabled&s=cacaaccadafed8e720c6d706ee3e20a7118e39a8
+
+&#x200B;
+
+Do i need to go into the cuda files and set the memory allocation myself? Or would these functions work? 
+
+&#x200B;
+
+Perhaps there is something else im missing.
+
+&#x200B;
+
+Thank you.",1680761132
+machinemind,Neuro-Linguistic Programming,lfhuhu,sordidbear,1612807903.0,"Are you interested in Natural Language Processing? Go to /r/LanguageTechnology.
+
+Are you interested in machine learning applied to understanding language? Go to /r/LanguageTechnology.
+
+Are you interested in Richard Bandler and John Grinder's approach to communication, personal development, and psychotherapy known as *Neuro-Linguistic Programming*? You're in the right place.",1680761132
+machinemind,Neuro-Linguistic Programming,gveb70v,lefnire,1619056260.0,"I'm building a product that will use NLP (the tech) to deliver NLP (this). Destiny.
+
+Also, I love the confusion, cracks me up every time. Can just sense the frustration in this pinned post.",1680761132
+machinemind,Neuro-Linguistic Programming,grtofl0,aladinmothertrucker,1616428888.0,I am a Natural Language Processing engineer who is interested in NeuroLinguistic Programming for developing my social skills. Most of my peers don't know what NeuroLinguistic Programming is :/,1680761132
+machinemind,Neuro-Linguistic Programming,gmlu0f1,mathathon1234,1612808103.0,Finally lol,1680761132
+machinemind,Neuro-Linguistic Programming,h13iclx,TheThinkersThoughts,1623199976.0,I'm a recently certified NLP practitioner so u want to continue to learn as much as u can,1680761132
+machinemind,Neuro-Linguistic Programming,gmp24ef,JoostvanderLeij,1612878039.0,Sad state of affair: most NLP trainers do such a bad job that NLP is more and more being associated with Natural Language Processing.,1680761132
+machinemind,Neuro-Linguistic Programming,h10p0q5,CaregiverNo2642,1623153848.0,As an NLP trainer I only began to realise the depth of their knowledge and genius Mind blowing,1680761132
+machinemind,Neuro-Linguistic Programming,h3c7uev,pranav3122,1624899455.0,Hey can anyone suggest me research paper topic on NLP for ug studei,1680761132
+machinemind,Neuro-Linguistic Programming,gmluxf1,CountJothula,1612808503.0,I remember trying to start off when iwas younger with the bandler books. Whew they are really deep to start with. Had to go back to them after reading and taking a bunch of courses.  Even after I became a hypnotherapist it's still pretty intense. The understanding of those guys is mind blowing,1680761132
+machinemind,Neuro-Linguistic Programming,h10oxiv,CaregiverNo2642,1623153792.0,Genius is the word I think,1680761132
+machinemind,Neuro-Linguistic Programming,ie4b8r1,may-begin-now,1656458703.0,"Does anyone have the time line information of when the computer language NLP started? It can't be as old as the Neuro linguistic programming NLP . I vote they change their terminology to one more unique to their subject so when someone looks up NLP the neural linguistic programming content is shown and thus eliminating the misdirection that caused this post ......just my opinion....lol
+
+
+/s",1680761132
+machinemind,Neuro-Linguistic Programming,100fqxy,AutoModerator,1672563610.0,"This post is for any and all self-promotional material. This includes: books, services, workshops, youtube channels, web pages, blogs, etc.
+
+Likewise, if you are looking for books, services, workshops, youtube channels, web pages, blogs, etc created by members of /r/NLP then this is the place to look!
+
+A new self-promotional thread is created once every 6 months.
+
+See [this collection](https://www.reddit.com/r/NLP/collection/69e72dd6-ba93-4a4b-9716-3ee7567c8ed0) for past self-promotion threads.",1680761132
+machinemind,Neuro-Linguistic Programming,j8qd2sv,eew_tainer_007,1676522639.0,"Join the dream Legal Tech focussed on serving the community. A company which develops products that put money into peoples pockets using AI. 
+
+Looking to hire bunch of  founding freelancers  who would want to get involved in building a ""community version"" legal tech similar to [harvey.ai](https://harvey.ai) . The focus of the application is  Tenant law. Within Tenant law, it is narrowly focussed on the subject/law related to refunding tenants their rightful security deposit monies  held by landlords. There is more than $B illegally held by landlords ( in America) and there can be no better and cooler use case. 
+
+Input data sets (A)  Large corpus of Q and A asked by real humans and replied by real attorneys. See example below. (B) Law text (actual law) (C) Case laws - text where the courts applied the law to specific cases.(D) Tenant agreement. (E) Any emails, text message that transpired between the tenant and landlord. 
+
+Product concept: User  engage with the product and ask natural language questions. AI leads the user to Attorney/Paralegal assisted reply. (RHLF). Multiple Workproducts are generated. Some products will be shown to the user. One such work product  would be a demand letter in the context of the users. For a fee, the system will generate a ready to file court papers. Tool will be capable of computing ""chances of success"", risk of settling vs litigating and other forms of advice to empower the tenant make truly informed decision aided by AI and law humans. 
+
+Skills - Anything that will make this NLP product take off and help boost your careers and passion. Front end, back end, data scrapers, ML/AI/NLP. I am particularly interested in mathematicians who understand concepts of evidence fusion and can fuse information using Dempster-Shafer theory or similar concepts. There is more to NLP than just processing text. Text can be converted into appllied intelligence which can then be fused with other data sources to make precision products. 
+
+Dont wait - your employers or toxic boss will not give you that free reign to experiment and make your dreams come true. I am not selling a dream. I am creating a platform of hope . Join the discord and make this real. You dont lose nothing. Want a title ? Want to be on the board ? Want a visa to come to USA ? As a non-profit venture, we   embrace diversity and inclusion. 
+
+For a chance of life time and YOUR better tomorrow. Discord:[https://discord.gg/uer2wCbe](https://discord.gg/uer2wCbe) DM welcomed. 
+
+\-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*
+
+Sample Q and A
+
+Real Human : ""question"": ""What happens to the landlord fails to refund the deposit within 21 days?"",  
+	""body"": ""It's actually 13 days past the 21-day deadline. I'm the agent working for the landlord. I've just emailed(past the deadline) the tenant the list of damages and refund amount. And, now the tenant is threatening to go to court for not agreeing on the amount. I did a walk-thru with tenant the day after he vacates the property and there are a few things which I've missed during the walk-thru. Can the tenant hold the walk-thru list against me? There were extensive damages to the wood flooring in the kitchen and dining area. Is it reasonable to charge flooring replacement for the entirety of the two areas? It's impossible to get the wood flooring to match the original wood since the product was phased out. Therefore, a replacement flooring is the only option and I've gotten a very reasonable priced material and labor."",  
+	""answers"": \[  
+		{  
+Real Attorney ""answer"": ""Under California Civil Code section 1950.5, within 21 calendar days after a tenant moves out, the landlord must either send a full refund of the security deposit, or mail or personally deliver to the tenant an itemized statement that lists the amounts of any deductions from the security deposit and the reasons for the deductions, together with a refund of any amounts not deducted. According to the California Supreme Court decision in the case of Granberry v. Islay Investments (1995) 9 Cal.4th 738, 745, after the 21 days have transpired, the landlord loses the right to keep any of the security deposit and must return the entire deposit to the tenant. A tenant who does not receive a return of the security deposit from...
+
+Outputs:
+
+1. Demand letter to Landlord (human reviews)
+2. Small Claims court papers. ( tool determines jurisdiction, human confirms.)
+3. Legal brief lite.
+4. List of documents, exhibits
+5. Other computations ( various proprietary metrics)
+
+\-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*-----------\*
+
+Made in Silicon Valley and approved for publication.",1680761132
+machinemind,Neuro-Linguistic Programming,jbx462i,theEmotionalOperator,1678621913.0,"Just drop by at the memory work forum in r/MemoryReconsolidation   
+
+
+A lot more modalities than NLP exploit that stuff, but obviously a lot of the field pioneers came from NLP in specific. So your input is appreciated.",1680761132
+machinemind,Neuro-Linguistic Programming,12cymhe,Red-Oak-Capital,1680730231.0,"Aristotle: Rhetoric Book 1, Chapter 11 - Definition of pleasure and then how it moves in the soul.  Interesting of how similar the two author's describe feeling and perceived sensation of movement.",1680761132
+machinemind,Neuro-Linguistic Programming,jf3xerw,DragonfruitNeat3362,1680731567.0,Gonna need some quotes or something….,1680761132
+machinemind,Neuro-Linguistic Programming,12cota1,hopeislost1000,1680710172.0,,1680761132
+machinemind,Neuro-Linguistic Programming,jf2e35m,DevOpsMuffin39,1680710538.0,"Ask them how they made that decision or come to that conclusion to purchase that latest iPhone, TV, Truck etc...",1680761132
+machinemind,Neuro-Linguistic Programming,jf2oubw,JoostvanderLeij,1680714645.0,"I built a whole website to answer this question => [https://nlpprotoscience.org/](https://nlpprotoscience.org/)
+
+Basically, if no NLP trainer ever says that NLP is scientific, NLP can't be pseudoscience. Instead NLP is a protoscience.",1680761132
+machinemind,Neuro-Linguistic Programming,jf4p8f2,gyrovagus,1680744006.0,"I don’t need it to be hard science. I need it to be useful, and I find it useful.",1680761132
+machinemind,Neuro-Linguistic Programming,jf2g96w,crazypreneur,1680711383.0,"Ah, there are so many funny responses you could do:
+
+""pseudo science! According to who?"" 
+
+""Ahh, so YOU think its pseudoscience... Do you have any evidence?""
+
+""How do you know?""
+
+""How do you know that's not true?""
+
+""Only a **pseudoscientist** would say that!""",1680761132
+machinemind,Neuro-Linguistic Programming,jf2diss,00roast00,1680710321.0,"All psychology is pseudoscience, it's all a subjective experience.",1680761132
+machinemind,Neuro-Linguistic Programming,jf2hogd,raphaelarias,1680711930.0,"Yeah man, sure.",1680761132
+machinemind,Neuro-Linguistic Programming,jf40vuc,Bliss_Cannon,1680733035.0,I would reluctantly agree.  NLP has deliberately moved away from science and scientific research.  It's problematic...,1680761132
+machinemind,Neuro-Linguistic Programming,jf37fdr,drsmith48170,1680721620.0,"I thought the first rule of NLP was don’t talk about NLP?
+
+Prove Me Wrong! 😜",1680761132
+machinemind,Neuro-Linguistic Programming,jf3g05r,EliteHypnosis,1680724815.0,"I prefer the Ace Ventura response: ""Yeah? And you're ugly.""",1680761132
+machinemind,Neuro-Linguistic Programming,jf3l6bg,CaregiverNo2642,1680726746.0,I ask them does God exist!,1680761132
+machinemind,Neuro-Linguistic Programming,12cmj67,allyouthinkisshit,1680705602.0,"Hi everyone! I ve been reading and practicing NLP in my life which got me through all the problems that I faced within my life, since the whole problem was actually on my way of thinking, so I programmed myself becoming an amazing one. I would love to share that to others, but I have to be accredited so I can teach NLP. Do you know some legit websites which are offering this kind of certificate? I tried to make my research on google, but I don't know what to choose.. maybe some of you have more experience in this regard 😅",1680761132
+machinemind,Neuro-Linguistic Programming,jf2ecbu,crazypreneur,1680710638.0,"You actually dont need to be ""accredited"" to teach NLP. NLP is not trademarked. It is not a protected brand. However, if you are not tony robbins or any other well known coach, people are looking for ""certified nlp trainers""",1680761132
+machinemind,Neuro-Linguistic Programming,jf268i2,hypnaughtytist,1680707505.0,"Are you more interested in teaching others NLP or how to be an ""amazing one""? There's a big difference between learning bits and pieces of NLP and teaching it, as an entire methodology, but if you stay in your own sandbox, you can help people and there's really no need for certification.",1680761132
+machinemind,Neuro-Linguistic Programming,jf2mdvr,Affectionate_Chef836,1680713723.0,"Hi!
+Which book do you recommend me to read first?, 😁",1680761132
+machinemind,Neuro-Linguistic Programming,12bbji9,thepythonesse,1680591963.0,"Hi guys! I'm an NLP novice and I'm more into reading than taking online courses. As the title of the post says, I'm looking for a well-written and easy to follow book on NLP, dark psychology and manipulation. Since there is lots of literature on that topic, can anyone recommend a partucular title? Thanks in advance!",1680761132
+machinemind,Neuro-Linguistic Programming,jew82cr,raphaelarias,1680596720.0,"If you are dealing with a narcissist, I would start by watching DrRamani videos on YouTube.",1680761132
+machinemind,Neuro-Linguistic Programming,jex8fzs,misterarse1,1680619144.0,"My experience with such people, and I work in a prison, I have a lot of experience, is what a previous poster responded with: boundries. These people will not change. What you need to do is know what your boundries are, set them, and then consistently maintain them. 
+
+Also, if you could give some specific scenarios where you think they are trying to manipulate you, perhaps we can help you come up with some strategies.",1680761132
+machinemind,Neuro-Linguistic Programming,jexw3e5,Technical_Captain_15,1680628492.0,"Honestly, any book I've come across regarding ""dark psychology"" or ""dark NLP"" is low quality and not worth it. You'd be better off studying original works on NLP.
+
+I'm in a similar situation according to what you wrote in another comment above. I'm on a mission to never be manipulated or deceived ever again. EVER again.
+
+In addition to NLP, get into body language. The Definitive Guide to Body Language by Allen and Barbara Pease is a good place to start. After that, dive into the work of Chase Hughes. The Six Minute X Ray (take your time with that one) is great and so is every video and podcast he's on. Chase says it's best to learn to recognize truth signals rather than deception tells and that makes sense. But why not both? 
+
+There's also several other body language books but I'm not familiar with them yet. Body Language by Julius Fast is an OG.
+
+After that, I would recommend Paul Ekman's work, but I personally haven't gotten into his books yet, they just seem promising.
+
+There's a couple other books that seemed worth reading that are sitting on my shelf, but I haven't dived into just yet.
+
+Never Be Lied to Again by David J Lieberman, and Spy the Lie by Houston, Floyd, and Carnicero
+
+Also, people have mentioned boundaries and I think that is exactly where you should put your focus on to begin with. While I don't have any recommendations for that per se, The Six Pillars of Self-Esteem by Nathaniel Brandon will help with that, especially the chapter on personal integrity.
+
+Let me know if you want to form a book club 🤣",1680761132
+machinemind,Neuro-Linguistic Programming,jewbex3,WanderingSchola,1680599779.0,"A lot of the books on that subject are as much about *utilising* those techniques as they are defending yourself against them. Understanding language patterns like double binds and compliance sets could be useful for you, but that's something I associate more with hypnosis. 
+
+As others have said, learning how to set and hold boundaries as well as learning how to keep yourself emotionally regulated would be the important ones. Offhand emotional anchoring and practicing taking the emotional charge out of some of your memories of the relationship would be the way forward in terms of NLP.
+
+While I hear you that no-contact isn't an option when you share a child, minimal contact will still probably be a vital part of managing this problem.",1680761132
+machinemind,Neuro-Linguistic Programming,jew5du7,chilibeans30,1680594274.0,For what purpose?,1680761132
+machinemind,Neuro-Linguistic Programming,jewq9er,inacharmedlife777,1680610569.0,"The OP requested book recommendations, not advice.
+(I don’t have any book suggestions, but I hope someone responds to your specific question.)",1680761132
+machinemind,Neuro-Linguistic Programming,jewwrxy,hamburt,1680613959.0,Psychopaths Bible... Christopher Hyatt,1680761132
+machinemind,Neuro-Linguistic Programming,jex3ueb,hypnaughtytist,1680617192.0,"The books about the contextual use of NLP are incomplete and fairly useless, unless you notice a specific technique that you read about. I would suggest learning the Meta Model and the Milton Model until you can recite the patterns in your sleep. Have you read The Structure of Magic?",1680761132
+machinemind,Neuro-Linguistic Programming,jewo625,25millionusd,1680609341.0,Just name a few good books will ya lot??,1680761132
+machinemind,Neuro-Linguistic Programming,jewhvic,Convenientjellybean,1680605198.0,"Check out other subs for this, (maybe start with r/findareddit ) where can get specific advice . You’ll be pushing a big rock up a steep hill trying to outwit them, they’ll use everything against you.",1680761132
+machinemind,Neuro-Linguistic Programming,12b65wb,Kmbffs,1680574450.0,"Been interested in NLP for years.  Came across this but curios what the group thinks. 
+
+https://www.nlp.com/nlp-training-atlantic-city-nj/",1680761132
+machinemind,Neuro-Linguistic Programming,jevegcc,Canadia_proud999,1680576324.0,Thats quite a good deal.  My prac training was almost 5 k,1680761132
+machinemind,Neuro-Linguistic Programming,jewppb8,EliteHypnosis,1680610248.0,"If you want to know whether something is legitimate, look at the organization running it, and also who is doing the training.
+
+It doesn't look like a full NLP Practitioner training - The course appears to be called Integrative NLP Practitioner, and is four days in length it appears, although I'm sure it will be life-changing.",1680761132
+machinemind,Neuro-Linguistic Programming,129rpvb,PhatMuchacho,1680456152.0,,1680761132
+machinemind,Neuro-Linguistic Programming,jeokpaf,ozmerc,1680456247.0,Congrats! I'm curious what's on a NLP exam?,1680761132
+machinemind,Neuro-Linguistic Programming,jep1xd7,hopeislost1000,1680463448.0,I think it’s great your program had a practical exam.  Congratulations!,1680761132
+machinemind,Neuro-Linguistic Programming,jep3a6f,AncientSoulBlessing,1680464032.0,Hooray!  Super proud of you!,1680761132
+machinemind,Neuro-Linguistic Programming,jepdzkc,haux_haux,1680468531.0,I'm curious are they affiliated with Bandler or Grinder in any way?,1680761132
+machinemind,Neuro-Linguistic Programming,128wyxz,Mori_564,1680379167.0,"I'm new to this and don't really have the time to spend hours digging through the internet reading whatever wiki article and research paper I can find. Is there a better, more efficient way to learn about NLP?",1680761132
+machinemind,Neuro-Linguistic Programming,jekwmii,hopeislost1000,1680381580.0,Get an NLP to help you to apply the NLP techniques that are useful to you to your real life situations and your real life goals so that you can give and receive feedback about how to apply these methods and actually receive the benefit of using them.,1680761132
+machinemind,Neuro-Linguistic Programming,jenijok,EliteHypnosis,1680438324.0,"Applied NLP (as opposed to the core of NLP, modelling) is a fascinating field to explore. The most important question is : What's your reason (or reasons) for learning NLP? This will give me an idea as to possible suggestions to offer you.",1680761132
+machinemind,Neuro-Linguistic Programming,jelfxuq,JoostvanderLeij,1680390543.0,Simply start with the free online ABC-NLP Practitioner => https://influence.amsterdam/2021/07/11/free-online-abc-nlp-practitioner/,1680761132
+machinemind,Neuro-Linguistic Programming,jen1uls,nlpdavidshephard,1680424721.0,Have a look at the free video and audio content at www.C21nlp.com.,1680761132
+machinemind,Neuro-Linguistic Programming,jelefj4,Substantial-Car-2,1680389826.0,yes. Join my discord. https://discord.gg/8eRm5xY7,1680761132
+machinemind,Neuro-Linguistic Programming,jerxvod,geefee1010,1680523015.0,"All you have is time. You just want to do things in the easiest and fastest way possible which in turn, will build your foundational knowledge base into a very weak one. 
+
+If your interested in something, dedicate your time and attention to it. There is no magic key.",1680761132
+machinemind,Neuro-Linguistic Programming,127i13a,helping112358,1680261820.0,"Throwaway account because of reasons…
+
+I recently came to the realization that stress (and possibly, deeper, my personality) is playing against me. Noticed because I went away for a couple of days, left my dog with someone, and I saw my dog much more calm than I knew him (buddy who took care of him has a ‘super chill attitude’). I learned that my dog shook his head quite often as a sign of stress..
+
+Well, I’m in my 30s and raising a baby boy sonI don’t want him to be affected with this in the way my dog is. In general, might be affecting the relationship with my wife as well. Me taking it all so serious and being stress.
+
+Long story short… I want to be very chill, not take it all so serious and don’t feel stressed (too much to ask, I know). But to truly, a deep and real change. 
+
+Not looking for a magic answer. Just curious of this is something that could be achieved through NLP?
+
+Thanks for reading!",1680761132
+machinemind,Neuro-Linguistic Programming,jee967x,Lumpy-Blacksmith-272,1680263127.0,"Yes .NLP can definitely help. A couple of routes you could take.  
+
+Get a couple books on it and go through them and actually do all the exercises as you go.  Watch YouTube videos on specifically which are you want help with nlp in the search.
+
+You could take online or in person practitioner training for yourself, and as you learn, it go through all the exercises.
+
+You could schedule a NLP session with a NLP Practitioner to address one specific item. You can see amazing results in a one hour session.
+
+You could do a day breakthrough session with an NLP master practioner.
+
+Depending on your financial situation and how important change is, a single session can greatly help.
+
+Understand you can change, you have to make a decision to change, and NLP is an amazing and powerful method to do it.
+
+Edit: spelling error",1680761132
+machinemind,Neuro-Linguistic Programming,jee9god,NLP__Coach,1680263297.0,"Hi, so nature has given us a range of emotions for a reason. For example, Fear at best gives you Power to make decisions and at worst, gives you PTSD. It is how we use our emotions and program them to work for us and not against us. 
+
+It is good to see you are willing to improve yourself. And Yes, you can definitely achieve this through NLP Coaching or by becoming an NLP Practitioner.
+
+So what NLP does is it makes us consciously aware about the shortcomings of our unconscious mind and helps us to work on it. Once, those shortcomings are corrected, it then again becomes part of the unconscious mind and that is when we are the best versions of ourselves...",1680761132
+machinemind,Neuro-Linguistic Programming,jeetz45,EliteHypnosis,1680273041.0,"Well done for both realizing you need assistance, and also being open to seeking it out.
+
+I am an NLP Practitioner, and also an Ericksonian Hypnotist (Milton Erickson was one of the original three models for NLP), and a question I have for you to explore now is this:
+
+Do you remember when in your life you first noticed yourself feeling/being stressed? Or as you notice certain patterns in yourself now, how far back to you remember having those patterns? For some people it can go way way back, or alternatively they can appear more recently due to some life change..",1680761132
+machinemind,Neuro-Linguistic Programming,jeeu3n8,SapioTist,1680273091.0,"Yes it can. And you can do plenty work on it yourself. The value of working a practitioner is that they can help you thru the blind spots that will be harder for you to discover without external input. Often, the things we need to work on can be glaringly apparent to others, while we are so entrenched in our own perceptual reality that we take these behaviors and reactions as a natural part of life. Kind of like sending your dog to your friends house did. You noticed difference, and the benefit of making change, only after external input. 
+
+Working on these areas alone is like walking into the darkness and hoping to find what you need when you're not even sure what that is. Having someone to help navigate the room can at least send you in the right direction without running into every obstacle on the way. You'll still need to do work of feeling around on the wall for the light switch, but it sure helps when they can help get you across the room without breaking a toe in the process.",1680761132
+machinemind,Neuro-Linguistic Programming,jefiswg,secondattender,1680282750.0,So your theory seems to be that you're too stressed out because you take things too seriously.  You want to take things less seriously so you'll be more relaxed.  Is that an accurate statement?,1680761132
+machinemind,Neuro-Linguistic Programming,jehwilh,WanderingSchola,1680320447.0,"Hi, not an NLP practitioner here, but I have an opinion to throw in. Stress is kind of the symptom of lots of different things:
+
+* Poor self organisation 
+* Disorganised/stressful work or home environment
+* Nervous system dysregulation from not completing the stress ""cycle""
+* Nervous system dysregulation from (C-)PTSD
+* Excess stress from belief in stress as inherently negative 
+* Lack of resources (fitness, rested-ness, mindfulness) to deal with stressful situations.
+* Social stress from things like stigma, poverty, or disability which all affect resource access and expenditure
+
+While NLP can help with some of these (probably through behaviour and belief modification), it's not going to fix all of it.
+
+Having scanned that list, do any of them register as something for you to work on, or that you're interested in?",1680761132
+machinemind,Neuro-Linguistic Programming,jej0syj,Red-Oak-Capital,1680351063.0,"Yes, unmanaged stress can be situationally transferred to people/pets who share your weekly home and/or work environment.  Book Recommendation:  NLP Self Mastery: 12 Book Mega Bundle by Modern Psychology Publishing.  *On Audible as well as print.*  Logic Premise:  The book is an extremely large compilation of NLP lessons for beginners and users as opposed to those seeking NLP certifications path.  Basically, skip sections that do not target what you desire.  Everything from stress reduction, eating habit changes, anxiety go bye bye routines to motivation visualizations.  It is one of several books I recommend to everyday people in my life that finally ask, things like, ""You never get stressed out.  How?""  or ""Why don't your worry about politics, money or things.""  I explained that I do indeed get both stressed out and worry, but I respond with things like, ""I found that only action seems to resolve things, so I just do not worry during a routine day unless needed before I get ready to go on an international flight, etc.""  and  ""Oh, I just breath a lot to keep working memory from getting zapped.""  Finally, if they are still engaged and listening or inquiring, I take the conversation to the next level by recommending  that they listen to NLP Self Mastery: 12 Book Mega Bundle by Modern Psychology Publishing while driving to work and tell them to Google Richard Bandler.  None of my close friends dove into NLP like I did even though most everyone noticed huge personality changes.",1680761132
+machinemind,Neuro-Linguistic Programming,jek1p2h,ozmerc,1680368355.0,"There is physiological stress and psychological stress. It flows as follows. Perceived stressors create psychological stress which in turn trigger physiological stress like raised cortisol and elevated blood pressure.
+
+Your perception of stressors changes over time. Psychologically or consciously you may become habituated to a stressor but physiologically you're anchored into the initial response like raised cortisol levels. You no longer perceive the different physical symptoms so on level you are not stressed. You just call the elevated cortisol levels the ""new"" you. It's your new normal.
+
+A pet or child have heightened sensory perception to ensure they survive in the environment within which they reside. Through pheromones and micro-muscle cues from you they are assessing how to make meaning of their surroundings. 
+
+They won't recognize the stressors as they are not stressors to them. Nor do they have an expectation which is being challenged to identify something as a stressor.
+
+They will however match your physiological responses as they are modeling that it's the best way to survive in this environment.
+
+So with all this said what do you do?
+
+Explore not what stresses you but rather what you feel are your preferences. ""I prefer x"". ""I would rather do x"". Over time when stressors get habituated you develop preferences and a lifestyle to work around them or get through them. You make slight changes to your behaviors and logically explain those changes away. 
+
+These little tolerances or annoyances are now just your ""lifestyle decisions"". They are your opinions or preferences. These subtleties offer a wealth of opportunity for personal transformation.
+
+Start your exploration here and then use many of the NLP tools out there to address what needs to be addressed.",1680761132
+sports,The back page of the internet.,12ccrad,AutoModerator,1680681635.0,A place to discuss everything except the English Premier League.,1680761281
+sports,The back page of the internet.,jf1cchm,a-Farewell-to-Kings,1680693189.0,12 out of 20 Brazilian Série A clubs currently have betting websites as their main sponsor.,1680761281
+sports,The back page of the internet.,jf0zmzb,Pizzonia123,1680682774.0,"The Finnish Veikkausliiga starts today with a full six-match round! This year HJK (Helsinki) is pretty much expected to run away with the league as their closest rivals from the few past years, KuPS (from Kuopio) have seemingly slowed down, mainly due to them losing their coach (Simo Valakari) to a Latvian club and HJK operating with a huge budget advantage. The closest competitor for HJK this season perhaps are FC Honka from Espoo, who they are facing today. Inter (Turku) and KuPS are maybe the most likely to fight for the rest of the european spots, alongside potential surprise teams like Oulu and Haka.
+
+If anyone at all is interested, the OneFootball app is supposed to show the league for the first time this season, I have no idea if it's free like some other leagues or if it's pay-to-view. The reputation of our league is worse than what it's really worth, but I'm probably biased so I recommend to check out some games for yourself if you're interested in some summertime football.
+
+I'm currently sitting on the second leg of our 450km one-way trip to Kuopio for the opening match. We haven't gotten a point there since 2016, so I sure hope we're due this year.",1680761281
+sports,The back page of the internet.,jf1pluf,brazilian_liliger,1680700492.0,"Next weekend is one of the best in Brazilian season. A total of 11 (out of 27) state championship finals will be disputed, included the most prestiged tournment ones. The following tournments will find their champions:  
+
+
+**Campeonato Paulista**
+
+In the most prestiged state championship, a competition that includes 5 different Série A teams and other 4 Série B sides a big upset is about to happen. Água Santa (no national division) [has beaten Palmeiras (current Série A champions) by 2-1 in the first leg](https://www.youtube.com/watch?v=Asudf-7zjuo). Second leg will be played in Sunday at Allianz Parque with Palmeiras remaining as favorites. If the teams draw in aggregate goals the title will be decided after penalties.  
+
+
+**Campeonato Carioca**  
+The final is contested by one of the biggest derbies in Brasil, Fla-Flu (Flamengo x Fluminense) with both expected to be protagonists in next Série A. [In the first leg Flamengo have won 2-0 and took a big advantage for second leg](https://www.youtube.com/watch?v=xXFc9XPLrZo). It will be played next Sunday at Maracanã.   
+
+
+**Campeonato Gaúcho**  
+Led by Luis Suárez, Grêmio (Série A) is the favorite to win the title against the traditional underdogs Caxias (Série D). Caxias, whom surprised the local powerhouse Internacional in the semifinals, [played well at home in the first leg securing a 1-1 draw](https://www.youtube.com/watch?v=j5OHcYWfeZ4). However Grêmio appears to have all the conditions to secure their 42th title playing for a win at home.  
+
+
+**Campeonato Mineiro**  
+The dispute in Minas Gerais is being decided against two traditional sides from state capital Belo Horizonte, América and Atlético, both currently playing Série A.[In the first leg Atlético won away after a plot twisting 2-3](https://www.youtube.com/watch?v=QpmiF_UkOe8). Second leg will be played next Sunday.  
+
+
+**Campeonato Cearense**  
+Is being decided by the two biggest clubs in the state, both based in the state capital Fortaleza, Ceará (Série B) and Fortaleza (Série A). [In the first leg Fortaleza won by 2-](https://www.youtube.com/watch?v=iN4dyk0O7-U)1. Second leg will be played next Saturday. Both teams share Castelão as their homeground.  
+
+
+**Campeonato Goiano**  
+The title is being decided by two big rivals, Atlético Goianiense (Série B) and Goiás (Série A), both based in state capital Goiânia. [In the first leg Atlético built a solid 2-0 advantage at home](https://www.youtube.com/watch?v=KqdzSVqvxgg). Second leg will be played next Sunday.   
+
+
+**Campeonato Paranaense**  
+The currently local most powerful side, [Athletico Paranaense (Série A) has beaten the countryside underdogs Cascavel (Série D) away by 2-1 in a late minutes comeback last weekend.](https://www.youtube.com/watch?v=cLcdQgA552g)They will play at state capital Curitiba next Sunday to secure their title.  
+
+
+**Campeonato Catarinense**  
+One of the most balanced state championships in Brazil, Catarinense is being decided by two countryside clubs this season, Criciúma (Série B) and Brusque (Série C). [Criciúma won first leg at home and took a single 1-0 advantage](https://www.youtube.com/watch?v=XMDtVAcr2oE). Brusque will play at their homeground in the title decision next Saturday.  
+
+
+**Campeonato Alagoano**  
+The final is being played by CRB (Série B), a power local side based in state capital Maceió and ASA (Série D) the most traditional countryside club in Alagoas, based in Arapiraca. [CRB took large advantage after beating ASA away by 2-0](https://www.youtube.com/watch?v=o7UvSs1XHyw)and will decide the title at home next Saturday.  
+
+
+**Campeonato Paraibano**
+
+[Treze (no national division) won first leg against Sousa (Série D) by 2-1 at home in last weekend](https://www.youtube.com/watch?v=in1X4toB-mk). Is important to point that despite current situation, Treze is considered a big club in local context with Sousa always appearing as potential underdogs. Both clubs are based in countryside cities.  
+
+
+**Campeonato Tocantinense**  
+[Tocantinópolis (Série D) has beaten Capital (no national division) at the first leg away by 2-1](https://www.youtube.com/watch?v=TDot5PXbwY8)and will decide the title at home next Sunday.",1680761281
+sports,The back page of the internet.,jf2gdae,FerraristDX,1680711428.0,"Is there any country with as strict standards for lower tiers as Germany? In the 4th tier Regionalliga West, we have the second club that withdraws after the season, cause the regional association massively tightened standards for stadiums and these clubs can't fulfill them.
+
+My home town club Bocholt, while attempting to renovate their stadium, even named the stadium in Lotte as an alternate venue, should things go wrong. Like yeah, who will travel so far from Bocholt to Lotte?
+
+How is it in other regional federations, are there similar problems?",1680761281
+sports,The back page of the internet.,jf0z7c0,callmedontcallme,1680682377.0,"I gotta admit normally I don't really watch the cup after we've exited but DFB Pokal yesterday was hilarious and absolutely satisfying. Union getting the receipt for their terrorism with great displays by Götze and Muani. Bayern first scoring the most irregular Bayern Bonus goal imaginable and then going out in an insane fashion. Pavard trying to dig up the penalty point. Mané coming in like a coked out sailor trying to kill Freiburg's Gulde specifically. Kimmich crying. Bayern announcer cranking up the Armageddon soundtrack to drown out celebrating Freiburg fans. 10/10 no notes.   
+
+    
+Might just tune in again tonight but the most based fixture (Stuttgart - Nürnberg) isn't on free TV so probably not.",1680761281
+sports,The back page of the internet.,jf10ocy,eyesindasky,1680683706.0,"Back status: We’re
+
+Why Alty got rid of Dinanga I’ve no idea, he’s class.",1680761281
+sports,The back page of the internet.,jf2iaai,changnesia,1680712165.0,"Anyone knowledgeable about the Swedish Allsvenskan and can tell me about the characters of the clubs? Stuff like is a certain club seen as the big money club, or if another is the working man's club, etc. I plan on attending AIK matches as they are the closest, but I'm curious to hear people's thoughts on the different clubs.",1680761281
+sports,The back page of the internet.,jf3133a,jersey-city-park,1680719236.0,Roma and Lazio offices raided by police investigating capital gains and irregular transfers,1680761281
+sports,The back page of the internet.,jf1finn,callmedontcallme,1680695192.0,I just found out Xavi Simons' original name is just Xavier and that it's just a nickname. After that I found out Xavi's name is just Xavier as well. My whole life has been a lie.,1680761281
+sports,The back page of the internet.,jf160fs,Billion34,1680688411.0,"The biggest match of our season tonight at least until the next one. Basically with our backs against the wall as we can say goodbye to our championship hopes with a loss. 
+
+Still Olympiakos, somehow, even though they got a better result than both us and Panathinaikos the other day managed to go into yet another meltdown and they're going into today's match with Jose Anigo as interim manager. It would be a collective admittance of failure by all the big clubs if we let this side that changed four managers this season get any silverware. 
+
+If logic prevails against insanity tonight, it will be the first time since I think 2010 with the great Fernando Santos as manager that we got two wins in Pireaus in the same season, a feat few sides have accomplished. Otherwise I'll be banging my head against the furniture.",1680761281
+sports,The back page of the internet.,12d71um,2soccer2bot,1680750010.0,"##Welcome to the r/soccer Daily Discussion! 
+  
+###✔️ This is a thread for:  
+  
+* Discussion points that aren't worth of its own thread.   
+* Asking small questions about football to the community.
+* if you're new to the subreddit, remember to get your **team crest** [here](https://www.reddit.com/r/soccer/wiki/set_flair) and to [read our rules and submission guidelines](/r/soccer/wiki/rules#wiki_community_rules)! 
+ 
+---- 
+    
+###❌ **It is not** a thread for:  
+  
+* Comments that aren't related to football.  
+* Trolling or baiting other users or fanbases.  
+* Low-effort comments about a current match.   
+* Shitposting, brigading or excessive Meta discussion.      
+* Any other kind of toxic or unreasonable behaviour.     
+   
+The moderation team will **remove** comments that violate those rules and **ban** persistent offenders.   
+  
+Please report comments you think that break such rules, but more than anything else, **remember the human**. The Internet is full of places to discuss football in bad faith. This community tries to be an exception.  
+  
+----  
+  
+###⚽ Can't find a Match Thread?  
+  
+* If you using Old Reddit [click this link](https://old.reddit.com/r/soccer/search?q=flair%3Amatch%2Bthread+AND+NOT+flair%3Apost+AND+NOT+flair%3Apre&restrict_sr=on&sort=new&t=day#res-hide-options).  
+* If you using New Reddit you need to try [this other one.](https://new.reddit.com/r/soccer/search/?q=match%20thread&restrict_sr=1&sr_nsfw=&sort=new)  
+* If you using the Official App [press here](https://new.reddit.com/r/soccer/search/?q=match%20thread&restrict_sr=1&sr_nsfw=&sort=new) and sort by ""new"".  
+* If you're using a third-party App... ¯\\_(ツ)_/¯
+  
+If there's no Match Thread for the match you're watching you can:    
+
+* [Create one](https://www.reddit.com/r/soccer/wiki/matchthreads) yourself.    
+* Ask /u/MatchThreadder for one. You just need to send a PM to him with the subject ""Match Thread"" and the body ""Team A vs Team B"" (for example, ""Inter Milan vs. Udinese"") to get one from this great bot 🤖   
+
+----  
+
+###🔗 Other useful quick links:  
+  
+⭐ [**Star Posts**](https://www.reddit.com/r/soccer/search?sort=new&restrict_sr=on&q=flair%3A%E2%AD%90%2BStar%2BPost): the original content by those users that give their best to our community.   
+
+📺 [**What to Watch**](https://www.reddit.com/r/soccer/search?sort=new&restrict_sr=on&q=flair%3A%F0%9F%93%BAWhat%2Bto%2BWatch): quick but extremely-useful guides of next matches.     
+
+🌍 [**Not-PL Daily Discussion**](https://www.reddit.com/r/soccer/search?sort=new&restrict_sr=on&q=flair%3A%F0%9F%8C%8D%F0%9F%8C%8E%2BWorld%2BFootball%2B): for small discussions and questions about everything but the English Premier League.     
+
+📜 [**Serious Discussion**](https://www.reddit.com/r/soccer/search?sort=new&restrict_sr=on&q=flair%3ASerious): for high-quality discussion threads about certain topics.   
+
+👩 [**Womens Football**](https://www.reddit.com/r/soccer/search?sort=new&restrict_sr=on&q=flair%3AWomens%2BFootball): for women's football content.    
+  
+
+📧 [**Ping Groups**](https://www.reddit.com/r/soccer/wiki/userpinger/documentation): Join a ping group, our new system to find the content you want to see!  ([Explanation here](https://www.reddit.com/r/soccer/comments/u8qwe8/user_ping_groups_introducing_a_new_system_to_find/))
+
+
+----
+
+*This thread is posted every 23 hours to give it a different start time each day.*",1680761281
+sports,The back page of the internet.,jf52ap4,TimothyN,1680750092.0,Firing Tuchel to have Lamps finish the season is a bizarro world moment.,1680761281
+sports,The back page of the internet.,jf5573k,Killthem0d,1680751589.0,"Fat Frank becoming the interim manager means Toddfather didn’t have a replacement lined up when he gave Potter the sack, right?",1680761281
+sports,The back page of the internet.,jf52ibv,dumpystumpy,1680750199.0,Out of all the “can you believe this happened this season” i think diaz scoring that banger against palace is probably the one that acc feels like it happened last season😅,1680761281
+sports,The back page of the internet.,jf549ue,de_coherence,1680751095.0,If you ever see a comment starting with 'x fan coming in peace' you know you're about to read the most embarrassing shit ever ffs what's wrong with people,1680761281
+sports,The back page of the internet.,jf53ys8,AFA_,1680750935.0,Garnacho laughing n leaving a comment on Vinis post makes me wonder what really happened in the pitch against Barca lol,1680761281
+sports,The back page of the internet.,jf58lfl,CryptographerLife686,1680753455.0,"Barca need to get of the old players asap or they rub off that weak mentality on the youngsters. You have Jordi Alba who cried when Barca were 3-1 up on aggregate, the quote from Roberto tonight “Their first goal touched our morale” and Busquets who looks lost when Barca are down. At least Ter Stegen made a big save when the score was 4-0 unlike his performance against Bayern. The main thing would probably be focusing on depth so Xavi can avoid overplaying players until they get injured. Even though they have been grinding out wins in the league. Without Pedri it’s a different team. It’s worth mentioning that today Xavi didn’t have Dembele, Frenkie and Christensen too.",1680761281
+sports,The back page of the internet.,jf583cs,ozamsey10,1680753173.0,Lampard will win the Champions League with Chelsea after a new manager is announced leaving everything in a very awkward state.,1680761281
+sports,The back page of the internet.,jf5ffgh,Koppite93,1680757671.0,"Looking into it, with how well the LA Dodgers are run.. his Chelsea purchase just seems like Boehly having a midlife crisis, purchasing a sports car and going on a bender",1680761281
+sports,The back page of the internet.,jf5dasz,_Sylph_,1680756271.0,"It's always a bit weird to see someone takes dibs at Kane's lack of trophy as a reflection of his quality as a player or how he is not a 'winner' or doesn't possess 'winner quality'. No club could be carried by a single man, I think Kane's stat kinda speaks for itself about his quality.",1680761281
+sports,The back page of the internet.,jf5el6u,DankBrownBoiV2,1680757103.0,£36m to sack Tuchel and hire Potter in September only to give Potter the severance package in April and interim hire the guy they sacked to hire Tuchel (and who got sacked by Everton). This might be the funniest managerial activity of all time.,1680761281
+sports,The back page of the internet.,12cx66h,alexinup,1680727269.0,,1680761281
+sports,The back page of the internet.,jf3mkfx,AutoModerator,1680727269.0,"**Mirrors / Alternative Angles** 
+  
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/soccer) if you have any questions or concerns.*",1680761281
+sports,The back page of the internet.,jf3mn23,PakiIronman,1680727296.0,"back to back hat tricks, unreal form",1680761281
+sports,The back page of the internet.,jf3mxaw,Santa_Klaus_101,1680727399.0,"Hat trick for benz, but holy shit that was so smooth from vini. That little La croqueta pass. He’s been running right into the heart of Barca’s defense and midfield today.",1680761281
+sports,The back page of the internet.,jf3mz5k,dridabass,1680727417.0,That double contact from vini,1680761281
+sports,The back page of the internet.,jf3mocp,Mr_XemiReR,1680727309.0,6 goals and an assist since Ramadan started...,1680761281
+sports,The back page of the internet.,jf3mo2d,Johnin480p,1680727306.0,how do i delete comments about carlo,1680761281
+sports,The back page of the internet.,jf3n2cv,ExWhyZayd,1680727449.0,nah that was an insane assist by vinicius,1680761281
+sports,The back page of the internet.,jf3mr8g,Johnin480p,1680727339.0,vini that was gorgeous,1680761281
+sports,The back page of the internet.,jf3n1dc,Andrew_RKO,1680727439.0,Did Vini just fake that pass?,1680761281
+sports,The back page of the internet.,jf3mra7,G1Spectrum,1680727339.0,Barca getting straight dicked right now,1680761281
+sports,The back page of the internet.,12cxjfz,cieldarko,1680728089.0,,1680761281
+sports,The back page of the internet.,jf3orkm,AutoModerator,1680728090.0,"**This is a stats thread. Remember that there's only one stat post allowed per match/team, so new stats about the same will be removed. Feel free to comment other stats as a reply to this comment so users can see them too!**
+
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/soccer) if you have any questions or concerns.*",1680761281
+sports,The back page of the internet.,jf3ouv8,lospollosakhis,1680728124.0,In great company,1680761281
+sports,The back page of the internet.,jf3preb,Silent-Act191,1680728465.0,"Can somebody tell Benzema most players peak their careers before they're in their mid 30, he's forgot and it's scary.",1680761281
+sports,The back page of the internet.,jf3p2yo,TheBrownMamba8,1680728209.0,Not fair. Ramadan Karim has the deen bonus activated.,1680761281
+sports,The back page of the internet.,jf3q0ti,Aceress_origin,1680728569.0,He broke his fast with this Hat trick on Barca lol,1680761281
+sports,The back page of the internet.,jf3qexj,Arlborn,1680728723.0,Peaking just in time for the champions league most important matches. Scary.,1680761281
+sports,The back page of the internet.,jf3owyv,ArmandNinja,1680728146.0,Ramadan Karim,1680761281
+sports,The back page of the internet.,jf3p3dh,G1Spectrum,1680728214.0,That is a WILD stat,1680761281
+sports,The back page of the internet.,jf3p1ga,Ask_Asensio,1680728193.0,I think only Messi has more Goal Contributions than Karim in El Clasico history.,1680761281
+sports,The back page of the internet.,jf3pp51,watermaloneyyy,1680728441.0,Prime benzema coming back in time for the knockout stages 🔥,1680761281
+sports,The back page of the internet.,12cs8p9,dragon8811,1680716921.0,,1680761281
+sports,The back page of the internet.,jf2v0vl,Jens1893,1680716972.0,Rest in peace my Nagelsmann v Tuchel/Chelsea v Bayern CL semi dream,1680761281
+sports,The back page of the internet.,jf2v1rk,TomasRoncero,1680716981.0,they’re really thinking hard between Nagelsmann and Luis Enrique huh,1680761281
+sports,The back page of the internet.,jf2v0d2,31_whgr,1680716966.0,that’s so fucking funny,1680761281
+sports,The back page of the internet.,jf2v39o,Bocchi_the_roc,1680716996.0,Lampsball vs real Madrid. Sleep with one eyebrow raised Carlo.,1680761281
+sports,The back page of the internet.,jf2vb4c,Deficit24,1680717075.0,"People jest, but this is how those fuckers won the Champions League the first time.",1680761281
+sports,The back page of the internet.,jf2v6fb,Kreindeker,1680717028.0,"As if Talksport was first to the punch on this, incredible.",1680761281
+sports,The back page of the internet.,jf2v3fm,rjtwe,1680716998.0,Interim bosses are so hot right now,1680761281
+sports,The back page of the internet.,jf2v4ze,TheConundrum98,1680717014.0,This is how I imagine a Premier League club would look like under the ownership of Elon Musk,1680761281
+sports,The back page of the internet.,jf2v3vd,sandbag-1,1680717002.0,Hahahah I fucking love Todd Boehly. The man is comedy gold,1680761281
+sports,The back page of the internet.,jf2vhe5,us3rf,1680717139.0,talkSPORT 1-0 r/chelseafc,1680761281
+sports,The back page of the internet.,12cznt8,er_primo_der_rafa,1680732518.0,,1680761281
+sports,The back page of the internet.,jf3zsad,AutoModerator,1680732561.0,"**Mirrors / Alternative Angles** 
+  
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/soccer) if you have any questions or concerns.*",1680761281
+sports,The back page of the internet.,jf40a43,tormarod,1680732775.0,Reminder that Xavi has more yellows this season than Gavi.,1680761281
+sports,The back page of the internet.,jf417lw,GunnersaurusDen,1680733177.0,"There's being passionate and then there's just being stupid, with shit like this and the head tackles.",1680761281
+sports,The back page of the internet.,jf40tsn,ManuMora98,1680733010.0,He clearly didn't have any intention of going for the ball in both tackles,1680761281
+sports,The back page of the internet.,jf40s9t,rww07,1680732991.0,Man it would be fun when he runs into a player like Ramos or Pepe,1680761281
+sports,The back page of the internet.,jf40atd,WorthyTurkey,1680732783.0,This kid needs some humbling.,1680761281
+sports,The back page of the internet.,jf40w7w,Nursilmaz,1680733039.0,"He went from: wow this kid, so much energy and passion to: this little cunt has no chill",1680761281
+sports,The back page of the internet.,jf4aoqg,ferkk,1680737396.0,"Gavi's signature move, bumping into others.",1680761281
+sports,The back page of the internet.,jf40i4w,__mihajlo_m,1680732870.0,This kid is so lucky Ramos Pepe and Casemiro are no longer here,1680761281
+sports,The back page of the internet.,jf49pks,dmstorm22,1680736954.0,"Ref gives advantage....
+
+Gavi: ""and I took that personally....""",1680761281
+sports,The back page of the internet.,12cwml8,Dellato88,1680726061.0,,1680761281
+sports,The back page of the internet.,jf3jbp9,AutoModerator,1680726061.0,"**Mirrors / Alternative Angles** 
+  
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/soccer) if you have any questions or concerns.*",1680761281
+sports,The back page of the internet.,jf3l1eb,PanteraNegraRei,1680726694.0,">You're either not a racist or you're an asshole
+
+Pure facts",1680761281
+sports,The back page of the internet.,jf3jh5t,DudebuD16,1680726117.0,Il principino can do no wrong,1680761281
+sports,The back page of the internet.,jf3kduy,Mister_Allegri,1680726452.0,Based Marchisio as usual,1680761281
+sports,The back page of the internet.,jf3jyyh,Iswaterreallywet,1680726297.0,Always rated him.,1680761281
+sports,The back page of the internet.,jf3l3uo,Kolo_ToureHH,1680726720.0,"No bullshit, straight to the point.",1680761281
+sports,The back page of the internet.,jf3keqi,Dellato88,1680726461.0,"I wonder if FIGC President and now UEFA Vice President Gravina will decide to stick his head in the sand yet again and do nothing about this epidemic plaguing Serie A.  
+
+No whataboutisms here, and like Marchisio says in his post, you're either not racist or an asshole.
+
+Fuck all racists that decide to make these awful chants; Juventino, Interista, Laziale or whatever, it doesn't matter. Fuck you if you're a racist.",1680761281
+sports,The back page of the internet.,jf3kzb5,BarryoffofEastenders,1680726672.0,Big respect to him for this. I was wondering if any white Italians speak out about this.,1680761281
+sports,The back page of the internet.,jf3mq5b,AJMcCoy612,1680727328.0,Is racism to this extent just present in Italian football or is it in Italian society as well?,1680761281
+sports,The back page of the internet.,jf3maii,V-TriggerMachine,1680727166.0,He's a prince for a reason,1680761281
+sports,The back page of the internet.,12cvnvo,alexinup,1680724019.0,,1680761281
+sports,The back page of the internet.,jf3duv2,AutoModerator,1680724019.0,"**Mirrors / Alternative Angles** 
+  
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/soccer) if you have any questions or concerns.*",1680761281
+sports,The back page of the internet.,jf3e54q,Wappachong,1680724123.0,"it's a Vini goal, ball was already in",1680761281
+sports,The back page of the internet.,jf3dydd,HeIIbIazer23,1680724055.0,Counter attack is back on the menu boys!,1680761281
+sports,The back page of the internet.,jf3e1xu,llmoT,1680724092.0,Camavinga has been immaculate defensively wow. His tackle started it all.,1680761281
+sports,The back page of the internet.,jf3dzeo,Nathan_Gee,1680724065.0,Seemed like benzema pushed after it was over the line,1680761281
+sports,The back page of the internet.,jf3e2mg,rickowensjacket,1680724098.0,Ramadan Karim is here,1680761281
+sports,The back page of the internet.,jf3dxmi,joescranton,1680724047.0,What a counterattack,1680761281
+sports,The back page of the internet.,jf3e37p,Godilings,1680724104.0,Holy shit Barca were so close to scoring,1680761281
+sports,The back page of the internet.,jf3e43o,Albiceleste_D10S,1680724113.0,BIG save Courtois then a lightning counterattack,1680761281
+sports,The back page of the internet.,jf3er5r,Santa_Klaus_101,1680724348.0,Vini is lightning on the counter.,1680761281
+sports,The back page of the internet.,12cwbk0,alexinup,1680725411.0,,1680761281
+sports,The back page of the internet.,jf3hl39,AutoModerator,1680725411.0,"**Mirrors / Alternative Angles** 
+  
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/soccer) if you have any questions or concerns.*",1680761281
+sports,The back page of the internet.,jf3hnt6,HeIIbIazer23,1680725439.0,Benz and Modric cooking,1680761281
+sports,The back page of the internet.,jf3hv0f,ttimourrozd,1680725514.0,The fundamental Roberto gets outrun by Modric. I have nothing to say.,1680761281
+sports,The back page of the internet.,jf3hns5,This-guy-again1,1680725439.0,Ramadan Benzema hits different,1680761281
+sports,The back page of the internet.,jf3hqpu,Kherlon,1680725470.0,Benzema had too much space there,1680761281
+sports,The back page of the internet.,jf3hqhj,xXDireLegendXx,1680725467.0,Modric is the gift that keeps on giving,1680761281
+sports,The back page of the internet.,jf3how0,__mihajlo_m,1680725451.0,RAMADAN KARIM,1680761281
+sports,The back page of the internet.,jf3hrnm,ethanicles7,1680725480.0,Alonso fleeing like its the scene of the crime,1680761281
+sports,The back page of the internet.,jf3htzo,trugbee1203,1680725504.0,Modric with a great run to set it up,1680761281
+sports,The back page of the internet.,jf3hxl8,GreatSpaniard,1680725541.0,"Refuse to believe we will go to a Copa del Rey Final tbh
+
+too much PTSD",1680761281
+sports,The back page of the internet.,12cxl2n,GreatSpaniard,1680728184.0,,1680761281
+sports,The back page of the internet.,jf3p5xc,supplementarytables,1680728240.0,Don Carlo kept his word to the Osasuna manager,1680761281
+sports,The back page of the internet.,jf3pew8,ArmandNinja,1680728333.0,"In the past 30 years, Real Madrid have won the Champions Leagues almost 3 times the amount of Copa del Reys",1680761281
+sports,The back page of the internet.,jf3p8qa,tweazz,1680728269.0,"Toni Kroos will appear in a Copa del Rey final.
+
+This is not a drill!",1680761281
+sports,The back page of the internet.,jf3ppjo,Fern-ando,1680728445.0,"Since the format changed no team has won it twice. Having Valencia, Real Sociedad , Betis and now Real Madrid and Osasuna as teams that barely even reached finals before.",1680761281
+sports,The back page of the internet.,jf3pmsq,JPA-3,1680728416.0,"that's going to be interesting, fucking hell they are scary when they play like that.
+
+No one will be as excited as us for being there so I am sure we will fight till the end, but not sure we can shithouse a final against these guys to be honest lmao",1680761281
+sports,The back page of the internet.,jf3q9kr,pm_mi_lou,1680728664.0,"After years, finally we have 2 under dogs in the final of the Kings Cup. Let's go!!!",1680761281
+sports,The back page of the internet.,jf3p2z0,GreatSpaniard,1680728209.0,"Ancelotti = Copa del Rey God
+
+First time we have beaten Barcelona by 3+ goals in competitive fixtures since 2008 before Benzema and CR7.
+
+First Copa del Rey final since 2014
+
+TEARS IN MY EYES",1680761281
+sports,The back page of the internet.,jf3prr7,Ralf_The_Hustler,1680728470.0,I really admire araujo but how the fuck did he manage to escape a card in this  game? Looks like barca have got their own casemiro now.,1680761281
+sports,The back page of the internet.,jf3q6kw,Moaadovich,1680728631.0,"Kinda off topic, but whoever was doing the camera directing for that game should be sacked! So many things are happening during the game, but we end up seeing drawn out replays and player shots.",1680761281
+sports,The back page of the internet.,jf3q7ql,AbleFig,1680728644.0,Camavinga is HIM,1680761281
