@@ -109,7 +109,7 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, comment_limit=5, topic="re
 
 if __name__ == "__main__":
     reddit_agent = praw.Reddit(client_id=REDDIT_CLIENT_ID, client_secret=REDDIT_CLIENT_SECRET, user_agent=REDDIT_USER_AGENT)
-    reddit_scrapper(reddit_agent, ["soccer"], limit=10, comment_limit=10, topic="sports")
+    reddit_scrapper(reddit_agent, ["school", "food", "travel"], limit=10, comment_limit=10, topic="analysis-demo")
 
 
 
