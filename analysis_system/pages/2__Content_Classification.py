@@ -22,7 +22,7 @@ def run():
         reddit_content = content_explorer.load_data()
 
         # Preprocess text
-        reddit_content["body"] = reddit_content["body"].apply(text_preprocessing.preprocess_text)
+        reddit_content["body_processed"] = reddit_content["body"].apply(text_preprocessing.preprocess_text)
 
         # Predict targets
         predicted_outputs = model_inference.predict_targets(reddit_content)

@@ -40,7 +40,7 @@ def predict_targets(reddit_content):
     targets = model_dict["target_list"]
 
     # vectorize text
-    vectorized_text = vectorizer.transform(reddit_content["body"])
+    vectorized_text = vectorizer.transform(reddit_content["body_processed"])
 
     # predict targets
     predictions = model.predict(vectorized_text)
