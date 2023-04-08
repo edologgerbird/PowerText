@@ -8,7 +8,7 @@ import functions.content_explorer as content_explorer
 import utils.design_format as format
 import os 
 
-deployed_on_st = True
+deployed_on_st = False
 if deployed_on_st:
     path = "analysis_system/"
 else:
@@ -130,9 +130,11 @@ def display_overall_prediction_stats(predicted_content):
     n_violations_total = int(n_violations_by_target.sum())
 
     # Display as metric cards
-    columns = st.columns(2)
+    columns = st.columns(3)
     columns[0].metric(label="Number of Posts Predicted", value=n_rows)
-    columns[1].metric(label="Number of Violations", value=n_violations_total)
+    columns[1].metric(label="Number of Predicted Violations", value=n_violations_total)
+    columns[2].metric(label="Percentage of Predicted Violations", value=f"{round(n_violations_total/n_rows*100, 2)}%")
+
 
 def display_prediction_stats_by_target(predicted_content):
     targets = load_model_dict()["target_list"]

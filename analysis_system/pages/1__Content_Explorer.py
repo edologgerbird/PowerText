@@ -27,7 +27,6 @@ def run():
         st.write("Here is a summary of the Subreddits from the past 24 hours:")
         st.write("")
 
-        # display subreddit stats
         content_explorer.display_subreddit_stats(reddit_content)
         format.horizontal_line()
 

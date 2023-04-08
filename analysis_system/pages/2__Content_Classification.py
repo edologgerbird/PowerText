@@ -39,6 +39,8 @@ def run():
         st.write("")
         model_inference.display_overall_prediction_stats(predicted_outputs)
 
+
+
         format.horizontal_line()
 
         # Display statistics by target and subreddit
@@ -67,9 +69,8 @@ def run():
         st.write("")
         n_post = st.slider("Number of Reddit posts to display", min_value=1, max_value=predicted_outputs.shape[0], value=10)
 
-
-        # if show_posts:
         format.horizontal_line()
+        st.subheader(f"Post type: {target}")
         if target == "No Violations":
             filtered_output = model_inference.get_posts_without_violation(predicted_outputs)
             model_inference.display_post_from_df(filtered_output, n_post)
