@@ -131,3 +131,11 @@ dmypy.json
 cache_files/
 
 transfer/
+
+data/
+
+data_/
+
+models/
+
+models_/
