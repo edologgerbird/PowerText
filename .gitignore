@@ -136,3 +136,8 @@ data/
 models/
 
 cache_files/
+
+# folders
+data/
+cache_files/
+models/
