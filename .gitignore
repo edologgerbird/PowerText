@@ -127,15 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
 cache_files/
-
 transfer/
 
-data/
-
 data_/
-
-models/
-
 models_/
+
+# folders
+data/
+cache_files/
+models/
+*.ipynb
