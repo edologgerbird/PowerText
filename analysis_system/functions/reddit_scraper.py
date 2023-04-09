@@ -30,6 +30,8 @@ input:
 output:
 - praw instance for reddit API account
 '''
+
+
 def reddit_agent_setup(client_id, client_secret, user_agent):
     return praw.Reddit(client_id=client_id, client_secret=client_secret, user_agent=user_agent)
 
@@ -50,6 +52,8 @@ inputs:
 outputs:
 - an excel file stored as "{topic}{unix_timestamp}.xlsx" in current directory
 '''
+
+
 def reddit_scrapper(reddit, subreddit_lists, limit=5, comment_limit=5, topic="reddit_output"):
     # set list to store records
     records = []
@@ -93,24 +97,30 @@ def reddit_scrapper(reddit, subreddit_lists, limit=5, comment_limit=5, topic="re
             count_posts += 1
 
     # convert records to dataframe and output in Excel
-    output = pd.DataFrame(records, columns=["topic", "thread", "id", "author", "timestamp", "body"])
+    output = pd.DataFrame(
+        records, columns=["topic", "thread", "id", "author", "timestamp", "body"])
     output_timestamp = str(int(time.time()))
     output["scraped_at"] = output_timestamp
 
     # concat to existing file if exists
     try:
-        reddit_store = pd.read_csv(f"{REDDIT_SCRAPED_DATA_PATH}reddit_store.csv")
+        reddit_store = pd.read_csv(
+            f"{REDDIT_SCRAPED_DATA_PATH}reddit_store.csv")
         print("INFO: reddit_store.csv exists, appending to existing file")
     except:
         reddit_store = pd.DataFrame()
         print("INFO: reddit_store.csv does not exist, creating new file")
-    reddit_store = pd.concat([reddit_store, output], axis=0).drop_duplicates('id').reset_index(drop=True)
-    reddit_store.to_csv(f"{REDDIT_SCRAPED_DATA_PATH}reddit_store.csv", index=False)
+    reddit_store = pd.concat([reddit_store, output], axis=0).drop_duplicates(
+        'id').reset_index(drop=True)
+    reddit_store.to_csv(
+        f"{REDDIT_SCRAPED_DATA_PATH}reddit_store.csv", index=False)
+
 
 if __name__ == "__main__":
-    reddit_agent = praw.Reddit(client_id=REDDIT_CLIENT_ID, client_secret=REDDIT_CLIENT_SECRET, user_agent=REDDIT_USER_AGENT)
-    reddit_scrapper(reddit_agent, ["school", "food", "travel"], limit=10, comment_limit=10, topic="analysis-demo")
-
+    reddit_agent = praw.Reddit(
+        client_id=REDDIT_CLIENT_ID, client_secret=REDDIT_CLIENT_SECRET, user_agent=REDDIT_USER_AGENT)
+    reddit_scrapper(reddit_agent, [
+                    "school", "food", "travel"], limit=10, comment_limit=10, topic="analysis-demo")
 
 
 '''

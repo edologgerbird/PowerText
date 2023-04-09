@@ -10,19 +10,26 @@ import functions.polarity_analysis as polarity_analysis
 st.title("😂 Sentiment Polarity Analysis")
 format.horizontal_line()
 
+
 def run():
+    '''This function runs the polarity analysis app.
+    '''
+
     if util.check_session_state_key("csv_file"):
         # Load data
         reddit_content = content_explorer.load_data()
 
         # Preprocess text
-        reddit_content["body"] = reddit_content["body"].apply(text_preprocessing.preprocess_text)
+        reddit_content["body"] = reddit_content["body"].apply(
+            text_preprocessing.preprocess_text)
 
         # Calculate polarity
-        reddit_content["polarity"] = reddit_content["body"].apply(polarity_analysis.polarity_analysis)
+        reddit_content["polarity"] = reddit_content["body"].apply(
+            polarity_analysis.polarity_analysis)
 
         st.subheader("Overall Polarity")
-        st.write("Here is an overall polarity of the Reddit posts from the past 24 hours: ")
+        st.write(
+            "Here is an overall polarity of the Reddit posts from the past 24 hours: ")
         st.write("")
 
         # Display overall polarity
@@ -34,23 +41,26 @@ def run():
 
         # Polarity analysis by subreddit
         st.subheader("Polarity by Subreddit")
-        st.write("Here is a summary of the polarity of individual Subreddits from the past 24 hours:")
+        st.write(
+            "Here is a summary of the polarity of individual Subreddits from the past 24 hours:")
         st.write("")
 
         # display subreddit stats
-        selection_options = list(content_explorer.get_unique_subreddits(reddit_content))
+        selection_options = list(
+            content_explorer.get_unique_subreddits(reddit_content))
         subreddit = st.selectbox("Select Subreddit", selection_options)
         st.write("")
 
         # Display polarity by subreddit
-        polarity_analysis.display_polarity_stats_by_subreddit(reddit_content, subreddit)
+        polarity_analysis.display_polarity_stats_by_subreddit(
+            reddit_content, subreddit)
 
         # Visualise Polarity by subreddit
-        polarity_analysis.visualise_polarity_by_subreddit(reddit_content, subreddit)
+        polarity_analysis.visualise_polarity_by_subreddit(
+            reddit_content, subreddit)
     else:
         util.no_file_uploaded()
 
-        
 
 if __name__ == "__main__":
     # try:

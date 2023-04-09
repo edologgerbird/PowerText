@@ -8,8 +8,15 @@ import utils.utility as util
 import utils.design_format as format
 
 
-
 def load_data(time_delta=24*60*60):
+    '''This function loads the data from the cache file. If the cache file is not present, it downloads the data from the data folder.
+
+    Args:
+        time_delta (int): The time delta in seconds.
+
+    Returns:
+        reddit_content (pd.DataFrame): The reddit content.
+    '''
 
     # load data
     reddit_content = st.session_state["csv_file"]
@@ -22,6 +29,15 @@ def load_data(time_delta=24*60*60):
 
 
 def display_overall_stats(reddit_content):
+    '''This function displays the overall stats of the reddit content.
+    
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        None
+    '''
+
     n_rows = reddit_content.shape[0]
     n_subreddits = len(get_unique_subreddits(reddit_content))
 
@@ -32,11 +48,29 @@ def display_overall_stats(reddit_content):
 
 
 def get_unique_subreddits(reddit_content):
+    '''This function returns the unique subreddits in the reddit content.
+    
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        unique_subreddits (list): The unique subreddits.
+    '''
+
     unique_subreddits = reddit_content["thread"].unique()
     return unique_subreddits
 
 
 def display_subreddit_stats(reddit_content):
+    '''This function displays the stats of the subreddits in the reddit content.
+    
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        None
+    '''
+
     # display subreddit stats
     subreddit_stats = reddit_content.groupby(
         "thread").count()["id"].reset_index()
@@ -64,6 +98,15 @@ def display_subreddit_stats(reddit_content):
 
 
 def visualise_reddit_content(reddit_content):
+    '''This function visualises the reddit content.
+    
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        None
+    '''
+
     filtered_content = dataframe_explorer(reddit_content)
     st.dataframe(filtered_content)
 
@@ -71,6 +114,15 @@ def visualise_reddit_content(reddit_content):
 # show random post from a given subreddit
 
 def show_random_post_from_subreddit(reddit_content, subreddit):
+    '''This function shows a random post from a given subreddit.
+    
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        None
+    '''
+
     # filter out posts from a given subreddit
     filtered_content = reddit_content[reddit_content["thread"] == subreddit]
 
@@ -79,11 +131,31 @@ def show_random_post_from_subreddit(reddit_content, subreddit):
     reddit_card(random_post)
     return random_post
 
+
 def generate_random_post(reddit_content):
+    '''This function generates a random post.
+    
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        random_post (pd.DataFrame): The random post.
+    '''
+
     random_post = reddit_content.sample(1)
     return random_post
 
+
 def reddit_card(content):
+    '''This function displays the content of a reddit post.
+    
+    Args:
+        content (pd.DataFrame): The reddit content.
+        
+    Returns:
+        None
+    '''
+    
     st.subheader(content["thread"].values[0])
     st.write(content["body"].values[0])
     st.caption(content["author"].values[0])

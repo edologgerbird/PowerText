@@ -10,10 +10,29 @@ from textblob import TextBlob
 
 
 def polarity_analysis(text):
+    '''This function calculates the polarity of the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        polarity (float): The polarity of the text.
+    '''
+
     polarity = TextBlob(text).sentiment.polarity
     return polarity
 
+
 def visualise_polarity(content):
+    '''This function visualises the polarity of the text.
+
+    Args:
+        content (pd.DataFrame): The content to be visualised.
+
+    Returns:
+        None
+    '''
+
     # visualise polarity
     polarity_chart = alt.Chart(content).mark_bar().encode(
         x=alt.X("polarity"),
@@ -25,7 +44,17 @@ def visualise_polarity(content):
 
     return
 
+
 def display_polarity_stats(content, n_decimals=5):
+    '''This function displays the polarity stats of the text.
+
+    Args:
+        content (pd.DataFrame): The content to be visualised.
+
+    Returns:
+        None
+    '''
+
     # Mean and SD
     mean_polarity = content["polarity"].mean()
     sd_polarity = content["polarity"].std()
@@ -36,12 +65,24 @@ def display_polarity_stats(content, n_decimals=5):
         help_text = "A polarity score above 0 indicates a generally positive sentiment."
     else:
         help_text = "A polarity score below 0 indicates a generally negative sentiment."
-    columns[0].metric(label="Mean Polarity", value=round(mean_polarity, n_decimals), help=help_text)
-    columns[1].metric(label="SD Polarity", value=round(sd_polarity, n_decimals), help="A high SD indicates a lot of variation in the polarity scores.")
+    columns[0].metric(label="Mean Polarity", value=round(
+        mean_polarity, n_decimals), help=help_text)
+    columns[1].metric(label="SD Polarity", value=round(sd_polarity, n_decimals),
+                      help="A high SD indicates a lot of variation in the polarity scores.")
 
     return
 
+
 def display_polarity_stats_by_subreddit(content, subreddit, n_decimals=5):
+    '''This function displays the polarity stats of the text by subreddit.
+
+    Args:
+        content (pd.DataFrame): The content to be visualised.
+
+    Returns:
+        None
+    '''
+
     # filter by subreddit
     content_filtered = content[content["thread"] == subreddit]
 
@@ -49,7 +90,18 @@ def display_polarity_stats_by_subreddit(content, subreddit, n_decimals=5):
 
     return
 
+
 def visualise_polarity_by_subreddit(content, subreddit):
+    '''This function visualises the polarity of the text by subreddit.
+
+    Args:
+        content (pd.DataFrame): The content to be visualised.
+        subreddit (str): The subreddit to be visualised.
+
+    Returns:
+        None
+    '''
+
     # filter by subreddit
     content_filtered = content[content["thread"] == subreddit]
 

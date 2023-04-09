@@ -6,43 +6,84 @@ import numpy as np
 import pandas as pd
 import nltk
 
-
-# nltk.download('stopwords')
-# stop_words = nltk.corpus.stopwords.words('english')
 nltk.download('wordnet')
 
+
 def load_stopwords():
+    '''This function loads the stopwords from the cache file. If the cache file is not present, it downloads the stopwords from nltk.
+
+    Returns:
+        stopwords (list): The list of stopwords.
+    '''
+
     try:
         with open('cache_files/stopwords.txt', "r") as word_list:
             stopwords = word_list.read().split('\n')
     except:
         nltk.download('stopwords')
         stopwords = nltk.corpus.stopwords.words('english')
-        # with open('cache_files/stopwords.txt', "w") as word_list:
-        #     for word in stopwords:
-        #         word_list.write(word + '\n')
     return stopwords
 
 # Removing punctuations
 
+
 def remove_punctuations(text):
+    '''This function removes the punctuations from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     for punctuation in string.punctuation:
         text = text.replace(punctuation, '')
     return text
 
 # Coverting to lowercase
 
+
 def to_lowercase(text):
+    '''This function converts the text to lowercase.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     return text.lower()
 
 # Removing non-alphanumeric characters
 
+
 def remove_non_alphanumeric(text):
+    '''This function removes the non-alphanumeric characters from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     return re.sub(r'\W+', ' ', text)
 
 # Removing stopwords
 
+
 def remove_stopwords(text):
+    '''This function removes the stopwords from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     stopwords = load_stopwords()
     text = text.split()
     text = [word for word in text if word not in stopwords]
@@ -50,32 +91,83 @@ def remove_stopwords(text):
 
 # Removing numbers
 
+
 def remove_numbers(text):
+    '''This function removes the numbers from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     return re.sub(r'\d+', '', text)
 
 # Removing words with length less than 2
 
+
 def remove_words_with_length_less_than_2(text):
+    '''This function removes the words with length less than 2 from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     text = text.split()
     text = [word for word in text if len(word) > 1]
     return " ".join(text)
 
 # Removing extra spaces
 
+
 def remove_extra_spaces(text):
+    '''This function removes the extra spaces from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     return " ".join(text.split())
 
 # Removing extra newlines
 
+
 def remove_extra_newlines(text):
+    '''This function removes the extra newlines from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     return re.sub(r'    ', '    ', text)
 
 # Removing extra tabs
 
+
 def remove_extra_tabs(text):
+    '''This function removes the extra tabs from the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     return re.sub(r'  ', '  ', text)
 
 # Removing punctuations
+
 
 def remove_punctuations(text):
     for punctuation in string.punctuation:
@@ -84,7 +176,17 @@ def remove_punctuations(text):
 
 # Lemmatizing text
 
+
 def lemmatize_text(text):
+    '''This function lemmatizes the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     try:
         lemmatizer = nltk.stem.WordNetLemmatizer()
     except:
@@ -96,49 +198,48 @@ def lemmatize_text(text):
 
 # Stemming text
 
+
 def stem_text(text):
+    '''This function stems the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     stemmer = nltk.stem.PorterStemmer()
     text = text.split()
     text = [stemmer.stem(word) for word in text]
     return " ".join(text)
 
-# Converting text to a list of paragraphs
-
-def split_text_to_para(text):
-    return text.split("\n\n")
-
-# Converting text to a list of sentences
-
-def split_text_to_sentences(text):
-    return nltk.sent_tokenize(text)
-
-# Converting text to a list of words
-
-def split_text_to_words(text):
-    return nltk.word_tokenize(text)
-
-# Text summarization
-
-def summarize_text(text, ratio=0.2):
-    return nltk.summarize(text, ratio=ratio)
-
 # Text Preprocessing Pipeline
 
-def preprocess_text(text, 
-                    _remove_punctuations=True, 
-                    _to_lowercase=True, 
-                    _remove_non_alphanumeric=True, 
-                    _remove_stopwords=True, 
-                    _remove_numbers=True, 
-                    _remove_extra_spaces=True, 
-                    _remove_extra_newlines=True, 
-                    _remove_extra_tabs=True, 
-                    _lemmatize_text=True, 
+
+def preprocess_text(text,
+                    _remove_punctuations=True,
+                    _to_lowercase=True,
+                    _remove_non_alphanumeric=True,
+                    _remove_stopwords=True,
+                    _remove_numbers=True,
+                    _remove_extra_spaces=True,
+                    _remove_extra_newlines=True,
+                    _remove_extra_tabs=True,
+                    _lemmatize_text=True,
                     _stem_text=True,
                     _remove_words_with_length_less_than_2=True):
-    
+    '''This function preprocesses the text.
+
+    Args:
+        text (str): The text to be processed.
+
+    Returns:
+        text (str): The processed text.
+    '''
+
     text = str(text)
-    
+
     if _remove_punctuations:
         text = remove_punctuations(text)
     if _to_lowercase:
@@ -162,6 +263,7 @@ def preprocess_text(text,
     if _remove_words_with_length_less_than_2:
         text = remove_words_with_length_less_than_2(text)
     return text
+
 
 # Testing
 if __name__ == "__main__":
