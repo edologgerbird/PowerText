@@ -8,7 +8,7 @@ import functions.content_explorer as content_explorer
 import utils.design_format as format
 import os 
 
-deployed_on_st = False
+deployed_on_st = True
 if deployed_on_st:
     path = "analysis_system/"
 else:
