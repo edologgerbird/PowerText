@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Textra.home </title>
+    <title> PowerText User Interface </title>
     <link rel="stylesheet" href= {% static '/css/tailwind.css/' %}/>
 </head>
 <body>
@@ -14,21 +14,22 @@
         <div class="flex flex-wrap place-items-center">
             <div class="w-full md:w-2/3 xl:w-3/5 p-6 h-200 place-items-center">
                 <div class="bg-white border-transparent shadow-xl w-full">
-                    <div class="bg-gradient-to-b from-gray-300 to-gray-100 uppercase
-                        text-gray-800 border-b-2 border-gray-300 p-2 w-full">
-                        <h2 class="font-bold uppercase text-gray-600 hover:text-gray-700">
-                            Input your social media text here!
+                    <div class="bg-white border-b-4 border-blue-600 p-4 w-full">
+                        <h2 class="font-bold uppercase text-black-800 text-xl hover:text-blue-800">
+                            Post Input
                         </h2>
                     </div>
-                    <div class="w-full p-6" id = "text-input">
-                        <form>
+                    <div class="bg-white border-b-4 border-blue-600 p-4 w-full" id = "text-input">
+                        {% csrf_token %}
+                        <form action="" method="post" enctype="multipart/form-data">
                             <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50
                                 dark:bg-gray-700 dark:border-gray-600">
-                                <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-                                    <label for="comment" class="sr-only">Your text</label>
-                                    <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900
+                                <div class="px-4 py-2 bg-white dark:bg-gray-800">
+                                    <label class="sr-only">Your text</label>
+                                    <input type="hidden" name="form_id" value="text_submit">
+                                    <textarea name="comment" rows="5" class="w-full px-0 text-sm text-gray-900
                                         bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white
-                                        dark:placeholder-gray-400" placeholder="Write a text..." required>
+                                        dark:placeholder-gray-400" placeholder="Write a text..." value="" required>
                                     </textarea>
                                 </div>
                                 <div class="flex items-center justify-between px-3 py-2 border-t
@@ -43,24 +44,13 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="flex flex-wrap">
-            <div class="w-full md:w-2/3 xl:w-3/5 p-6 h-50 place-items-center">
-                <div class="bg-white border-transparent shadow-xl w-full">
-                    <div class="bg-gradient-to-b from-gray-300 to-gray-100 uppercase
-                        text-gray-800 border-b-2 border-gray-300 p-2 w-full">
-                        <h2 class="font-bold uppercase text-gray-600 hover:text-gray-700">
+                <div class="bg-white border-b-4 border-blue-600 p-4 w-full">
+                    <div class="bg-white p-2 w-full">
+                        <h2 class="font-bold uppercase text-xl text-black-900 hover:text-blue-800">
                             Results
                         </h2>
                     </div>
                 </div>
-            </div>
-            <div class="flex justify-around">
-                    <card></card>
-                    <card></card>
-                    <card></card>
-                    <card></card>
             </div>
         </div>
     </div>
@@ -69,8 +59,26 @@
 
 <style>
 body {
-	background-image: url({% static '/assets/wallpaper.png/' %});
+	background-image: url({% static '/assets/wallpaper/bg_5.jpg/' %});
 }
 
 </style>
+
+<script>
+    window.onload = function () {
+
+        function changeImage() {
+            var BackgroundImg = [
+                "{% static '/assets/wallpaper/bg_1.jpg/' %}",
+                "{% static '/assets/wallpaper/bg_2.jpg/' %}",
+                "{% static '/assets/wallpaper/bg_3.jpg/' %}",
+                "{% static '/assets/wallpaper/bg_4.jpg/' %}",
+                "{% static '/assets/wallpaper/bg_5.jpg/' %}",
+            ];
+            var i = Math.floor((Math.random() * 5));
+            document.body.style.backgroundImage = 'url("' + BackgroundImg[i] + '")';
+        }
+        window.setInterval(changeImage, 8000);
+    }
+</script>
 
