@@ -30,10 +30,10 @@ def load_data(time_delta=24*60*60):
 
 def display_overall_stats(reddit_content):
     '''This function displays the overall stats of the reddit content.
-    
+
     Args:
         reddit_content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         None
     '''
@@ -49,10 +49,10 @@ def display_overall_stats(reddit_content):
 
 def get_unique_subreddits(reddit_content):
     '''This function returns the unique subreddits in the reddit content.
-    
+
     Args:
         reddit_content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         unique_subreddits (list): The unique subreddits.
     '''
@@ -63,10 +63,10 @@ def get_unique_subreddits(reddit_content):
 
 def display_subreddit_stats(reddit_content):
     '''This function displays the stats of the subreddits in the reddit content.
-    
+
     Args:
         reddit_content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         None
     '''
@@ -99,10 +99,10 @@ def display_subreddit_stats(reddit_content):
 
 def visualise_reddit_content(reddit_content):
     '''This function visualises the reddit content.
-    
+
     Args:
         reddit_content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         None
     '''
@@ -115,10 +115,10 @@ def visualise_reddit_content(reddit_content):
 
 def show_random_post_from_subreddit(reddit_content, subreddit):
     '''This function shows a random post from a given subreddit.
-    
+
     Args:
         reddit_content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         None
     '''
@@ -134,10 +134,10 @@ def show_random_post_from_subreddit(reddit_content, subreddit):
 
 def generate_random_post(reddit_content):
     '''This function generates a random post.
-    
+
     Args:
         reddit_content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         random_post (pd.DataFrame): The random post.
     '''
@@ -148,14 +148,14 @@ def generate_random_post(reddit_content):
 
 def reddit_card(content):
     '''This function displays the content of a reddit post.
-    
+
     Args:
         content (pd.DataFrame): The reddit content.
-        
+
     Returns:
         None
     '''
-    
+
     st.subheader(content["thread"].values[0])
     st.write(content["body"].values[0])
     st.caption(content["author"].values[0])
