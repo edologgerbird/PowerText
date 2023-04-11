@@ -7,6 +7,8 @@ import functions.model_inference as model_inference
 import functions.text_preprocessing as text_preprocessing
 import functions.content_explorer as content_explorer
 
+format.add_logo()
+
 
 st.title("🔮 Content Classification")
 format.horizontal_line()
@@ -20,7 +22,7 @@ def run():
         format.align_text(
             "In this page, we will classify the Reddit posts from the past 24 hours, based on their Terms-of-Service violations.", "justify")
         format.align_text(
-            "For this demonstration, we trained and deployed a PassiveAggressiveClassifier to classify the scraped content.", "justify")
+            "For this demonstration, we trained and deployed HateBERT to classify the scraped content.", "justify")
         st.write("")
         st.write("")
         # Load data
@@ -29,9 +31,10 @@ def run():
         # Preprocess text
         reddit_content["body_processed"] = reddit_content["body"].apply(
             text_preprocessing.preprocess_text)
-
         # Predict targets
-        predicted_outputs = model_inference.predict_targets(reddit_content)
+        with st.spinner("Predicting targets using HateBert..."):
+            predicted_outputs = model_inference.predict_targets_bert(
+                reddit_content)
 
         with st.expander("View Raw Data with Predicted Output"):
             content_explorer.visualise_reddit_content(predicted_outputs)

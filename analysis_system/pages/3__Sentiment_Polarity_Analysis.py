@@ -7,6 +7,9 @@ import functions.content_explorer as content_explorer
 import functions.text_preprocessing as text_preprocessing
 import functions.polarity_analysis as polarity_analysis
 
+
+format.add_logo()
+
 st.title("😂 Sentiment Polarity Analysis")
 format.horizontal_line()
 

@@ -6,6 +6,10 @@ import altair as alt
 import functions.text_preprocessing as text_preprocessing
 import functions.content_explorer as content_explorer
 import utils.design_format as format
+import torch
+from torch.utils.data import Dataset, DataLoader
+from functions.SingleClassifier import SingleClassifier
+from functions.DS import DS
 import os
 
 deployed_on_st = True
@@ -25,22 +29,116 @@ def load_model_dict():
     # load model dictionary
     model_dict = pickle.load(
         open(f"{path}models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
-    # model_dict = pickle.load(open("analysis_system/models/PassiveAggressiveClassifier_model_dict.pkl", "rb"))
 
     return model_dict
 
 
-def get_targets():
+def load_bert_model():
+    '''This function loads the BERT model.
+
+    Returns:
+        model (torch.nn.Module): The BERT model.
+    '''
+
+    model_ckpt = "GroNLP/hateBERT"
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+    model_weight = torch.load(f"{path}models/model_weights_bert1.pth")
+    model = SingleClassifier(model_ckpt, nlabels=8).to(device)
+
+    model.load_state_dict(model_weight)
+
+    return model
+
+
+def predict_targets_bert(reddit_content):
+    '''This function predicts the targets for the reddit content using BERT.
+
+    Args:
+        reddit_content (pd.DataFrame): The reddit content.
+
+    Returns:
+        reddit_content (pd.DataFrame): The reddit content with the predicted targets.
+    '''
+
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    model_ckpt = "GroNLP/hateBERT"
+    batch_size = 16
+    unseen_ds = DS(reddit_content, model_ckpt)
+    unseen_dl = DataLoader(unseen_ds, batch_size=batch_size,
+                           collate_fn=unseen_ds.collate_fn)
+
+    bert_model = load_bert_model()
+
+    label_preds = []
+
+    with torch.no_grad():
+        for i, data in enumerate(unseen_dl):
+            comments, _ = data
+            label_outputs = bert_model(comments)
+            label_preds.extend(label_outputs.argmax(-1).cpu().numpy())
+
+    targets = [
+        'hate',
+        'privacy',
+        'sexual',
+        'impersonation',
+        'illegal',
+        'advertisement',
+        'ai',
+        'neutral'
+    ]
+
+    predictions = pd.DataFrame(label_preds)  # , columns=targets)
+
+    # Dummy encode predictions to targets
+    predictions = predictions.replace(0, 'hate')
+    predictions = predictions.replace(1, 'privacy')
+    predictions = predictions.replace(2, 'sexual')
+    predictions = predictions.replace(3, 'impersonation')
+    predictions = predictions.replace(4, 'illegal')
+    predictions = predictions.replace(5, 'advertisement')
+    predictions = predictions.replace(6, 'ai')
+    predictions = predictions.replace(7, 'neutral')
+    predictions = pd.get_dummies(predictions)
+    prediction_columns = [col_name[2:] for col_name in predictions.columns]
+    predictions.columns = prediction_columns
+
+    # Populating missing target columns
+    for col in targets:
+        if col not in predictions.columns:
+            predictions[col] = 0
+
+    # merge predictions with reddit_content
+    reddit_content = reddit_content.reset_index(drop=True)
+    reddit_content = pd.concat([reddit_content, predictions], axis=1)
+    
+
+    return reddit_content
+
+
+def get_targets(bert=True):
     '''This function returns the list of targets.
 
     Returns:
         targets (list): The list of targets.
     '''
 
-    # load model dict
-    model_dict = load_model_dict()
+    if bert:
+        targets = [
+                'hate',
+                'privacy',
+                'sexual',
+                'impersonation',
+                'illegal',
+                'advertisement',
+                'ai',
+                'neutral'
+            ]
+    else:
+        model_dict = load_model_dict()
 
-    targets = model_dict["target_list"]
+        targets = model_dict["target_list"]
 
     return targets
 
@@ -74,7 +172,7 @@ def predict_targets(reddit_content):
     reddit_content = reddit_content.reset_index(drop=True)
     # merge predictions with reddit_content
     reddit_content = pd.concat([reddit_content, predictions], axis=1)
-
+    
     return reddit_content
 
 
@@ -166,6 +264,8 @@ def save_feedback_to_datastore(feedback):
     try:
         feedback_df = pd.read_csv(f"{path}data_store/feedback/feedback.csv")
         feedback_df = pd.concat([feedback_df, feedback], axis=0)
+        if "Neutral" in feedback_df.columns:
+            feedback_df = feedback_df.drop("Neutral", axis=1)
         feedback_df.to_csv(
             f"{path}data_store/feedback/feedback.csv", index=False)
 

@@ -7,7 +7,7 @@ def page_under_construction(page_name, error=None):
     Args:
         page_name (str): Name of the page
         error (Exception, optional): Error message. Defaults to None.
-        
+
     Returns:
         None
     '''
@@ -26,12 +26,13 @@ def page_under_construction(page_name, error=None):
             f'{page_name} is currently under construction! Do come back soon!')
     st.stop()
 
+
 def cache_object(object, key):
     '''Function to cache objects in Streamlit Session State
     Args:
         object (object): Object to be cached
         key (str): Key to be used to cache the object
-        
+
     Returns:
         object: Cached object
     '''
@@ -42,6 +43,7 @@ def cache_object(object, key):
         st.session_state[key] = object
     return st.session_state[key]
 
+
 def customDisppearingMsg(msg, wait=3, type_='success', icon=None):
     '''Function to display a custom disappearing message
     Args:
@@ -49,7 +51,7 @@ def customDisppearingMsg(msg, wait=3, type_='success', icon=None):
         wait (int, optional): Time to wait before disappearing. Defaults to 3.
         type_ (str, optional): Type of message. Defaults to 'success'.
         icon (str, optional): Icon to be displayed. Defaults to None.
-        
+
     Returns:
         object: Placeholder object
     '''
@@ -66,11 +68,12 @@ def customDisppearingMsg(msg, wait=3, type_='success', icon=None):
         placeholder.empty()
     return placeholder
 
+
 def check_session_state_key(key):
     '''Function to check if a key exists in Streamlit Session State
     Args:
         key (str): Key to be checked
-        
+
     Returns:
         bool: True if key exists, False otherwise
     '''
@@ -79,14 +82,16 @@ def check_session_state_key(key):
         return False
     else:
         return True
-    
+
+
 def no_file_uploaded():
     '''Function to display a message when no file is uploaded
     Args:
         None
-        
+
     Returns:
         None
     '''
-    
-    customDisppearingMsg("No file uploaded yet! Please upload your CSV file in the 'Home' page!", wait=-1, type_='warning', icon='⚠️')
+
+    customDisppearingMsg(
+        "No file uploaded yet! Please upload your CSV file in the 'Home' page!", wait=-1, type_='warning', icon='⚠️')

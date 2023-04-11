@@ -5,6 +5,7 @@ import utils.utility as util
 import utils.design_format as format
 import functions.content_explorer as content_explorer
 
+format.add_logo()
 
 st.title("🔍 Content Explorer")
 format.horizontal_line()
@@ -23,7 +24,8 @@ def run():
         st.write(
             "Here is an overall summary of the Reddit posts from the past 24 hours: ")
         st.write("")
-        content_explorer.display_overall_stats(reddit_content)
+        with st.spinner("Generating statistics..."):
+            content_explorer.display_overall_stats(reddit_content)
         format.horizontal_line()
 
         # display subreddit stats
