@@ -7,7 +7,6 @@ import pandas as pd
 import nltk
 import streamlit as st
 
-nltk.download('wordnet')
 
 deployed_on_st = True
 if deployed_on_st:
@@ -35,8 +34,8 @@ def load_stopwords():
 
     return stopwords
 
-# Removing punctuations
 
+# Removing punctuations
 
 def remove_punctuations(text):
     '''This function removes the punctuations from the text.

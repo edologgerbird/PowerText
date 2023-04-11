@@ -112,21 +112,33 @@ def predict_targets_bert(reddit_content):
     # merge predictions with reddit_content
     reddit_content = reddit_content.reset_index(drop=True)
     reddit_content = pd.concat([reddit_content, predictions], axis=1)
+    
 
     return reddit_content
 
 
-def get_targets():
+def get_targets(bert=True):
     '''This function returns the list of targets.
 
     Returns:
         targets (list): The list of targets.
     '''
 
-    # load model dict
-    model_dict = load_model_dict()
+    if bert:
+        targets = [
+                'hate',
+                'privacy',
+                'sexual',
+                'impersonation',
+                'illegal',
+                'advertisement',
+                'ai',
+                'neutral'
+            ]
+    else:
+        model_dict = load_model_dict()
 
-    targets = model_dict["target_list"]
+        targets = model_dict["target_list"]
 
     return targets
 
@@ -160,7 +172,7 @@ def predict_targets(reddit_content):
     reddit_content = reddit_content.reset_index(drop=True)
     # merge predictions with reddit_content
     reddit_content = pd.concat([reddit_content, predictions], axis=1)
-
+    
     return reddit_content
 
 
@@ -252,6 +264,8 @@ def save_feedback_to_datastore(feedback):
     try:
         feedback_df = pd.read_csv(f"{path}data_store/feedback/feedback.csv")
         feedback_df = pd.concat([feedback_df, feedback], axis=0)
+        if "Neutral" in feedback_df.columns:
+            feedback_df = feedback_df.drop("Neutral", axis=1)
         feedback_df.to_csv(
             f"{path}data_store/feedback/feedback.csv", index=False)
 

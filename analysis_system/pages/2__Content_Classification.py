@@ -31,7 +31,6 @@ def run():
         # Preprocess text
         reddit_content["body_processed"] = reddit_content["body"].apply(
             text_preprocessing.preprocess_text)
-
         # Predict targets
         with st.spinner("Predicting targets using HateBert..."):
             predicted_outputs = model_inference.predict_targets_bert(
