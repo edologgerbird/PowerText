@@ -131,7 +131,6 @@ dmypy.json
 # folders
 data/
 cache_files/
-models/
 
 cache_files/
 transfer/
