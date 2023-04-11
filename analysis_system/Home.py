@@ -5,10 +5,10 @@ import pandas as pd
 
 format.add_logo()
 
-st.title("🔥Powertext Analysis System")
+st.title("🔥PowerText Analysis System")
 format.horizontal_line()
-st.subheader("Welcome to Powertext!")
-format.align_text("This is a demo of the Powertext Analysis System. The system is designed to help you analyse content retrieved from social media and automatically classify these posts into broad Terms-of-service violations.", "justify")
+st.subheader("Welcome to PowerText!")
+format.align_text("This is a demo of the PowerText Analysis System. The system is designed to help you analyse content retrieved from social media and automatically classify these posts into broad Terms-of-service violations.", "justify")
 format.align_text("For the purpose of this demo, will we upload a CSV of scraped data from Reddit.", "justify")
 format.horizontal_line()
 
