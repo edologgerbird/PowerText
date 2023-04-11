@@ -7,6 +7,7 @@ import pandas as pd
 import nltk
 import streamlit as st
 
+nltk.download('wordnet')
 
 deployed_on_st = True
 if deployed_on_st:

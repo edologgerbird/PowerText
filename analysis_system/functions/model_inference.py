@@ -42,8 +42,11 @@ def load_bert_model():
 
     model_ckpt = "GroNLP/hateBERT"
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
-    model_weight = torch.load(f"{path}models/model_weights_bert1.pth")
+    if device == 'cude':
+        model_weight = torch.load(f"{path}models/model_weights_bert1.pth")
+    else:
+        model_weight = torch.load(f"{path}models/model_weights_bert1.pth",
+                                  map_location=torch.device('cpu'))
     model = SingleClassifier(model_ckpt, nlabels=8).to(device)
 
     model.load_state_dict(model_weight)
