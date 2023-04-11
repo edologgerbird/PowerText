@@ -46,8 +46,6 @@ class DS(Dataset):
         comment = ' '.join(comment)
         comment = comment.replace("\\", "")
 
-        emotion = row['label']
-        # emotion = self.labels.index(emotion)
         emotion = 0
 
         return f"{comment}", emotion

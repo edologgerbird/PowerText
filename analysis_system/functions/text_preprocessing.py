@@ -5,8 +5,15 @@ import string
 import numpy as np
 import pandas as pd
 import nltk
+import streamlit as st
 
 nltk.download('wordnet')
+
+deployed_on_st = True
+if deployed_on_st:
+    path = "analysis_system/"
+else:
+    path = ""
 
 
 def load_stopwords():
@@ -17,11 +24,15 @@ def load_stopwords():
     '''
 
     try:
-        with open('cache_files/stopwords.txt', "r") as word_list:
+        with open(f'{path}cache_files/stopwords.txt', "r") as word_list:
             stopwords = word_list.read().split('\n')
     except:
-        nltk.download('stopwords')
+        with st.spinner("Downloading stopwords..."):
+            nltk.download('stopwords')
         stopwords = nltk.corpus.stopwords.words('english')
+        with open(f'{path}cache_files/stopwords.txt', "w") as word_list:
+            word_list.write('\n'.join(stopwords))
+
     return stopwords
 
 # Removing punctuations

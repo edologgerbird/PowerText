@@ -7,6 +7,8 @@ import functions.model_inference as model_inference
 import functions.text_preprocessing as text_preprocessing
 import functions.content_explorer as content_explorer
 
+format.add_logo()
+
 
 st.title("🔮 Content Classification")
 format.horizontal_line()
@@ -31,7 +33,9 @@ def run():
             text_preprocessing.preprocess_text)
 
         # Predict targets
-        predicted_outputs = model_inference.predict_targets_bert(reddit_content)
+        with st.spinner("Predicting targets using HateBert..."):
+            predicted_outputs = model_inference.predict_targets_bert(
+                reddit_content)
 
         with st.expander("View Raw Data with Predicted Output"):
             content_explorer.visualise_reddit_content(predicted_outputs)

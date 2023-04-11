@@ -3,6 +3,14 @@ import utils.design_format as format
 import utils.utility as util
 import pandas as pd
 
+format.add_logo()
+
+deployed_on_st = True
+if deployed_on_st:
+    path = "analysis_system/"
+else:
+    path = ""
+
 st.title("🔥Powertext Analysis System")
 format.horizontal_line()
 st.subheader("Welcome to Powertext!")
