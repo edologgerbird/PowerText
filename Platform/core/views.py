@@ -6,6 +6,11 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .handler_bert import *
 
+
+def homepage(request):
+    return render(request, "index.html")
+
+
 @csrf_exempt
 def user_demo_1(request):
     context = {}
@@ -31,22 +36,22 @@ def user_demo_1(request):
             if predict[0] == 1:
                 flagged = '1'
                 violations.append('Hate')
-            elif predict[1] == 1:
+            if predict[1] == 1:
                 flagged = '1'
                 violations.append('Privacy')
-            elif predict[2] == 1:
+            if predict[2] == 1:
                 flagged = '1'
                 violations.append('Sexual')
-            elif predict[3] == 1:
+            if predict[3] == 1:
                 flagged = '1'
                 violations.append('Impersonation')
-            elif predict[4] == 1:
+            if predict[4] == 1:
                 flagged = '1'
                 violations.append('Illegal')
-            elif predict[5] == 1:
+            if predict[5] == 1:
                 flagged = '1'
                 violations.append('Advertisement')
-            elif predict[6] == 1:
+            if predict[6] == 1:
                 flagged = '1'
                 violations.append('AI Generated')
 
@@ -60,7 +65,7 @@ def user_demo_1(request):
             context['text_flagged'] = flagged
             context['text_message'] = message
 
-    return render(request, "user_demo.html", context)
+    return render(request, "user_demo_1.html", context)
 
 
 @csrf_exempt
@@ -95,16 +100,18 @@ def wrapper_random_guess(text):
 
 def wrapper_hate_bert(text):
     predict = run_hate_bert(text)
+    print(predict)
     output = []
-    threshold = max(min(max(predict) / 2, 2), 1.5)
+    threshold = 5
     for i in predict:
         if i >= threshold:
             output.append(1)
         else:
             output.append(0)
+    print(output)
     return output
 
 def shrink_text(text):
-    if len(text) >= 15:
-        text = text[:6] + "..." + text[-6:]
+    if len(text) >= 30:
+        text = text[:12] + "..." + text[-12:]
     return text
