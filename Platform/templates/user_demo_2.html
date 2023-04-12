@@ -31,36 +31,90 @@
                 <i class="fas fa-angry" style="color: #ff4b4b"></i>
                 <span class="text-red-600 font-bold text-xl">Hate/Harassment</span>
               {% elif label_hate == '0' %}
-              <i class="fas fa-angry" style="color: #00ff00"></i>
+                <i class="fas fa-angry" style="color: #00ff00"></i>
                 <span class="text-green-600 text-xl">Hate/Harassment</span>
               {% else %}
-              <i class="fas fa-angry" style="color: #ffffff"></i>
+                <i class="fas fa-angry" style="color: #ffffff"></i>
                 <span class="text-white text-xl">Hate/Harassment</span>
               {% endif %}
           </div>
+
           <div class="icon-container" id="authenticity">
-            <i class="fas fa-award fill-current text-blue-600"></i>
-            <span>Authenticity</span>
+            {% if label_ai == '1' %}
+              <i class="fas fa-award fill-current text-blue-600" style="color: #ff4b4b"></i>
+              <span class="text-red-600 font-bold text-xl">Authenticity</span>
+            {% elif label_ai == '0' %}
+              <i class="fas fa-award fill-current text-blue-600" style="color: #00ff00"></i>
+              <span class="text-green-600 text-xl">Authenticity</span>
+            {% else %}
+              <i class="fas fa-award fill-current text-blue-600" style="color: #ffffff"></i>
+              <span class="text-white text-xl">Authenticity</span>
+            {% endif %}
           </div>
+
           <div class="icon-container" id="privacy">
-            <i class="fas fa-user-shield"></i>
-            <span>Privacy</span>
+            {% if label_private == '1' %}
+              <i class="fas fa-user-shield" style="color: #ff4b4b"></i>
+              <span class="text-red-600 font-bold text-xl">Privacy</span>
+            {% elif label_private == '0' %}
+              <i class="fas fa-user-shield" style="color: #00ff00"></i>
+              <span class="text-green-600 text-xl">Privacy</span>
+            {% else %}
+              <i class="fas fa-user-shield" style="color: #ffffff"></i>
+              <span class="text-white text-xl">Privacy</span>
+            {% endif %}
           </div>
-          <div class="icon-container" id="spam">
-            <i class="fas fa-envelope-open-text"></i>
-            <span>Spam</span>
+
+          <div class="icon-container" id="sexual">
+            {% if label_sexual == '1' %}
+              <i class="fas fa-envelope-open-text" style="color: #ff4b4b"></i>
+              <span class="text-red-600 font-bold text-xl">Sexual</span>
+            {% elif label_sexual == '0' %}
+              <i class="fas fa-envelope-open-text" style="color: #00ff00"></i>
+              <span class="text-green-600 text-xl">Sexual</span>
+            {% else %}
+              <i class="fas fa-envelope-open-text" style="color: #ffffff"></i>
+              <span class="text-white text-xl">Sexual</span>
+            {% endif %}
           </div>
+
           <div class="icon-container" id="impersonation">
-            <i class="fas fa-user-secret"></i>
-            <span>Impersonation</span>
+            {% if label_imperson == '1' %}
+              <i class="fas fa-user-secret" style="color: #ff4b4b"></i>
+              <span class="text-red-600 font-bold text-xl">Impersonation</span>
+            {% elif label_imperson == '0' %}
+              <i class="fas fa-user-secret" style="color: #00ff00"></i>
+              <span class="text-green-600 text-xl">Impersonation</span>
+            {% else %}
+              <i class="fas fa-user-secret" style="color: #ffffff"></i>
+              <span class="text-white text-xl">Impersonation</span>
+            {% endif %}
           </div>
+
           <div class="icon-container" id="illegal">
-            <i class="fas fa-ban"></i>
-            <span>Illegal</span>
+            {% if label_illegal == '1' %}
+              <i class="fas fa-ban" style="color: #ff4b4b"></i>
+              <span class="text-red-600 font-bold text-xl">Illegal</span>
+            {% elif label_illegal == '0' %}
+              <i class="fas fa-ban" style="color: #00ff00"></i>
+              <span class="text-green-600 text-xl">Illegal</span>
+            {% else %}
+              <i class="fas fa-ban" style="color: #ffffff"></i>
+              <span class="text-white text-xl">Illegal</span>
+            {% endif %}
           </div>
+          
           <div class="icon-container" id="advertisement">
-            <i class="fas fa-ad"></i>
-            <span>Advertisement</span>
+            {% if label_ads == '1' %}
+              <i class="fas fa-ad" style="color: #ff4b4b"></i>
+              <span class="text-red-600 font-bold text-xl">Advertisement</span>
+            {% elif label_ads == '0' %}
+              <i class="fas fa-ad" style="color: #00ff00"></i>
+              <span class="text-green-600 text-xl">Advertisement</span>
+            {% else %}
+              <i class="fas fa-ad" style="color: #ffffff"></i>
+              <span class="text-white text-xl">Advertisement</span>
+            {% endif %}
           </div>
         </div>
       </div>
