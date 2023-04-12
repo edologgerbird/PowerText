@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .handler_bert import *
 
 @csrf_exempt
-def homepage(request):
+def user_demo_1(request):
     context = {}
     if request.method == 'POST':
         if request.POST['form_id'] == 'text_submit':
@@ -62,6 +62,27 @@ def homepage(request):
 
     return render(request, "user_demo.html", context)
 
+
+@csrf_exempt
+def user_demo_2(request):
+    context = {}
+    if request.method == 'POST':
+        if request.POST['form_id'] == 'text_submit':
+            text = request.POST['comment']
+            predict = wrapper_hate_bert(text)
+
+            # render labels: possible implementation
+            context['text_submitted'] = text
+            context['label_hate'] = '1' if predict[0] == 1 else '0'
+            context['label_private'] = '1' if predict[1] == 1 else '0'
+            context['label_sexual'] = '1' if predict[2] == 1 else '0'
+            context['label_imperson'] = '1' if predict[3] == 1 else '0'
+            context['label_illegal'] = '1' if predict[4] == 1 else '0'
+            context['label_ads'] = '1' if predict[5] == 1 else '0'
+            context['label_ai'] = '1' if predict[6] == 1 else '0'
+
+    return render(request, "user_demo_2.html", context)
+
 # helper functions
 def wrapper_all_zero(text):
     return np.zeros(7)
@@ -75,7 +96,7 @@ def wrapper_random_guess(text):
 def wrapper_hate_bert(text):
     predict = run_hate_bert(text)
     output = []
-    threshold = max(predict) / 2
+    threshold = max(min(max(predict) / 2, 2), 1.5)
     for i in predict:
         if i >= threshold:
             output.append(1)
