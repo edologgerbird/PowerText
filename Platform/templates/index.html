@@ -50,6 +50,74 @@
                             Results
                         </h2>
                     </div>
+                <div>
+                    Text submitted: {{ text_submitted }}
+                </div><br>
+                    <div>
+                        <div>
+                            {% if label_hate == '0' %}
+                                Tag 1 Pure!
+                            {% elif label_hate == '1' %}
+                                Tag 1 Hate!
+                            {% else %}
+                                Tag 1 ?
+                            {% endif %}
+                        </div><br>
+                        <div>
+                            {% if label_private == '0' %}
+                                Tag 2 Pure!
+                            {% elif label_private == '1' %}
+                                Tag 2 Privacy!
+                            {% else %}
+                                Tag 2 ?
+                            {% endif %}
+                        </div><br>
+                        <div>
+                            {% if label_sexual == '0' %}
+                                Tag 3 Pure!
+                            {% elif label_sexual == '1' %}
+                                Tag 3 Sexy!
+                            {% else %}
+                                Tag 3 ?
+                            {% endif %}
+                        </div><br>
+                        <div>
+                            {% if label_imperson == '0' %}
+                                Tag 4 Pure!
+                            {% elif label_imperson == '1' %}
+                                Tag 4 Impersonate!
+                            {% else %}
+                                Tag 4 ?
+                            {% endif %}
+                        </div><br>
+                        <div>
+                            {% if label_illegal == '0' %}
+                                Tag 5 Pure!
+                            {% elif label_illegal == '1' %}
+                                Tag 5 Illegal!
+                            {% else %}
+                                Tag 5 ?
+                            {% endif %}
+                        </div><br>
+                        <div>
+                            {% if label_ads == '0' %}
+                                Tag 6 Pure!
+                            {% elif label_ads == '1' %}
+                                Tag 6 Ad!
+                            {% else %}
+                                Tag 6 ?
+                            {% endif %}
+                        </div><br>
+                        <div>
+                            {% if label_ai == '0' %}
+                                Human!
+                            {% elif label_ai == '1' %}
+                                AI!
+                            {% else %}
+                                AI ?
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
