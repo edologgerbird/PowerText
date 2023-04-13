@@ -7,20 +7,23 @@
   <link rel="stylesheet" href="{% static '/css/styles.css/' %}">
   <link rel="stylesheet" href="{% static '/css/all.min.css/' %}">
   <link href="{% static '/css/tailwind.css/' %}" rel="stylesheet">
-  <title>Violation Checker</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  <title>User Interface - Violation Checker</title>
 </head>
 <body>
+    <a href="/" type="button" class="w-auto text-gray-400 font-bold bg-white hover:text-black py-2 px-4 ml-16
+        rounded inline-flex items-center p-2">Return Home</a>
   <div class="App">
     <header class="App-header">
       <img src="{% static '/assets/icon.png/' %}" alt="Icon" class="app-icon" width="400" height="189.6">
-      <h1>Violation Checker</h1>
+      <br>
         {% csrf_token %}
         <form action="" method="post" enctype="multipart/form-data">
           <div class="container">
             <div class="input-container w-full">
               <input type="hidden" name="form_id" value="text_submit">
-              <textarea id="comment" name="comment" class="text-black" placeholder="Enter a sentence"></textarea>
-              <button id="check-button">Check Phrase</button>
+              <textarea id="comment" name="comment" class="text-black p-3" placeholder="Enter a sentence"></textarea>
+                <div class="p-2 text-xl font-bold"> <button id="check-button" class="bg-white text-black p-2">Check Violations</button> </div>
             </div>
           </div>
         </form>
