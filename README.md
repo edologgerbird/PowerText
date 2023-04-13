@@ -119,4 +119,6 @@ The requirements.txt file contains Python libraries that your notebooks depend o
 pip install -r requirements.txt
 ```
 
+We recommend using Google Colab to run the project (https://colab.research.google.com) as it gives free GPU access to run the model
+
 <p align="right">(<a href="#top">back to top</a>)</p>
