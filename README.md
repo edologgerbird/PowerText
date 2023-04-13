@@ -2,10 +2,8 @@
 
 <div align="center">
   <a>
-    <img src="read_me_files/logo/logo-color.png" alt="Logo" width="300">
+    <img src="read_me_files/logo/logo-color.png" alt="Logo" width="600">
   </a>
-    <br/>
-    <br/>
   <h3 align="center">PowerText</h3>
 
   <p align="center">
@@ -230,7 +228,9 @@ To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` noteboo
 
 ## Development Layer
 
-We proceed to build and train a suite of models to 
+We proceed to build and train a suite of models to predict potential TOS violations within the text input. The following models were built, trained and evaluated:
+
+
 
 ## Deployment Layer
 
