@@ -61,7 +61,7 @@ The system offers two distinct end products: an automated content collection and
 
 ### _Keywords:_
 
-_Data Pipeline, Sentiment Analysis, Transformers, Roberta BERT, hateBERT, CNN, LSTM, Hugging Face, Natural Language Processing, TOS Violation Analysis, Web Scraping, Data Visualisation_
+_Data Pipeline, Sentiment Analysis, MNB, PassiveAggressive, XGBoost, Transformers, RoBERTa, hateBERT, CNN, LSTM, Hugging Face, Natural Language Processing, TOS Violation Analysis, Web Scraping, Data Visualisation_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -84,7 +84,7 @@ _Data Pipeline, Sentiment Analysis, Transformers, Roberta BERT, hateBERT, CNN, L
 
 **Built with:** [Microsoft Visual Studio Code](https://code.visualstudio.com/), [Google Colab](https://colab.research.google.com/), [Streamlit](https://streamlit.io/), [Django](https://www.djangoproject.com/), [Git](https://git-scm.com/)
 
-**Notable Packages:** praw, pandas, numpy, scikit-learn, xgboost, transformers, pytorch, torchvision, tqdm (view requirements.txt for full list)
+**Notable Packages:** praw, pandas, numpy, scikit-learn, xgboost, transformers, pytorch, torchvision, tqdm, streamlit, django (view requirements.txt for full list)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
