@@ -2,7 +2,7 @@
 
 <div align="center">
   <a>
-    <img src="read_me_files/logo/logo-no-background.png" alt="Logo" width="300">
+    <img src="read_me_files/logo/logo-color.png" alt="Logo" width="300">
   </a>
     <br/>
     <br/>
@@ -228,7 +228,11 @@ With the processed data, we conducted a comprehensive Exploratory Data Analysis 
 
 To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` notebook in ```data_processing/``` folder.
 
+> ⚠️ Do remember to adjust the paths to where you store your dataset on your local machine!
+
 ## Development Layer
+
+We proceed to build and train a suite of models to 
 
 ## Deployment Layer
 
