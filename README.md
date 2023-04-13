@@ -131,7 +131,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 content_path = "insert/path/to/your/data"
 ```
-You will be prompted to log in with your Google Account. Simply replace the content_path with the path to directory where you have uploaded the data.
+You will be prompted to log in with your Google Account. Simply replace the ```content_path``` with the path to directory where you have uploaded the data.
 
 Alternatively, if you do not wish to authenticate with your Google Account, you may simply run the following code to retrieve the data from a permanent link:
 
@@ -479,3 +479,8 @@ This feedback will be incorporated into the next model retraining cycle.
 We would like to express our gratitude to Prof Sun Chenshuo and Phoebe Chua for their invaluable guidance, support, and insights throughout the development of this project. Their expertise and encouragement have been instrumental in shaping our work. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<br><br>
+<sub>
+Copyright (C) 2023. This project was created using publicity available APIs and was created for educational reasons. Any parts of this project should ONLY be used for <strong>NON-COMMERICAL</strong> reasons. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses.
+</sub>
