@@ -195,23 +195,21 @@ Our scraped data are compiled as xlsx and csv files, and stored within the ```Da
 Following the compilation of data from the multiple sources as detailed in the previous section, we proceeded to process the data to prepare it for model training and exploratory data analysis.
 
 The preprocessing pipeline consist of the following steps:
+
+_Data Concatenation_
+
 1. Concatenating all datasets into a single ```DataFrame```.
 2. Setting up target columns for each data entry 
-3. Text preprocessing:
 
-    i. Remove Punctuations
+_Text Preprocessing_
 
-    ii. Convert to lowercase
-
-    iii. Remove non-alphanumeric characters
-    
-    iv. Remove stopwords
-
-    v. Remove extra spaces, new lines, tabs
-    
-    vi. Lemmetize and Stem text
-
-    vii. Remove words with length < 2
+1. Remove Punctuations
+2. Convert to lowercase
+3. Remove non-alphanumeric characters
+4. Remove stopwords
+5. Remove extra spaces, new lines, tabs
+6. Lemmetize and Stem text
+7. Remove words with length < 2
 
 To run the Data Preprocessing step, simply run the ```text_preprocessing.ipynb``` notebook in ```data_processing/``` folder.
 
