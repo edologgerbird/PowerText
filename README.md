@@ -90,56 +90,6 @@ _Data Pipeline, Sentiment Analysis, Transformers, Roberta BERT, hateBERT, CNN, L
 
 ## Getting Started
 
-## Code Structure
-
-## Source Layer
-
-### Data Ingestion Sources
-
-Our team extracted both structured and unstructred data from the following sources:
-
-| Source | Description | Size |
-| ----------- | ----------- | ----------- |
-| [Reddit](https://www.reddit.com/) | Extracted using the [PRAW API](https://praw.readthedocs.io/en/stable/) endpoint | 16828 |
-| [ChatGPT](https://chat.openai.com/chat) | Generated using ChatGPT 3.5 and 4 | 6043 |
-| Confounding Dataset | Manually created to include confounding and additional hate & ads | 26676 |
-
-### Reddit Scraper Agent
-
-The Reddit scraper agent can be location in ``` WebScrapper/reddit_scrapper.py```
-
-This script defines methods that scrapes posts and comments based on user-specified subreddits, post counts and comment counts.
-
-To initiate a ```reddit_scraper``` instance, execute the following Python code:
-
-```py
-from reddit_scaper import reddit_scrapper
-
-reddit_agent = praw.Reddit(client_id='my_client_id', client_secret='my_client_secret', user_agent='my_user_agent')
-reddit_scrapper(reddit_agent, ['MachineLearning', 'learnmachinelearning', 'GPT'], limit=10, comment_limit=10, topic="machinemind")
-```
-
-> To generate and specify the client_id, client_secret and user_agent, please follow the steps detailed [here](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Preprocessing Layer
-
-## Development Layer
-
-## Deployment Layer
-
-## Feedback Layer
-
-
-
-
-
-
-
-
-## Getting Started
-
 ### **Prerequisites**
 
 Make sure you have installed all of the following on your development machine:
@@ -169,6 +119,76 @@ The requirements.txt file contains Python libraries that your notebooks depend o
 pip install -r requirements.txt
 ```
 
-We recommend using Google Colab to run the project (https://colab.research.google.com) as it gives free GPU access to run the model
+### _2. Google Colab Environment_
+
+Our deep learning models were primarily trained on [Google Colab Pro](https://colab.research.google.com) due to the access to high performance GPUs required for the training of complex neural network systems. 
+
+You can set up the Google Colab environment to run our model training codes by executing the following:
+
+```py
+from google.colab import drive
+drive.mount('/content/drive')
+content_path = "insert/path/to/your/data"
+```
+You will be prompted to log in with your Google Account. Simply replace the content_path with the path to directory where you have uploaded the data.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Code Structure
+
+> INSERT CODE STRUCTURE
+
+## Source Layer
+
+### Data Ingestion Sources
+
+Our team extracted both structured and unstructred data from the following sources:
+
+| Source | Description | Size |
+| ----------- | ----------- | ----------- |
+| [Reddit](https://www.reddit.com/) | Extracted using the [PRAW API](https://praw.readthedocs.io/en/stable/) endpoint | 16828 |
+| [ChatGPT](https://chat.openai.com/chat) | Generated using ChatGPT 3.5 and 4 | 6043 |
+| Confounding Dataset | Manually created to include confounding and additional hate & ads | 26676 |
+
+### Reddit Scraper Agent
+
+The Reddit scraper agent can be location in ``` WebScrapper/reddit_scrapper.py```
+
+This script defines methods that scrapes posts and comments based on user-specified subreddits, post counts and comment counts.
+
+To initiate a ```reddit_scraper``` instance, execute the following Python code:
+
+```py
+from reddit_scaper import reddit_scrapper
+
+reddit_agent = praw.Reddit(client_id='my_client_id', client_secret='my_client_secret', user_agent='my_user_agent')
+reddit_scrapper(reddit_agent, ['MachineLearning', 'learnmachinelearning', 'GPT'], limit=10, comment_limit=10, topic="machinemind")
+```
+
+> 🔍To generate and specify the client_id, client_secret and user_agent, please follow the steps detailed [here](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
+
+### Storing of Raw Data
+
+Our scraped data are compiled as xlsx and csv files, and stored within the ```Dataset/``` folder, categorised into
+- Reddit Content: ```Dataset/Reddit Tagged Content``` 
+- AI Content: ```Dataset/AI Content``` 
+- Confounding Content: ```Dataset/Additional Data``` 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Preprocessing Layer
+
+## Development Layer
+
+## Deployment Layer
+
+## Feedback Layer
+
+
+
+
+
+
+
+
+
