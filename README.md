@@ -2,7 +2,7 @@
 
 <div align="center">
   <a>
-    <img src="read_me_files/logo/logo-color.png" alt="Logo" width="600">
+    <img src="read_me_files/logo/logo-color.png" alt="Logo" width="550">
   </a>
   <h3 align="center">PowerText</h3>
 
@@ -229,6 +229,50 @@ To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` noteboo
 ## Development Layer
 
 We proceed to build and train a suite of models to predict potential TOS violations within the text input. The following models were built, trained and evaluated:
+
+_Baseline Models_ 
+1. Multinomial NaiveBayes Classifier
+2. PassiveAggressive Classifier
+3. XGBoost Classifier
+
+The baseline models training notebook can be found at ```model_building/baselines/baseline_models.ipynb```
+
+_Deep Learning Models_
+1. Convolutional Neural Network (CNN) [```model_building/CNN/CNN.ipynb```]
+2. Gated Recurrent Unit [```model_building/GRU/GRU.ipynb```]
+3. Long Short-term Memory [```model_building/LSTM/LSTM.ipynb```]
+4. Basic Transformer [```model_building/Transformer/Transformer.ipynb```]
+5. Bidirectional Encoder Representations from Transformers (BERT) [```model_building/Transfer_Learning/BERT.ipynb```]
+6. RoBERTa [```model_building/Transfer_Learning/RoBERTa.ipynb```]
+7. hateBERT (multiple varients)  [```model_building/Transfer_Learning/hateBERT-variant-X.ipynb```]
+
+| Model | Precision | Recall | F1 | 
+| ----------- | ----------- | ----------- | ----------- |
+| Multinomial Naive Bayes |  0.27 | 0.17 | 0.20 |
+| PassiveAggressive       |  0.67 | 0.55 | 0.60 |
+| XGBoost                 |  0.79 | 0.42 | 0.53 |
+| CNN                     |  0.33 | 0.31 | 0.32 |
+| GRU                     |  0.33 | 0.34 | 0.33 |
+| LSTM                    |  0.32 | 0.32 | 0.32 |
+| Basic Transformer       |  0.68 | 0.52 | 0.55 |
+| BERT                    |  0.85 | 0.65 | 0.70 |
+| RoBERTa                 |  0.80 | 0.63 | 0.68 |
+| hateBERT variant 1      |  0.79 | **0.79** | 0.79 |
+| hateBERT variant 2      |  **0.89** | 0.77 | **0.82** |
+| hateBERT variant 3      |  0.81 | 0.69 | 0.72 |
+
+From initial testing, we observed that hateBERT performs the best for our task and given dataset. To increase robustness in evaluation, we further conducted a 10-fold Cross Validation on individual targets for the hateBERT model using variant 2. 
+
+| Model | Precision | Recall | F1 | n |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Hate Speech |  0.94 | 0.95 | 0.94 | 1958 |
+| Privacy | 0.66 | 0.73 | 0.69 | 26 |
+| Sexual | 0.67 | 0.57 | 0.61 | 46 |
+| Impersonation  | 0.60 | 0.46 | 0.52 | 26 |
+| Illegal | 0.50 | 0.57 | 0.53 | 28 |
+| Advertisement | 0.78 | 0.83 |0.80 | 47 |
+| AI Content | 0.98 | 0.98 | 0.98 | 684 |
+| Neutral | 0.94 | 0.93 | 0.94 | 2175 |
 
 
 
