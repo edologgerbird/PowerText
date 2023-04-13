@@ -1,0 +1,108 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  width: 70%;
+  height: 100px;
+  box-sizing: border-box;
+  margin-left: 10%;
+  resize: none;
+}
+
+input[type='text'] {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3aa0d5;
+}
+
+.violations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.violations .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 100px;
+}
+
+.violations .icon-container span {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.violations .icon-container i {
+  font-size: 48px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.violations .icon-container.violated i {
+  color: #ff4b4b;
+}
