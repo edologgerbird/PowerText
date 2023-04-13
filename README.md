@@ -235,16 +235,19 @@ We proceed to build and train a suite of models to predict potential TOS violati
 2. PassiveAggressive Classifier
 3. XGBoost Classifier
 
-The baseline models training notebook can be found at ```model_building/baselines/baseline_models.ipynb```
+The baseline models training notebook can be found at ```model_building/baselines/baseline_models.ipynb```.
 
 ### _Deep Learning Models_
-1. Convolutional Neural Network (CNN) [```model_building/CNN/CNN.ipynb```]
-2. Gated Recurrent Unit [```model_building/GRU/GRU.ipynb```]
-3. Long Short-term Memory [```model_building/LSTM/LSTM.ipynb```]
-4. Basic Transformer [```model_building/Transformer/Transformer.ipynb```]
-5. Bidirectional Encoder Representations from Transformers (BERT) [```model_building/Transfer_Learning/BERT.ipynb```]
-6. RoBERTa [```model_building/Transfer_Learning/RoBERTa.ipynb```]
-7. hateBERT (multiple varients)  [```model_building/Transfer_Learning/hateBERT-variant-X.ipynb```]
+1. Convolutional Neural Network (CNN) 
+2. Gated Recurrent Unit
+3. Long Short-term Memory 
+4. Basic Transformer 
+5. Bidirectional Encoder Representations from Transformers (BERT) 
+6. RoBERTa 
+7. hateBERT (multiple varients)  
+
+The respective deep learning models training notebooks can be found at ```model_building/xxx/xxx.ipynb```.
+
 
 | Model | Precision | Recall | F1 | 
 | ----------- | ----------- | ----------- | ----------- |
@@ -274,7 +277,7 @@ From initial testing, we observed that hateBERT performs the best for our task a
 | AI Content | 0.98 | 0.98 | 0.98 | 684 |
 | Neutral | 0.94 | 0.93 | 0.94 | 2175 |
 
-
+The model weights of the hateBert has been saved for future deployment. It is stored at ```analysis_system/models/model_weights_bert1.pth```
 
 ## Deployment Layer
 
@@ -307,6 +310,11 @@ python Platform/manage.py runserver
 
 ## Feedback Layer
 
+In this last layer, we intend to collect feedback from content moderators regarding the predicted target violations for each Reddit post. The feedback is collected via the ```Automatic Post Analysis Dashboard for Content Moderators```.
+
+The feedback is collected and saved into a csv file located at: ```analysis_system/data_store/feedback/feedback.csv```.
+
+This feedback will be incorporated into the next model retraining cycle.
 
 
 
