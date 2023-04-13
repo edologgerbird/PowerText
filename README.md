@@ -31,10 +31,12 @@ Contents of this project should ONLY be used for <strong>NON-COMMERICAL</strong>
 <li><a href="#project-overview">Project Overview</a></li>
 <li><a href="#authors">Authors</a></li>
 <li><a href="#codes-and-resources-used">Codes and Resources Used</a></li>
-<li><a href="#data-ingestion-sources">Data Ingestion Sources</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#source-layer">Source Layer</a></li>
+<li><a href="#data-processing-layer">Data Processing Layer</a></li>
+<li><a href="#development-layer">Development Layer</a></li>
+<li><a href="#deployment-layer">Deployment Layer</a></li>
+<li><a href="#feedback-layer">Feedback Layer</a></li>
 <li><a href="#acknowledgements">Acknowledgements</a></li>
 </ol>
 
@@ -96,7 +98,7 @@ Make sure you have installed all of the following on your development machine:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## **Installation**
+### **Installation**
 
 We recommend setting up a virtual environment to run this project.
 
@@ -146,6 +148,11 @@ The required additional modules required for each ```.ipynb``` notebook runned o
 
 
 ## Source Layer
+
+```
+📦WebScrapper
+ ┗ 📜reddit_scrapper.py
+```
 
 ### Data Ingestion Sources
 
@@ -386,6 +393,67 @@ python Platform/manage.py runserver
 ```
 > ⚠️ Ensure that you have Django installed! Do install the requirements via the requirements.txt if you have not done so!
 
+The structure of the ```Text Classification for Common Users```
+
+```
+📦Platform
+ ┣ 📂.idea
+ ┃ ┣ 📂inspectionProfiles
+ ┃ ┃ ┣ 📜profiles_settings.xml
+ ┃ ┃ ┗ 📜Project_Default.xml
+ ┃ ┣ 📜.gitignore
+ ┃ ┣ 📜misc.xml
+ ┃ ┣ 📜modules.xml
+ ┃ ┣ 📜Platform.iml
+ ┃ ┗ 📜vcs.xml
+ ┣ 📂core
+ ┃ ┣ 📂migrations
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜handler_bert.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂Platform
+ ┃ ┣ 📜asgi.py
+ ┃ ┣ 📜settings.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜wsgi.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂static
+ ┃ ┣ 📂assets
+ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┗ 📜icon.png
+ ┃ ┣ 📂css
+ ┃ ┃ ┣ 📂webfonts
+ ┃ ┃ ┃ ┣ 📜fa-brands-400.ttf
+ ┃ ┃ ┃ ┣ 📜fa-brands-400.woff2
+ ┃ ┃ ┃ ┣ 📜fa-regular-400.ttf
+ ┃ ┃ ┃ ┣ 📜fa-regular-400.woff2
+ ┃ ┃ ┃ ┣ 📜fa-solid-900.ttf
+ ┃ ┃ ┃ ┣ 📜fa-solid-900.woff2
+ ┃ ┃ ┃ ┣ 📜fa-v4compatibility.ttf
+ ┃ ┃ ┃ ┗ 📜fa-v4compatibility.woff2
+ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┣ 📜all.css
+ ┃ ┃ ┣ 📜all.min.css
+ ┃ ┃ ┣ 📜emoji.css
+ ┃ ┃ ┣ 📜styles.css
+ ┃ ┃ ┗ 📜tailwind.css
+ ┃ ┣ 📂js
+ ┃ ┃ ┗ 📜app.js
+ ┃ ┣ 📜.DS_Store
+ ┃ ┗ 📜favicon.ico
+ ┣ 📂templates
+ ┃ ┣ 📜index.html
+ ┃ ┣ 📜user_demo_1.html
+ ┃ ┗ 📜user_demo_2.html
+ ┣ 📜favicon.ico
+ ┗ 📜manage.py
+```
 
 ## Feedback Layer
 
@@ -396,9 +464,6 @@ The feedback is collected and saved into a csv file located at: ```analysis_syst
 This feedback will be incorporated into the next model retraining cycle.
 
 
+## Acknowledgements
 
-
-
-
-
-
+We would like to express our gratitude to Prof Sun Chenshuo and Phoebe Chua for their invaluable guidance, support, and insights throughout the development of this project. Their expertise and encouragement have been instrumental in shaping our work. 
