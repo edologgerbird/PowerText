@@ -80,7 +80,7 @@ _Data Pipeline, Sentiment Analysis, Transformers, Roberta BERT, hateBERT, CNN, L
 
 **Python Version:** 3.9.10
 
-**Built with:** [Microsoft Visual Studio Code](https://code.visualstudio.com/), [Google Colab](https://colab.research.google.com/), [Streamlit](https://streamlit.io/), [Git](https://git-scm.com/)
+**Built with:** [Microsoft Visual Studio Code](https://code.visualstudio.com/), [Google Colab](https://colab.research.google.com/), [Streamlit](https://streamlit.io/), [Django](https://www.djangoproject.com/), [Git](https://git-scm.com/)
 
 **Notable Packages:** praw, pandas, numpy, scikit-learn, xgboost, transformers, pytorch, torchvision, tqdm (view requirements.txt for full list)
 
@@ -230,14 +230,14 @@ To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` noteboo
 
 We proceed to build and train a suite of models to predict potential TOS violations within the text input. The following models were built, trained and evaluated:
 
-_Baseline Models_ 
+### _Baseline Models_ 
 1. Multinomial NaiveBayes Classifier
 2. PassiveAggressive Classifier
 3. XGBoost Classifier
 
 The baseline models training notebook can be found at ```model_building/baselines/baseline_models.ipynb```
 
-_Deep Learning Models_
+### _Deep Learning Models_
 1. Convolutional Neural Network (CNN) [```model_building/CNN/CNN.ipynb```]
 2. Gated Recurrent Unit [```model_building/GRU/GRU.ipynb```]
 3. Long Short-term Memory [```model_building/LSTM/LSTM.ipynb```]
@@ -277,6 +277,33 @@ From initial testing, we observed that hateBERT performs the best for our task a
 
 
 ## Deployment Layer
+
+### Product 1: Automatic Post Analysis Dashboard for Content Moderators
+
+The first product was built using [Streamlit](https://streamlit.io/), an open-source framework that allows developers to rapidly develop web applications for data science purposes. 
+
+To run the Automatic Post Analysis Dashboard, execute the following code in the CLI:
+
+```sh
+streamlit run analysis_system/Home.py
+```
+> ⚠️ Ensure that you have the Streamlit package installed! Do install the requirements via the requirements.txt if you have not done so!
+
+The application should run on ```http://localhost:8501/```.
+
+Alternatively, you may access the deployed version [here](https://edologgerbird-is4242-group8-analysis-systemhome-edoautom-esii7q.streamlit.app/).
+
+### Product 2: Text Classification for Common Users
+
+The second product was built using [Django](https://www.djangoproject.com/), another framework that enables developers to build web apps rapidly.
+
+To run the Text Classification for Commun Users application, execute the following code in the CLI:
+
+```sh
+python Platform/manage.py runserver
+```
+> ⚠️ Ensure that you have Django installed! Do install the requirements via the requirements.txt if you have not done so!
+
 
 ## Feedback Layer
 
