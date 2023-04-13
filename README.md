@@ -7,13 +7,13 @@
   <h3 align="center">PowerText</h3>
 
   <p align="center">
-    Automatic Content Modereation for Text in Social Media: Term of Service violations and AI content detection.
+    Automatic moderation for text in social media through PowerText: Terms of service violation and AI content detection
     <br />
     <a href=""><strong>View the Full Project Report »</strong></a>
     <br />
     <a href="https://edologgerbird-is4242-group8-analysis-systemhome-edoautom-esii7q.streamlit.app/"><strong>View the Demo Application for Content Regulators »</strong></a>
     <br />
-    <a href=""><strong>View the Demo Application for Common Users » »</strong></a>
+    <a href="https://drive.google.com/file/d/1LnsVY1nZn3p-es80ANq4Fr_LtPOsbyYZ/view"><strong>View the Video Demo for Common Users » »</strong></a>
     <br />
   </p>
 </div>
