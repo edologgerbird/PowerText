@@ -236,6 +236,8 @@ To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` noteboo
 
 > ⚠️ Do remember to adjust the paths to where you store your dataset on your local machine!
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Development Layer
 
 ```
@@ -324,6 +326,9 @@ From initial testing, we observed that hateBERT performs the best for our task a
 | Neutral | 0.94 | 0.93 | 0.94 | 2175 |
 
 The model weights of the hateBert has been saved for future deployment. It is stored at ```analysis_system/models/model_weights_bert1.pth```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ## Deployment Layer
 
@@ -455,6 +460,8 @@ The structure of the ```Text Classification for Common Users```
  ┗ 📜manage.py
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Feedback Layer
 
 In this last layer, we intend to collect feedback from content moderators regarding the predicted target violations for each Reddit post. The feedback is collected via the ```Automatic Post Analysis Dashboard for Content Moderators```.
@@ -463,7 +470,11 @@ The feedback is collected and saved into a csv file located at: ```analysis_syst
 
 This feedback will be incorporated into the next model retraining cycle.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ## Acknowledgements
 
 We would like to express our gratitude to Prof Sun Chenshuo and Phoebe Chua for their invaluable guidance, support, and insights throughout the development of this project. Their expertise and encouragement have been instrumental in shaping our work. 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
