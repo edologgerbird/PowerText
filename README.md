@@ -144,9 +144,6 @@ The required additional modules required for each ```.ipynb``` notebook runned o
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Code Structure
-
-> INSERT CODE STRUCTURE
 
 ## Source Layer
 
@@ -188,6 +185,12 @@ Our scraped data are compiled as xlsx and csv files, and stored within the ```Da
 
 ## Data Processing Layer
 
+```
+📦data_processing
+ ┣ 📜data_eda.ipynb
+ ┗ 📜text_preprocessing.ipynb
+```
+
 ### Data Preprocessing Notebook
 
 Following the compilation of data from the multiple sources as detailed in the previous section, we proceeded to process the data to prepare it for model training and exploratory data analysis.
@@ -227,6 +230,42 @@ To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` noteboo
 > ⚠️ Do remember to adjust the paths to where you store your dataset on your local machine!
 
 ## Development Layer
+
+```
+📦model_building
+ ┣ 📂baselines
+ ┃ ┣ 📂models
+ ┃ ┃ ┣ 📜MultinomialNB_model.pkl
+ ┃ ┃ ┣ 📜MultinomialNB_model_cv_dict.pkl
+ ┃ ┃ ┣ 📜PassiveAggressiveClassifier_model.pkl
+ ┃ ┃ ┣ 📜PassiveAggressiveClassifier_model_cv_dict.pkl
+ ┃ ┃ ┣ 📜XGBClassifier_model.pkl
+ ┃ ┃ ┗ 📜XGBClassifier_model_cv_dict.pkl
+ ┃ ┣ 📂roc_curves
+ ┃ ┃ ┣ 📜LGBMClassifier_roc_curve.png
+ ┃ ┃ ┣ 📜MultinomialNB_roc_curve.png
+ ┃ ┃ ┣ 📜PassiveAggressiveClassifier_roc_curve.png
+ ┃ ┃ ┣ 📜SGDClassifier_roc_curve.png
+ ┃ ┃ ┗ 📜XGBClassifier_roc_curve.png
+ ┃ ┣ 📜baseline_models.ipynb
+ ┃ ┗ 📜baseline_model_performance_cv.txt
+ ┣ 📂CNN
+ ┃ ┗ 📜CNN.ipynb
+ ┣ 📂GRU
+ ┃ ┗ 📜GRU.ipynb
+ ┣ 📂LSTM
+ ┃ ┗ 📜Single_LSTM_Learning_model.ipynb
+ ┣ 📂Transfer_Learning
+ ┃ ┣ 📂data
+ ┃ ┃ ┗ 📜processed.csv
+ ┃ ┣ 📜BERT.ipynb
+ ┃ ┣ 📜hateBERT-variant-1.ipynb
+ ┃ ┣ 📜hateBERT-variant-2.ipynb
+ ┃ ┣ 📜hateBERT-variant-3.ipynb
+ ┃ ┗ 📜RoBERTa.ipynb
+ ┗ 📂Transformer
+ ┃ ┗ 📜Transformer.ipynb
+```
 
 We proceed to build and train a suite of models to predict potential TOS violations within the text input. The following models were built, trained and evaluated:
 
@@ -283,6 +322,7 @@ The model weights of the hateBert has been saved for future deployment. It is st
 
 ### Product 1: Automatic Post Analysis Dashboard for Content Moderators
 
+
 The first product was built using [Streamlit](https://streamlit.io/), an open-source framework that allows developers to rapidly develop web applications for data science purposes. 
 
 To run the Automatic Post Analysis Dashboard, execute the following code in the CLI:
@@ -295,6 +335,45 @@ streamlit run analysis_system/Home.py
 The application should run on ```http://localhost:8501/```.
 
 Alternatively, you may access the deployed version [here](https://edologgerbird-is4242-group8-analysis-systemhome-edoautom-esii7q.streamlit.app/).
+
+The structure of the ```Automatic Post Analysis Dashboard for Content Moderators```
+
+```
+📦analysis_system
+ ┣ 📂assets
+ ┃ ┣ 📜capy.png
+ ┃ ┣ 📜logo-colour.png
+ ┃ ┗ 📜logo-white.png
+ ┣ 📂cache_files
+ ┃ ┗ 📜stopwords.txt
+ ┣ 📂data_store
+ ┃ ┣ 📂feedback
+ ┃ ┃ ┗ 📜feedback.csv
+ ┃ ┗ 📂scraped
+ ┃ ┃ ┗ 📜reddit_content.csv
+ ┣ 📂functions
+ ┃ ┣ 📜content_explorer.py
+ ┃ ┣ 📜DS.py
+ ┃ ┣ 📜model_inference.py
+ ┃ ┣ 📜polarity_analysis.py
+ ┃ ┣ 📜reddit_scraper.py
+ ┃ ┣ 📜SingleClassifier.py
+ ┃ ┗ 📜text_preprocessing.py
+ ┣ 📂models
+ ┃ ┣ 📜model_weights_bert1.pth
+ ┃ ┗ 📜PassiveAggressiveClassifier_model_dict.pkl
+ ┣ 📂pages
+ ┃ ┣ 📜1__Content_Explorer.py
+ ┃ ┣ 📜2__Content_Classification.py
+ ┃ ┗ 📜3__Sentiment_Polarity_Analysis.py
+ ┣ 📂utils
+ ┃ ┣ 📜design_format.py
+ ┃ ┗ 📜utility.py
+ ┣ 📜Home.py
+ ┗ 📜requirements.txt
+
+```
+
 
 ### Product 2: Text Classification for Common Users
 
