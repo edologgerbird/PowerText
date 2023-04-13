@@ -132,6 +132,18 @@ content_path = "insert/path/to/your/data"
 ```
 You will be prompted to log in with your Google Account. Simply replace the content_path with the path to directory where you have uploaded the data.
 
+Alternatively, if you do not wish to authenticate with your Google Account, you may simply run the following code to retrieve the data from a permanent link:
+
+```py
+train_path = 'https://drive.google.com/uc?export=download&id=1ZTfYOXeZLW57mLR7IegIFovi7FW1chS6'
+val_path = 'https://drive.google.com/uc?export=download&id=1ZMJI7DyKMLHpHp-HBUO64kWbP6A-qj9k'
+
+train_df = pd.read_csv(train_path)
+val_df = pd.read_csv(val_path)
+```
+
+The required additional modules required for each ```.ipynb``` notebook runned on Google Colab have been included in each notebook to be installed using ```pip```.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Code Structure
@@ -176,7 +188,45 @@ Our scraped data are compiled as xlsx and csv files, and stored within the ```Da
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Preprocessing Layer
+## Data Processing Layer
+
+### Data Preprocessing Notebook
+
+Following the compilation of data from the multiple sources as detailed in the previous section, we proceeded to process the data to prepare it for model training and exploratory data analysis.
+
+The preprocessing pipeline consist of the following steps:
+1. Concatenating all datasets into a single ```DataFrame```.
+2. Setting up target columns for each data entry 
+3. Text preprocessing:
+
+    i. Remove Punctuations
+
+    ii. Convert to lowercase
+
+    iii. Remove non-alphanumeric characters
+    
+    iv. Remove stopwords
+
+    v. Remove extra spaces, new lines, tabs
+    
+    vi. Lemmetize and Stem text
+
+    vii. Remove words with length < 2
+
+To run the Data Preprocessing step, simply run the ```text_preprocessing.ipynb``` notebook in ```data_processing/``` folder.
+
+### Exploratory Data Analysis
+
+With the processed data, we conducted a comprehensive Exploratory Data Analysis of the combined dataset. The analyses undertaken include:
+
+1. Class distribution
+2. N-gram analysis
+3. Cluster analysis (Document and word)
+4. Polarity analysis
+5. Perplexity analysis
+6. Burstiness analysis
+
+To view the Data Preprocessing step, simply run the ```data_eda.ipynb``` notebook in ```data_processing/``` folder.
 
 ## Development Layer
 
