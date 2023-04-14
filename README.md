@@ -324,7 +324,7 @@ From initial testing, we observed that hateBERT performs the best for our task a
 | AI Content | 0.98 | 0.98 | 0.98 | 684 |
 | Neutral | 0.94 | 0.93 | 0.94 | 2175 |
 
-The model weights of the hateBert has been saved for future deployment. It is stored at ```analysis_system/models/model_weights_bert1.pth```
+The model weights of the hateBert has been saved for future deployment. It is stored at ```analysis_system/models/final_model_weights_full.pth```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
