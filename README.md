@@ -478,7 +478,7 @@ This feedback will be incorporated into the next model retraining cycle.
 
 ## Final Deliverables
 
-A copy of the read-only final deliverables (Project report and presentation slides) are provided in ``` Deliverables/``` folder.
+A copy of the read-only final deliverables (Project report and project presentation slides) are provided in the ```Deliverables/``` folder.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
