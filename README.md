@@ -55,7 +55,7 @@ The system offers two distinct end products: an automated content collection and
 ### _Solution Architecture:_
 
   <a>
-    <img src="read_me_files/archi.png" alt="Solution Architecture" height="400">
+    <img src="read_me_files/archi.png" alt="Solution Architecture" width="800">
   </a>
 
 ### _Keywords:_
@@ -93,7 +93,7 @@ _Data Pipeline, Sentiment Analysis, MNB, PassiveAggressive, XGBoost, Transformer
 
 Make sure you have installed all of the following on your development machine:
 
-- Python 3.8.0 or above
+- Python 3.8.X or 3.9.X
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -396,6 +396,8 @@ To run the Text Classification for Commun Users application, execute the followi
 python Platform/manage.py runserver
 ```
 > ⚠️ Ensure that you have Django installed! Do install the requirements via the requirements.txt if you have not done so!
+
+The application should run on ```http://localhost:8000/```.
 
 The structure of the ```Text Classification for Common Users```
 
