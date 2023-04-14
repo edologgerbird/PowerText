@@ -9,7 +9,6 @@ import functions.content_explorer as content_explorer
 
 format.add_logo()
 
-
 st.title("🔮 Content Classification")
 format.horizontal_line()
 
@@ -29,10 +28,11 @@ def run():
         reddit_content = content_explorer.load_data()
 
         # Preprocess text
-        reddit_content["body_processed"] = reddit_content["body"].apply(
-            text_preprocessing.preprocess_text)
+        with st.spinner("Preprocessing Reddit Posts..."):
+            reddit_content["body_processed"] = reddit_content["body"].apply(
+                text_preprocessing.preprocess_text)
         # Predict targets
-        with st.spinner("Predicting targets using HateBert..."):
+        with st.spinner("Predicting targets using hateBERT..."):
             predicted_outputs = model_inference.predict_targets_bert(
                 reddit_content)
 
@@ -98,7 +98,4 @@ def run():
 
 
 if __name__ == "__main__":
-    # try:
     run()
-    # except:
-    #     util.page_under_construction("Content Classification")
