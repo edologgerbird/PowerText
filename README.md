@@ -43,7 +43,7 @@ Contents of this project should ONLY be used for <strong>NON-COMMERICAL</strong>
 
 # PowerText Implementation
 
-## Project Overiview:
+## Project Overview:
 
 The objective of this project is to develop an automated content moderator for text content in social media platforms. Our proposed system is designed to accurately identify and flag content that violates terms of service in various categories such as hate speech, cyberbullying, and advertisements, while also being capable of distinguishing between human-generated and AI-generated content. To achieve this, we will leverage four commonly used Natural Language Processing (NLP) algorithms, namely NaiveBayes, PassiveAggressive, XGBoost, CNN, LSTM, GRU, and Transformers.
 
