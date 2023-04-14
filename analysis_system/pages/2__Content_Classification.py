@@ -7,6 +7,11 @@ import functions.model_inference as model_inference
 import functions.text_preprocessing as text_preprocessing
 import functions.content_explorer as content_explorer
 
+st.set_page_config(
+    page_title="PowerText Analysis Platform",
+    page_icon="🔥",
+)
+
 format.add_logo()
 
 st.title("🔮 Content Classification")

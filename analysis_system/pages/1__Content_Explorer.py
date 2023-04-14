@@ -5,6 +5,11 @@ import utils.utility as util
 import utils.design_format as format
 import functions.content_explorer as content_explorer
 
+st.set_page_config(
+    page_title="PowerText Analysis Platform",
+    page_icon="🔥",
+)
+
 format.add_logo()
 
 st.title("🔍 Content Explorer")

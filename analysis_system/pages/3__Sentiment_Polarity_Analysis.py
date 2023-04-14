@@ -7,6 +7,10 @@ import functions.content_explorer as content_explorer
 import functions.text_preprocessing as text_preprocessing
 import functions.polarity_analysis as polarity_analysis
 
+st.set_page_config(
+    page_title="PowerText Analysis Platform",
+    page_icon="🔥",
+)
 
 format.add_logo()
 
