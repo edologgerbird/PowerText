@@ -127,7 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-Platform/final_model_weights_full.pth
 
 
 # folders
@@ -138,3 +137,4 @@ transfer/
 
 data_/
 models_/
+
