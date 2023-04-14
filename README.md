@@ -477,7 +477,7 @@ This feedback will be incorporated into the next model retraining cycle.
 
 ## Acknowledgements
 
-We would like to express our gratitude to Prof Sun Chenshuo and Phoebe Chua for their invaluable guidance, support, and insights throughout the development of this project. Their expertise and encouragement have been instrumental in shaping our work. 
+We would like to express our gratitude to Prof Sun Chenshuo and Ms Phoebe Chua for their invaluable guidance, support, and insights throughout the development of this project. Their expertise and encouragement have been instrumental in shaping our work. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
