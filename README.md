@@ -363,6 +363,12 @@ The structure of the ```Automatic Post Analysis Dashboard for Content Moderators
  ┃ ┗ 📂scraped
  ┃ ┃ ┗ 📜reddit_content.csv
  ┣ 📂functions
+ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┣ 📜content_explorer.cpython-39.pyc
+ ┃ ┃ ┣ 📜DS.cpython-39.pyc
+ ┃ ┃ ┣ 📜model_inference.cpython-39.pyc
+ ┃ ┃ ┣ 📜SingleClassifier.cpython-39.pyc
+ ┃ ┃ ┗ 📜text_preprocessing.cpython-39.pyc
  ┃ ┣ 📜content_explorer.py
  ┃ ┣ 📜DS.py
  ┃ ┣ 📜model_inference.py
@@ -371,13 +377,16 @@ The structure of the ```Automatic Post Analysis Dashboard for Content Moderators
  ┃ ┣ 📜SingleClassifier.py
  ┃ ┗ 📜text_preprocessing.py
  ┣ 📂models
- ┃ ┣ 📜model_weights_bert1.pth
+ ┃ ┣ 📜final_model_weights_full.pth
  ┃ ┗ 📜PassiveAggressiveClassifier_model_dict.pkl
  ┣ 📂pages
  ┃ ┣ 📜1__Content_Explorer.py
  ┃ ┣ 📜2__Content_Classification.py
  ┃ ┗ 📜3__Sentiment_Polarity_Analysis.py
  ┣ 📂utils
+ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┣ 📜design_format.cpython-39.pyc
+ ┃ ┃ ┗ 📜utility.cpython-39.pyc
  ┃ ┣ 📜design_format.py
  ┃ ┗ 📜utility.py
  ┣ 📜Home.py
@@ -403,15 +412,6 @@ The structure of the ```Text Classification for Common Users```
 
 ```
 📦Platform
- ┣ 📂.idea
- ┃ ┣ 📂inspectionProfiles
- ┃ ┃ ┣ 📜profiles_settings.xml
- ┃ ┃ ┗ 📜Project_Default.xml
- ┃ ┣ 📜.gitignore
- ┃ ┣ 📜misc.xml
- ┃ ┣ 📜modules.xml
- ┃ ┣ 📜Platform.iml
- ┃ ┗ 📜vcs.xml
  ┣ 📂core
  ┃ ┣ 📂migrations
  ┃ ┃ ┗ 📜__init__.py
@@ -458,6 +458,7 @@ The structure of the ```Text Classification for Common Users```
  ┃ ┣ 📜user_demo_1.html
  ┃ ┗ 📜user_demo_2.html
  ┣ 📜favicon.ico
+ ┣ 📜final_model_weights_full.pth
  ┗ 📜manage.py
 ```
 
