@@ -9,9 +9,9 @@
   <p align="center">
     Automatic moderation for text in social media through PowerText: Terms of service violation and AI content detection
     <br />
-    <a href="https://edologgerbird-is4242-group8-analysis-systemhome-8nkhpg.streamlit.app/" target="_blank"><strong>View the Demo Application for Content Regulators »</strong></a>
+    <a href="https://bit.ly/is4242_user_demo" target="_blank"><strong>View the Demo Application for Content Regulators »</strong></a>
     <br />
-    <a href="https://drive.google.com/file/d/1LnsVY1nZn3p-es80ANq4Fr_LtPOsbyYZ/view" target="_blank"><strong>View the Video Demo for Common Users » »</strong></a>
+    <a href="https://bit.ly/is4242_analysis_system" target="_blank"><strong>View the Video Demo for Common Users » »</strong></a>
     <br />
   </p>
 </div>
@@ -36,6 +36,7 @@ Contents of this project should ONLY be used for <strong>NON-COMMERICAL</strong>
 <li><a href="#development-layer">Development Layer</a></li>
 <li><a href="#deployment-layer">Deployment Layer</a></li>
 <li><a href="#feedback-layer">Feedback Layer</a></li>
+<li><a href="#final-deliverables">Final Deliverables</a></li>
 <li><a href="#acknowledgements">Acknowledgements</a></li>
 </ol>
 
@@ -471,6 +472,13 @@ In this last layer, we intend to collect feedback from content moderators regard
 The feedback is collected and saved into a csv file located at: ```analysis_system/data_store/feedback/feedback.csv```.
 
 This feedback will be incorporated into the next model retraining cycle.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Final Deliverables
+
+A copy of the read-only final deliverables (Project report and presentation slides) are provided in ``` Deliverables/``` folder.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
